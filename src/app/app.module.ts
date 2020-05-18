@@ -7,8 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { ComponentListComponent } from './component-list/component-list.component';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SideNavComponent],
+  declarations: [AppComponent, NavbarComponent, SideNavComponent, ComponentListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
