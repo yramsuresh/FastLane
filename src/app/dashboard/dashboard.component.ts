@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from '../component-services.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',
@@ -10,7 +11,10 @@ export class DashboardComponent implements OnInit {
   components: any;
   solutions: any;
   bestPratices: any;
-  constructor(private componentservices: ComponentServicesService) {}
+  constructor(
+    private componentservices: ComponentServicesService,
+    private router: Router
+  ) {}
 
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
@@ -21,7 +25,9 @@ export class DashboardComponent implements OnInit {
       console.log(this.components);
     });
   }
-
+  navigate(tileName) {
+    this.router.navigate(['/details'], { queryParams: { tileName } });
+  }
   ngOnInit(): void {
     this.getComponentData();
   }

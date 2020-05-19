@@ -1,20 +1,20 @@
 <div fxLayout="column" class="main-container">
-  <!-- <div
+  <div
     fxLayout="column"
     fxLayoutAlign="space-around center"
     class="search-wrapper"
   >
     <span class="searchHeader">What are you looking for?</span>
     <input type="text" />
-  </div> -->
-  <div fxLayout="column" fxLayoutAlign="space-around center">
+  </div>
+  <!-- <div fxLayout="column" fxLayoutAlign="space-around center">
     <span class="searchHeader">What are you looking for?</span>
     <mat-form-field appearance="outline">
       <mat-label>Outline form field</mat-label>
       <input matInput placeholder="Placeholder" />
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     </mat-form-field>
-  </div>
+  </div> -->
   <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Components</h1>
     <span routerLink="/components">See All</span>
@@ -27,7 +27,11 @@
     fxLayoutGap="16px"
     class="flex-row"
   >
-    <div class="tile" *ngFor="let data of components">
+    <div
+      (click)="navigate(data.cName)"
+      class="tile"
+      *ngFor="let data of components"
+    >
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
@@ -50,7 +54,11 @@
     fxLayoutGap="16px"
     class="flex-row"
   >
-    <div class="tile" *ngFor="let data of solutions">
+    <div
+      (click)="navigate(data.cName)"
+      class="tile"
+      *ngFor="let data of solutions"
+    >
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
@@ -73,7 +81,11 @@
     fxLayoutGap="16px"
     class="flex-row"
   >
-    <div class="tile" *ngFor="let data of bestPratices">
+    <div
+      (click)="navigate(data.cName)"
+      class="tile"
+      *ngFor="let data of bestPratices"
+    >
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">

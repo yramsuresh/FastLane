@@ -15,6 +15,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
+import { DetailsComponent } from './common/details/details.component';
+import { MatButtonModule } from '@angular/material/button';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
     HeaderComponent,
     SideNavComponent,
     // DashboardComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,9 @@ import { MatInputModule } from '@angular/material/input';
     FlexLayoutModule,
     MatDividerModule,
     MatMenuModule,
+    MatButtonModule,
+    CarouselModule,
+    WavesModule,
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from '../component-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'components',
@@ -9,7 +10,10 @@ import { ComponentServicesService } from '../component-services.service';
 export class ComponentsComponent implements OnInit {
   componentData: any;
   components: any;
-  constructor(private componentservices: ComponentServicesService) {}
+  constructor(
+    private componentservices: ComponentServicesService,
+    private router: Router
+  ) {}
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
@@ -17,7 +21,9 @@ export class ComponentsComponent implements OnInit {
       console.log(this.components);
     });
   }
-
+  navigate(tileName) {
+    this.router.navigate(['/details'], { queryParams: { tileName } });
+  }
   ngOnInit(): void {
     this.getComponentData();
   }

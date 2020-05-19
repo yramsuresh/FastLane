@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { DetailsComponent } from './common/details/details.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       import('./bestpractice/bestpractice.module').then(
         (m) => m.BestpracticeModule
       ),
+  },
+  {
+    path: 'details',
+    component: DetailsComponent,
   },
   {
     path: '**',

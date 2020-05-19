@@ -11,7 +11,11 @@
     fxLayoutGap="16px"
     class="flex-row"
   >
-    <div class="tile" *ngFor="let data of components">
+    <div
+      (click)="navigate(data.cName)"
+      class="tile"
+      *ngFor="let data of components"
+    >
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
