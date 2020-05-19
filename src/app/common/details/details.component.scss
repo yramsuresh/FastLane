@@ -1,0 +1,38 @@
+.details-container {
+    padding-top: 95px;
+    .description-container {
+        border: 2px solid #1C5DD8;
+        border-radius: 8px;
+        margin: 10px 0px;
+        //width: 100%;
+        height: 164px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        padding: 10px;
+    }
+    .compDetails {
+        justify-content: space-between;
+        align-items: center;
+        .code {
+            border: 2px solid #1C5DD8;
+            height: auto;
+            min-height: 100px;
+            align-items: center;
+            border-radius: 8px;
+            width: 50%;
+            margin: 0px 10px;
+        }
+        .images {
+            border: 2px solid #1C5DD8;
+            height: auto;
+            min-height: 100px;
+            align-items: center;
+            border-radius: 8px;
+            width: 50%;
+            margin: 0px 10px;
+            img {
+                width: 100%;
+                height: 60%;
+            }
+        }
+    }
+}

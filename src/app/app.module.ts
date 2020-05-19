@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
+import { DetailsComponent } from './common/details/details.component';
+import { MatButtonModule } from '@angular/material/button';
+import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     SideNavComponent,
     DashboardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +35,11 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule,
     FlexLayoutModule,
     MatDividerModule,
+    MatButtonModule,
+    CarouselModule, 
+    WavesModule
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
