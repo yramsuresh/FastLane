@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from '../component-services.service';
 
 @Component({
-  selector: 'component-list',
-  templateUrl: './component-list.component.html',
-  styleUrls: ['./component-list.component.scss'],
+  selector: 'dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class ComponentListComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   componentData: any;
   components: any;
   solutions: any;
