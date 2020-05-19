@@ -6,20 +6,22 @@ import { HeaderComponent } from './common/header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNavComponent } from './common/side-nav/side-nav.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ComponentServicesService } from './component-services.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SideNavComponent,
-    DashboardComponent,
+    // DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,9 +30,11 @@ import { AppRoutingModule } from './app-routing.module';
     MatSidenavModule,
     MatIconModule,
     MatFormFieldModule,
+    MatInputModule,
     HttpClientModule,
     FlexLayoutModule,
     MatDividerModule,
+    MatMenuModule,
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],

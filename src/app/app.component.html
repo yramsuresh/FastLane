@@ -1,15 +1,10 @@
 <mat-drawer-container class="custom-container example-container">
   <mat-drawer class="custom-sidebar" mode="side" opened>
-    <side-nav></side-nav
-  ></mat-drawer>
+    <side-nav></side-nav>
+  </mat-drawer>
   <mat-drawer-content class="custom-wrapper">
     <header class="navbar"></header>
-    <dashboard></dashboard>
+    <!-- <dashboard></dashboard> -->
+    <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
-
-<!-- <button routerLink="/components">components</button>
-<button routerLink="/solutions">solutions</button>
-<button routerLink="/best-module">bestPractice</button>
-<button routerLink="">Home</button> -->
-<router-outlet></router-outlet>

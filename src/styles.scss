@@ -4,7 +4,7 @@ body {
 }
 * {
   // font-family: "Roboto", sans-serif;
-  font-family: 'Avenir Next';
+  font-family: "Avenir Next";
   box-sizing: border-box;
   letter-spacing: 0px;
   color: #2b2d71;
@@ -29,3 +29,18 @@ html {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu-Holder {
+  position: absolute !important;
+  top: 44px !important;
+  right: 17px !important;
+  z-index: 999 !important;
+  overflow: hidden !important;
+}
+.cdk-overlay-connected-position-bounding-box {
+  height: auto !important;
+}
+.main-container {
+  padding-top: 95px;
+}
+
+//components styles

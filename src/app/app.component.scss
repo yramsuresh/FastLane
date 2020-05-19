@@ -5,12 +5,11 @@
 .custom-container {
   height: 100%;
 }
-.custom-wrapper
-{
+.custom-wrapper {
   padding-left: 32px;
 }
 .navbar {
-  width: 100%;
+  width: calc(100% - 120px);
   height: 70px;
   background: #fafcff;
   position: fixed;

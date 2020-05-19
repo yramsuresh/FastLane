@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from '../component-services.service';
-
 @Component({
   selector: 'dashboard',
   templateUrl: './dashboard.component.html',

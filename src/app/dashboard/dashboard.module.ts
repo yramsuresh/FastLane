@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SolutionsComponent } from './solutions/solutions.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AllmodulesModule } from '../allmodules/allmodules.module';
+import { DashboardComponent } from './dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,12 +13,12 @@ import { MatDividerModule } from '@angular/material/divider';
 const routes: Routes = [
   {
     path: '',
-    component: SolutionsComponent,
+    component: DashboardComponent,
   },
 ];
 
 @NgModule({
-  declarations: [SolutionsComponent],
+  declarations: [DashboardComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -31,6 +30,6 @@ const routes: Routes = [
     FlexLayoutModule,
     MatDividerModule,
   ],
-  exports: [SolutionsComponent],
+  exports: [DashboardComponent],
 })
-export class SolutionsModule {}
+export class DashboardModule {}

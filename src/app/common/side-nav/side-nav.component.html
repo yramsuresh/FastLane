@@ -1,25 +1,57 @@
 <div class="nav-icon blue-bg">
-  <img src=".\assets\logos\LTI_logo.svg" alt="Lti-logo" />
+  <img src=".\assets\logos\LTI_logo.svg" alt="Lti-logo" routerLink="/" />
 </div>
-<div class="nav-icon no-logo" routerLink="/components">
+<div
+  class="nav-icon dashboard-icon no-logo"
+  routerLink="/components"
+  routerLinkActive="active-link"
+>
   <img
+    class="deselected"
     src=".\assets\logos\Deselected-Components.svg"
     width="21"
     alt="Components"
   />
-</div>
-<div class="nav-icon no-logo" routerLink="/solutions">
   <img
+    class="Selected"
+    src=".\assets\logos\Selected-Components.svg"
+    alt="selected"
+    width="30"
+  />
+</div>
+<div
+  class="nav-icon no-logo"
+  routerLink="/solutions"
+  routerLinkActive="active-link"
+>
+  <img
+    class="deselected"
     src=".\assets\logos\Deselected-Solutions.svg"
     width="28"
     alt="Solutions"
   />
-</div>
-<div class="nav-icon no-logo" routerLink="/bestpractice">
   <img
+    class="Selected"
+    src=".\assets\logos\Selected-Solutions.svg"
+    alt="selected"
+    width="28"
+  />
+</div>
+<div
+  class="nav-icon no-logo"
+  routerLink="/bestpractice"
+  routerLinkActive="active-link"
+>
+  <img
+    class="deselected"
     src=".\assets\logos\Deselected-BestPractices.svg"
     width="30"
     alt="BestPractices"
   />
+  <img
+    class="Selected"
+    src=".\assets\logos\Selected-BestPractices.svg"
+    alt="selected"
+    width="30"
+  />
 </div>
-<router-outlet></router-outlet>

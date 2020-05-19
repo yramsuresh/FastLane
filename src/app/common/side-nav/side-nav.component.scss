@@ -4,8 +4,25 @@
   text-align: center;
   line-height: 76px;
   outline: none;
-  &.no-logo
-  {
+  cursor: pointer;
+  &.no-logo {
     line-height: 70px;
+  }
+  &.dashboard-icon.active-link {
+    line-height: 80px;
+  }
+  .Selected {
+    display: none;
+  }
+  .deselected {
+    display: inline-block;
+  }
+  &.active-link {
+    .Selected {
+      display: inline-block;
+    }
+    .deselected {
+      display: none;
+    }
   }
 }

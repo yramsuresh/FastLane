@@ -1,18 +1,23 @@
 <div fxLayout="column" class="main-container">
-  <div
+  <!-- <div
     fxLayout="column"
     fxLayoutAlign="space-around center"
     class="search-wrapper"
   >
-    <span class="searchHeader">What are you Looking for?</span>
+    <span class="searchHeader">What are you looking for?</span>
     <input type="text" />
-    <!-- <div *ngFor="let data of components">
-      <h1>{{ data.cName }}</h1>
-    </div> -->
+  </div> -->
+  <div fxLayout="column" fxLayoutAlign="space-around center">
+    <span class="searchHeader">What are you looking for?</span>
+    <mat-form-field appearance="outline">
+      <mat-label>Outline form field</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
   </div>
   <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Components</h1>
-    <span>See All</span>
+    <span routerLink="/components">See All</span>
   </div>
   <div
     fxLayout="row"
@@ -35,7 +40,7 @@
   </div>
   <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Solutions</h1>
-    <span>See All</span>
+    <span routerLink="/solutions">See All</span>
   </div>
   <div
     fxLayout="row"
@@ -58,7 +63,7 @@
   </div>
   <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Best Practice & Guildlines</h1>
-    <span>See All</span>
+    <span routerLink="/bestpractice">See All</span>
   </div>
   <div
     fxLayout="row"
