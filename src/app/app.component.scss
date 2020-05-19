@@ -5,10 +5,14 @@
 .custom-container {
   height: 100%;
 }
+.custom-wrapper
+{
+  padding-left: 32px;
+}
 .navbar {
   width: 100%;
-  background: #fafcff 0% 0% no-repeat padding-box;
-  margin-bottom: 100px;
+  height: 70px;
+  background: #fafcff;
   position: fixed;
   top: 0;
 }

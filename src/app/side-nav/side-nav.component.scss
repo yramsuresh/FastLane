@@ -3,4 +3,9 @@
   height: 70px;
   text-align: center;
   line-height: 76px;
+  outline: none;
+  &.no-logo
+  {
+    line-height: 70px;
+  }
 }

@@ -1,6 +1,6 @@
-<div fxLayout="column">
-  <div class="search">
-    <p class="searchHeader">what are you Looking for?</p>
+<div fxLayout="column" class="main-container">
+  <div fxLayout="column" fxLayoutAlign="space-around center" class="search-wrapper">
+    <span class="searchHeader">What are you Looking for?</span>
     <input type="text" />
     <!-- <div *ngFor="let data of components">
       <h1>{{ data.cName }}</h1>
@@ -16,6 +16,7 @@
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
     fxLayoutGap="16px"
+    class="flex-row"
   >
     <div class="tile" *ngFor="let data of components">
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
@@ -38,6 +39,7 @@
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
     fxLayoutGap="16px"
+    class="flex-row"
   >
     <div class="tile" *ngFor="let data of solutions">
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
@@ -61,6 +63,7 @@
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
     fxLayoutGap="16px"
+    class="flex-row"
   >
     <div class="tile" *ngFor="let data of bestPratices">
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
