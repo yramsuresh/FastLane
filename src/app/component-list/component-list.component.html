@@ -1,12 +1,16 @@
 <div fxLayout="column" class="main-container">
-  <div fxLayout="column" fxLayoutAlign="space-around center" class="search-wrapper">
+  <div
+    fxLayout="column"
+    fxLayoutAlign="space-around center"
+    class="search-wrapper"
+  >
     <span class="searchHeader">What are you Looking for?</span>
     <input type="text" />
     <!-- <div *ngFor="let data of components">
       <h1>{{ data.cName }}</h1>
     </div> -->
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Components</h1>
     <span>See All</span>
   </div>
@@ -21,7 +25,7 @@
     <div class="tile" *ngFor="let data of components">
       <img src="../assets/images/Image 3.png" alt="thumbnails" />
       <mat-divider></mat-divider>
-      <div class="content" fxLayout="column" fxLayoutGap="5px">
+      <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
         <span class="cName">{{ data.cName }}</span>
         <span class="text-overflow">{{ data.shortDesc }}</span>
@@ -29,7 +33,7 @@
       </div>
     </div>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Solutions</h1>
     <span>See All</span>
   </div>
@@ -52,8 +56,7 @@
       </div>
     </div>
   </div>
-
-  <div fxLayout="row" fxLayoutAlign="space-between center">
+  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
     <h1>Best Practice & Guildlines</h1>
     <span>See All</span>
   </div>

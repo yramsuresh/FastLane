@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BestPracticeComponent } from './best-practice.component';
+import { BestpracticeComponent } from './bestpractice.component';
 
-describe('BestPracticeComponent', () => {
-  let component: BestPracticeComponent;
-  let fixture: ComponentFixture<BestPracticeComponent>;
+describe('BestpracticeComponent', () => {
+  let component: BestpracticeComponent;
+  let fixture: ComponentFixture<BestpracticeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BestPracticeComponent ]
+      declarations: [ BestpracticeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BestPracticeComponent);
+    fixture = TestBed.createComponent(BestpracticeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
