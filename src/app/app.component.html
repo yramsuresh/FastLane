@@ -3,7 +3,13 @@
     <side-nav></side-nav
   ></mat-drawer>
   <mat-drawer-content>
-    <navbar></navbar>
-    <h1>FrontLane</h1></mat-drawer-content
-  >
+    <div class="navbar"><navbar></navbar></div>
+    <div><component-list></component-list></div>
+  </mat-drawer-content>
 </mat-drawer-container>
+
+<!-- <button routerLink="/components">components</button>
+<button routerLink="/solutions">solutions</button>
+<button routerLink="/best-module">bestPractice</button>
+<button routerLink="">Home</button> -->
+<router-outlet></router-outlet>

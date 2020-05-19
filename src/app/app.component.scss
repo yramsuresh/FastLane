@@ -1,7 +1,14 @@
 .custom-sidebar {
-  width: 96px;
+  width: 70px;
   text-align: center;
 }
 .custom-container {
   height: 100%;
+}
+.navbar {
+  width: 100%;
+  background: #fafcff 0% 0% no-repeat padding-box;
+  margin-bottom: 100px;
+  position: fixed;
+  top: 0;
 }

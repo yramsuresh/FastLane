@@ -1,0 +1,195 @@
+{
+  "components": [
+    {
+      "cName": "Charts",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["./images/Image 3.png", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "stepper",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["./images/Image 3.png", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "DataTable",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "FormModule",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    }
+  ],
+  "solutions": [
+    {
+      "cName": "Charts",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "DataTable",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "FormModule",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    }
+  ],
+  "bestPractices": [
+    {
+      "cName": "Charts",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "DataTable",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "Angular",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    },
+    {
+      "cName": "FormModule",
+      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Download files from here",
+          "downloadable": "url"
+        }
+      ],
+      "type": "angular/react/...",
+      "size": "30Kb",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["contributor1", "contributor2"],
+      "thumbnails": "imgurl"
+    }
+  ]
+}
