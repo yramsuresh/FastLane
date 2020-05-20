@@ -1,206 +1,298 @@
 {
   "components": [
     {
-      "cName": "Charts",
+      "cName": "Charts - D3 Bar Chart",
       "id": 1,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
+      "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
       "images": ["./images/Image 3.png", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "D3Bar/D3BarChart.docx"
+        },
+        {
+          "linkText": "Source Code",
+          "downloadable": "D3Bar/D3-charts.zip"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "react",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Akhil Thakur"],
+      "thumbnails": ""
     },
     {
-      "cName": "stepper",
+      "cName": "PDF Builder with ESignature",
       "id": 2,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "shortDesc": "Create a PDF file using Text/Photo/ESignature",
+      "longDesc": "Can be useful to integrate / add E-signature in any input form of web application. Ex. Resume builder, Dynamic PDF creation ",
       "images": ["./images/Image 3.png", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "PDF builder with Esignature.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "online-resume-builder-with-esignature-master.zip"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "angular",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Sarvesh Joshi"],
+      "thumbnails": ""
     },
     {
-      "cName": "DataTable",
+      "cName": "Instant Table Search",
       "id": 3,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "shortDesc": "This component provides auto search with the help of an online API",
+      "longDesc": "Instant Search app presents an auto suggest kind of component to the user where he/she types some alphabets as search string and the app hits an online API to come up with the suggestions. On initial load, we are showing all the data. When user selects an option out of the suggestions, the app shows the desired filtered data. User can select multiple options as well. We have given option to remove any of the search options as well. ",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "InstantSearch-Component Details.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "InstantSearchCode.zip"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "angular",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Ritu Mahajan", "Ashlesha Panse"],
+      "thumbnails": ""
     },
     {
-      "cName": "FormModule",
+      "cName": "Push Notification",
       "id": 4,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "shortDesc": "This components uses Angular and .Net Core Backend service to send-receive push notifications",
+      "longDesc": "Uses service worker Angular service and a .Net Core backend service to send-receive the push notifications. The notification channels are subscribed to from the front-end Angular application. The given channels are then broadcasted with required notifications (controlled via any user defined custom logic) from the backend .Net Core server. ",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "Push Notification - Component Details.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "Push Notification - POC.zip"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "angular & .Net Core",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Omkar Ghaisas", ""],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Voice Command Recognition",
+      "id": 5,
+      "shortDesc": "This components converts speech to text without any online API",
+      "longDesc": "The main moto of this app is it transmit speech to text recognition. As soon as the page loads we display all the data in the form of data table. So, based on the click of mic icon user would be able to provide input so as to filter the data. And this filter happens through out all the fields in the table and also recognizes the digits and clears the data when the mic icon is clicked back.",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "Voice command recognition.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "VoiceCommandRecognition.zip"
+        }
+      ],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Mohan Patil", "Venugopal Thillanayagam"],
+      "thumbnails": ""
+    },
+
+    {
+      "cName": "Voice Search",
+      "id": 6,
+      "shortDesc": "This components converts speech to text using online API",
+      "longDesc": "This app presents a UI with a mic icon to the user. On initial load, it populates all the data. When user clicks on mic icon and speaks something, speech to text transmission happens. The search string is displayed in read only text box. Then this search string is used to filter the data and presents it to the user. Whenever user clicks on mic symbol, the old search string gets removed and the app starts listening for the new search option. If the transcribed text does not match any record, a message is displayed. The search is happening across all the data fields. The app recognizes the spoken digits too.  ",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "VoiceSearch-Component Details.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "VoiceSearchCode.zip"
+        }
+      ],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Ritu Mahajan"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Export Table to excel",
+      "id": 7,
+      "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
+      "longDesc": "This is a javascript library which helps the user to export data displayed in a table to be exported and shared with other people. Unlike other libraries it tries to maintain the same styling, grouping and thus maintaining the usability aspect ",
+      "images": ["img1", "img2", "img3"],
+      "files": [],
+      "type": "javascript",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Lipsa Champatiroy"],
+      "thumbnails": ""
     }
   ],
   "solutions": [
     {
-      "cName": "Charts",
-      "id": 5,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Encrypting the connection string",
+      "id": 8,
+      "shortDesc": "Encrypt the connection string for database",
+      "longDesc": "Encrypt the connection string for database",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "Encrypting the Connection String"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": ".Net",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Vinod Gupta"],
+      "thumbnails": ""
     },
     {
-      "cName": "DataTable",
-      "id": 6,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Exception Handling, Logging and Analytics tool",
+      "id": 9,
+      "shortDesc": "Exception Handling, Logging and Analytics tool",
+      "longDesc": "This document explains how to handle exceptions in you Web API code and how to use Splunk for logging & analytics",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "Exception Handling, Logging and Analytics tools.docx"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": ".Net",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Ismail Shaikh"],
+      "thumbnails": ""
     },
     {
-      "cName": "FormModule",
-      "id": 7,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Input Data Sanitization",
+      "id": 10,
+      "shortDesc": "Sanitizes input data using Regex",
+      "longDesc": "Validate a model is by using Data Annotations. It has a set of attributes and classes defined in the System.ComponentModel.DataAnnotations assembly. Data Annotations allow us to decorate model classes with metadata. This metadata describes a set of rules that are used to validate a property. ",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Usage Document",
+          "downloadable": "Input Data Sanitization using Regex.docx"
         }
       ],
-      "type": "angular/react/...",
+      "type": ".Net",
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Vinod Gupta"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "SEO Implementation",
+      "id": 11,
+      "shortDesc": "Integrate SEO in Angular",
+      "longDesc": "Search engine optimization (SEO) is the process of affecting the online visibility of a website or a web page in a web search engine's unpaid results. This document explains how we integrater Angular Universal to support SEO",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "SEO Document.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Sheetal Shinde"],
+      "thumbnails": ""
     }
   ],
   "bestPractices": [
     {
-      "cName": "Charts",
-      "id": 8,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Angular Code Review Checklist",
+      "id": 12,
+      "shortDesc": "Lists down the items to be verified while reviewing Angular code",
+      "longDesc": "Lists down the items to be verified while reviewing Angular code",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "AngularCodeReviewChecklist",
+          "downloadable": "Angular_Code_Review_Checklist.xlsx"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "angular",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["", ""],
+      "thumbnails": ""
     },
     {
-      "cName": "DataTable",
-      "id": 9,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "HTML5 Bet Practices",
+      "id": 13,
+      "shortDesc": "Best Practices for writing HTML5",
+      "longDesc": "Best Practices for writing HTML5",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "HTML5 Best Practices",
+          "downloadable": "Best Practices of Writing HTML 5.pptx"
         }
       ],
-      "type": "angular/react/...",
+      "type": "HTML5",
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Jitendra Berde"],
+      "thumbnails": ""
     },
     {
-      "cName": "Angular",
-      "id": 10,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Frontend Development Standards",
+      "id": 14,
+      "shortDesc": "Development Standards for a frontend app",
+      "longDesc": "Development Standards for a frontend app",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Standard",
+          "downloadable": "Frontend Development Standards_v1.docx"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "angular",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["", ""],
+      "thumbnails": ""
     },
     {
-      "cName": "FormModule",
-      "id": 11,
-      "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
-      "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
+      "cName": "Good Practices for Responsive Websites",
+      "id": 15,
+      "shortDesc": "Good Practices for Responsive Websites",
+      "longDesc": "Guideline for creating Responsive Websites",
       "images": ["img1", "img2", "img3"],
       "files": [
         {
-          "linkText": "Download files from here",
-          "downloadable": "url"
+          "linkText": "Guideline",
+          "downloadable": "LTI_Good_Practices_Document_Responsive WebSites.pdf"
         }
       ],
-      "type": "angular/react/...",
-      "size": "30Kb",
+      "type": "HTML/CSS",
+      "size": "",
       "lastUpdatedOn": "15 May 2020",
-      "contributors": ["contributor1", "contributor2"],
-      "thumbnails": "imgurl"
+      "contributors": ["Jitendra Berde"],
+      "thumbnails": ""
     }
   ]
 }
