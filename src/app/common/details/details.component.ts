@@ -11,6 +11,8 @@ export class DetailsComponent implements OnInit {
   details: any;
   tileId: any;
   detailobject: any;
+  selectedImgPath: string;
+  selectedImgIndex: number;
   constructor(
     private componentservices: ComponentServicesService,
     private activatedRoute: ActivatedRoute
@@ -26,6 +28,8 @@ export class DetailsComponent implements OnInit {
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });
+      this.selectedImgPath = this.detailobject.images[0];
+      this.selectedImgIndex = 0;
     });
   }
   ngOnInit(): void {
@@ -33,5 +37,10 @@ export class DetailsComponent implements OnInit {
       this.tileId = params['tileId'];
     });
     this.getComponentData();
+  }
+
+  chooseImg(index) {
+    this.selectedImgPath = this.detailobject.images[index];
+    this.selectedImgIndex = index;
   }
 }

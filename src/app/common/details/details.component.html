@@ -1,57 +1,42 @@
 <div fxLayout="column" class="details-container" fxLayoutGap.xs="10px">
-  <div fxLayoutAlign="start center" class="componentName">
-    <span class="detailsHeader">{{ detailobject?.cName }}&nbsp;</span>
-    <span>| angular</span>
-  </div>
-  <div fxLayout="column" fxLayoutAlign="start" class="description-container">
-    <span class="descriptionHeader">description</span>
-    <span class="descriptionContent"
-      >Charts based on D3 library. Lorem ipsum dolor sit amet, consectetur
-      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-      pariatur.</span
+    <div fxLayoutAlign="start center" class="componentName">
+        <span class="detailsHeader">{{ detailobject?.cName }}&nbsp;</span>
+        <span>| {{ detailobject?.type }}</span>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="start" class="description-container">
+        <span class="descriptionHeader">description</span>
+        <span class="descriptionContent">
+      {{detailobject?.longDesc}}
+      </span
     >
   </div>
   <div fxLayout="row" class="compDetails" fxLayoutAlign="space-between">
-    <div fxLayout="row" fxLayoutAlign="space-between" class="code">
-      <div fxLayout="column" class="codeLeft">
+    <div fxLayout="column" fxLayoutAlign="space-between" class="code">
         <div class="codeHeader">Code</div>
-        <div></div>
-      </div>
-      <div class="codeRight">
-        <button>Download</button>
-      </div>
+        <div class="codeDetails">
+          <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let detailData of detailobject?.files">
+            <span>{{detailData.linkText}}</span>
+        <span> <a href="{{detailData.downloadable}}">Download</a></span>
     </div>
-    <div class="images" fxLayout="column" fxLayoutAlign="space-around">
-      <div class="imagesHeader">
-        Images
-      </div>
-      <div class="imagesContent">
-        <img
-          class="previewImg"
-          src="../assets/images/Image 3.png"
-          alt="thumbnails"
-        />
-        <mat-divider></mat-divider>
-        <img
-          class="smallImgs"
-          src="../assets/images/Image 3.png"
-          alt="thumbnails"
-        />
-        <img
-          class="smallImgs"
-          src="../assets/images/Image 3.png"
-          alt="thumbnails"
-        />
-        <img
-          class="smallImgs"
-          src="../assets/images/Image 3.png"
-          alt="thumbnails"
-        />
-      </div>
-    </div>
-  </div>
 </div>
-<div class="main-container"></div>
+
+</div>
+<div class="images" fxLayout="column" fxLayoutAlign="space-around">
+    <div class="imagesHeader">
+        Images
+    </div>
+    <div class="imagesContent">
+        <div class="previewDiv">
+            <img class="previewImg" src="{{selectedImgPath}}" alt="thumbnails" />
+        </div>
+        <mat-divider></mat-divider>
+        <div class="imagesList">
+            <div [ngClass]="selectedImgIndex == i ? 'selectedDiv' : 'normalDiv'" *ngFor="let img of detailobject?.images; index as i" (click)="chooseImg(i)">
+                <img class="smallImgs" src="{{img}}" alt="thumbnails" />
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>

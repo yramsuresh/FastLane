@@ -1,17 +1,16 @@
 .custom-sidebar {
-  width: 70px;
-  text-align: center;
+    width: 70px;
+    text-align: center;
 }
+
 .custom-container {
-  height: 100%;
+    height: 100%;
 }
-.custom-wrapper {
-  padding-left: 32px;
-}
+
 .top-navbar {
-  width: calc(100% - 120px);
-  height: 70px;
-  background: #fafcff;
-  position: fixed;
-  top: 0;
+    width: calc(100% - 87px);
+    height: 70px;
+    background: #fafcff;
+    position: fixed;
+    top: 0;
 }
