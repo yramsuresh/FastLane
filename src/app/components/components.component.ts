@@ -21,8 +21,8 @@ export class ComponentsComponent implements OnInit {
       console.log(this.components);
     });
   }
-  navigate(tileName) {
-    this.router.navigate(['/details'], { queryParams: { tileName } });
+  navigate(tileId) {
+    this.router.navigate(['/details'], { queryParams: { tileId } });
   }
   ngOnInit(): void {
     this.getComponentData();

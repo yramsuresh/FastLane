@@ -19,8 +19,8 @@ export class BestpracticeComponent implements OnInit {
       this.bestPratices = this.componentData.bestPractices;
     });
   }
-  navigate(tileName) {
-    this.router.navigate(['/details'], { queryParams: tileName });
+  navigate(tileId) {
+    this.router.navigate(['/details'], { queryParams: tileId });
   }
   ngOnInit(): void {
     this.getComponentData();

@@ -22,12 +22,14 @@ html {
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 14px;
 }
 .text-overflow1 {
   white-space: nowrap;
   width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 14px;
 }
 .menu-Holder {
   position: absolute !important;
@@ -42,5 +44,12 @@ html {
 .main-container {
   padding-top: 95px;
 }
-
+.sub-head {
+  margin-top: 20px;
+  padding-right: 18px;
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
 //components styles

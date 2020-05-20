@@ -21,8 +21,8 @@ export class SolutionsComponent implements OnInit {
       console.log(this.solutions);
     });
   }
-  navigate(tileName) {
-    this.router.navigate(['/details'], { queryParams: { tileName } });
+  navigate(tileId) {
+    this.router.navigate(['/details'], { queryParams: { tileId } });
   }
 
   ngOnInit(): void {

@@ -2,6 +2,7 @@
   "components": [
     {
       "cName": "Charts",
+      "id": 1,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["./images/Image 3.png", "img2", "img3"],
@@ -19,6 +20,7 @@
     },
     {
       "cName": "stepper",
+      "id": 2,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["./images/Image 3.png", "img2", "img3"],
@@ -36,6 +38,7 @@
     },
     {
       "cName": "DataTable",
+      "id": 3,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -53,6 +56,7 @@
     },
     {
       "cName": "FormModule",
+      "id": 4,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -72,6 +76,7 @@
   "solutions": [
     {
       "cName": "Charts",
+      "id": 5,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -89,6 +94,7 @@
     },
     {
       "cName": "DataTable",
+      "id": 6,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -106,6 +112,7 @@
     },
     {
       "cName": "FormModule",
+      "id": 7,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -125,6 +132,7 @@
   "bestPractices": [
     {
       "cName": "Charts",
+      "id": 8,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -142,6 +150,7 @@
     },
     {
       "cName": "DataTable",
+      "id": 9,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -159,6 +168,7 @@
     },
     {
       "cName": "Angular",
+      "id": 10,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],
@@ -176,6 +186,7 @@
     },
     {
       "cName": "FormModule",
+      "id": 11,
       "shortDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "longDesc": "D3 charts is an best way to use charts. Uses Svg charts",
       "images": ["img1", "img2", "img3"],

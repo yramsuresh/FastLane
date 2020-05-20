@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   components: any;
   solutions: any;
   bestPratices: any;
+
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -25,8 +26,8 @@ export class DashboardComponent implements OnInit {
       console.log(this.components);
     });
   }
-  navigate(tileName) {
-    this.router.navigate(['/details'], { queryParams: { tileName } });
+  navigate(tileId) {
+    this.router.navigate(['/details'], { queryParams: { tileId } });
   }
   ngOnInit(): void {
     this.getComponentData();
