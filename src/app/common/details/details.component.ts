@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from 'src/app/component-services.service';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -15,8 +18,15 @@ export class DetailsComponent implements OnInit {
   selectedImgIndex: number;
   constructor(
     private componentservices: ComponentServicesService,
-    private activatedRoute: ActivatedRoute
-  ) {}
+    private activatedRoute: ActivatedRoute,
+    iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,
+    private location: Location
+  ) {
+    iconRegistry.addSvgIcon(
+      'arrow-back',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow_back.svg'));
+  }
+
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
@@ -42,5 +52,9 @@ export class DetailsComponent implements OnInit {
   chooseImg(index) {
     this.selectedImgPath = this.detailobject.images[index];
     this.selectedImgIndex = index;
+  }
+
+  goToPreviousPage() {
+    this.location.back();
   }
 }

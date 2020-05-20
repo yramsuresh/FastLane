@@ -1,5 +1,8 @@
 <div fxLayout="column" class="details-container" fxLayoutGap.xs="10px">
     <div fxLayoutAlign="start center" class="componentName">
+        <span>
+          <button (click)="goToPreviousPage()"><mat-icon aria-hidden="false" svgIcon="arrow-back"></mat-icon></button>
+      </span>
         <span class="detailsHeader">{{ detailobject?.cName }}&nbsp;</span>
         <span>| {{ detailobject?.type }}</span>
     </div>
@@ -16,7 +19,7 @@
         <div class="codeDetails">
           <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let detailData of detailobject?.files">
             <span>{{detailData.linkText}}</span>
-        <span> <a href="{{detailData.downloadable}}">Download</a></span>
+        <span> <a href="{{detailData.downloadable}}" target="_blank">Download</a></span>
     </div>
 </div>
 
