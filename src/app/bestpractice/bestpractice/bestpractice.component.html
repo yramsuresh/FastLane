@@ -16,7 +16,7 @@
       class="tile"
       *ngFor="let data of bestPratices"
     >
-      <img src="../assets/images/Image 3.png" alt="thumbnails" />
+      <img src={{data.thumbnails}} alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>

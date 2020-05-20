@@ -16,7 +16,7 @@
         <div class="codeDetails">
           <div fxLayout="row" fxLayoutAlign="space-between" *ngFor="let detailData of detailobject?.files">
             <span>{{detailData.linkText}}</span>
-        <span> <a href="../assets/Data/{{detailData.downloadable}}">Download</a></span>
+        <span> <a href="{{detailData.downloadable}}">Download</a></span>
     </div>
 </div>
 
@@ -26,11 +26,13 @@
         Images
     </div>
     <div class="imagesContent">
-        <img class="previewImg" src="../assets/images/{{selectedImgPath}}" alt="thumbnails" />
+        <div class="previewDiv">
+            <img class="previewImg" src="{{selectedImgPath}}" alt="thumbnails" />
+        </div>
         <mat-divider></mat-divider>
         <div class="imagesList">
             <div [ngClass]="selectedImgIndex == i ? 'selectedDiv' : 'normalDiv'" *ngFor="let img of detailobject?.images; index as i" (click)="chooseImg(i)">
-                <img class="smallImgs" src="../assets/images/{{img}}" alt="thumbnails" />
+                <img class="smallImgs" src="{{img}}" alt="thumbnails" />
             </div>
         </div>
 

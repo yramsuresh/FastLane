@@ -1,5 +1,6 @@
 .details-container {
     padding-top: 95px;
+    background-color: #FAFCFF;
     .componentName {
         color: #2b2d71;
         .detailsHeader {
@@ -32,6 +33,7 @@
             border-radius: 8px;
             width: 50%;
             padding: 10px;
+            background-color: #ffffff;
             .codeHeader {
                 color: #2b2d71;
                 font-weight: bold;
@@ -53,6 +55,7 @@
             }
         }
         .images {
+            background-color: #ffffff;
             border: 2px solid #1c5dd8;
             height: 100%;
             min-height: 100px;
@@ -60,9 +63,14 @@
             border-radius: 8px;
             width: 50%;
             margin: 0px 10px;
-            .previewImg {
+            .imagesContent .previewDiv {
                 width: 100%;
                 height: 60%;
+                .previewImg {
+                    width: 569px;
+                    height: 250px;
+                    max-height: 400px;
+                }
             }
             .imagesHeader {
                 color: #2b2d71;
@@ -71,24 +79,24 @@
                 padding-left: 10px;
             }
             .imagesList {
-                overflow-x: auto;
-                display: inline;
+                overflow-x: scroll;
+                display: flex;
                 vertical-align: middle;
                 div {
                     float: left;
-                    width: 30%;
+                    width: fit-content;
                     align-content: center;
-                    height: 30%;
+                    height: fit-content;
                     text-align: center;
                     margin: 4px;
                     .smallImgs {
-                        width: 100%;
-                        height: 100%;
+                        width: 200px;
+                        height: 200px;
                         padding: 5px;
                     }
                 }
                 div.selectedDiv {
-                    border: 1px solid #2b2d71;
+                    border: 1px #2b2d71;
                 }
             }
         }
