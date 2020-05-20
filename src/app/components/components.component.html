@@ -8,7 +8,7 @@
     fxLayout.xs="column"
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
-    fxLayoutGap="16px"
+    fxLayoutGap="15px"
     class="flex-row"
   >
     <div
@@ -16,7 +16,7 @@
       class="tile"
       *ngFor="let data of components"
     >
-      <img src={{data.thumbnails}} alt="thumbnails" />
+      <img src="{{ data.thumbnails }}" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>

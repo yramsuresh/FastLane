@@ -5,7 +5,7 @@
     class="search-wrapper"
   >
     <span class="searchHeader">What are you looking for?</span>
-    <input type="text" />
+    <input type="text" [(ngModel)]="comp" #ctrl="ngModel" />
   </div>
   <!-- <div fxLayout="column" fxLayoutAlign="space-around center">
     <span class="searchHeader">What are you looking for?</span>
@@ -15,7 +15,12 @@
       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     </mat-form-field>
   </div> -->
-  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="sub-head"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    *ngIf="components"
+  >
     <h1>Components</h1>
     <span routerLink="/components">See All</span>
   </div>
@@ -24,15 +29,15 @@
     fxLayout.xs="column"
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
-    fxLayoutGap="16px"
+    fxLayoutGap="15px"
     class="flex-row"
   >
     <div
       (click)="navigate(data.id)"
       class="tile"
-      *ngFor="let data of components"
+      *ngFor="let data of components | filter: comp"
     >
-      <img src={{data.thumbnails}} alt="{{data.thumbnails}}" />
+      <img src="{{ data.thumbnails }}" alt="{{ data.thumbnails }}" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
@@ -42,7 +47,12 @@
       </div>
     </div>
   </div>
-  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="sub-head"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    *ngIf="solutions"
+  >
     <h1>Solutions</h1>
     <span routerLink="/solutions">See All</span>
   </div>
@@ -51,15 +61,15 @@
     fxLayout.xs="column"
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
-    fxLayoutGap="16px"
+    fxLayoutGap="15px"
     class="flex-row"
   >
     <div
       (click)="navigate(data.id)"
       class="tile"
-      *ngFor="let data of solutions"
+      *ngFor="let data of solutions | filter: comp"
     >
-      <img src={{data.thumbnails}} alt="thumbnails" />
+      <img src="{{ data.thumbnails }}" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
@@ -69,7 +79,12 @@
       </div>
     </div>
   </div>
-  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
+  <div
+    class="sub-head"
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    *ngIf="bestPratices"
+  >
     <h1>Best Practice & Guildlines</h1>
     <span routerLink="/bestpractice">See All</span>
   </div>
@@ -78,15 +93,15 @@
     fxLayout.xs="column"
     fxLayoutGap.xs="10px"
     fxLayoutAlign="start center"
-    fxLayoutGap="16px"
+    fxLayoutGap="15px"
     class="flex-row"
   >
     <div
       (click)="navigate(data.id)"
       class="tile"
-      *ngFor="let data of bestPratices"
+      *ngFor="let data of bestPratices | filter: comp"
     >
-      <img src={{data.thumbnails}} alt="thumbnails" />
+      <img src="{{ data.thumbnails }}" alt="thumbnails" />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>

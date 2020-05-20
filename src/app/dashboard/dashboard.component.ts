@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   components: any;
   solutions: any;
   bestPratices: any;
+  comp: any;
 
   constructor(
     private componentservices: ComponentServicesService,
@@ -23,9 +24,9 @@ export class DashboardComponent implements OnInit {
       this.components = this.componentData.components;
       this.solutions = this.componentData.solutions;
       this.bestPratices = this.componentData.bestPractices;
-      console.log(this.components);
     });
   }
+
   navigate(tileId) {
     this.router.navigate(['/details'], { queryParams: { tileId } });
   }
