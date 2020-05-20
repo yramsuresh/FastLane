@@ -1,80 +1,117 @@
 .details-container {
-  padding-top: 95px;
-  .componentName {
-    color: #2b2d71;
-    .detailsHeader {
-      font-weight: bold;
-      font-size: 18px;
-    }
-  }
-  .description-container {
-    border: 2px solid #1c5dd8;
-    border-radius: 8px;
-    margin: 10px 0px;
-    //width: 100%;
-    max-height: 164px;
-    overflow: auto;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    padding: 19px 24px 24px 24px;
-    .descriptionContent {
-      color: #2b2d71;
-      font-weight: bold;
-    }
-  }
-  .compDetails {
-    justify-content: space-between;
-    align-items: center;
-    .code {
-      flex: 1;
-      height: auto;
-      min-height: 645px;
-      align-items: center;
-      border-radius: 8px;
-      width: 50%;
-      margin: 0px 10px;
-      .codeLeft {
-        flex: 1;
-        padding: 10px;
-        .codeHeader {
-          color: #2b2d71;
-          font-weight: bold;
-        }
-      }
-      .codeRight {
-        padding: 10px;
-        button {
-          background: #1c5dd8;
-          color: #ffffff;
-          border: none;
-          padding: 4px 16px;
-          font-size: 12px;
-          border-radius: 4px;
-        }
-      }
-    }
-    .images {
-      border: 2px solid #1c5dd8;
-      height: 100%;
-      min-height: 100px;
-      align-items: center;
-      border-radius: 8px;
-      width: 50%;
-      margin: 0px 10px;
-      .smallImgs {
-        width: 33%;
-        height: 40%;
-        padding: 5px;
-      }
-      .previewImg {
-        width: 100%;
-        height: 60%;
-      }
-      .imagesHeader {
+    padding-top: 95px;
+    padding-left: 32px;
+    background-color: #FAFCFF;
+    .componentName {
         color: #2b2d71;
-        font-weight: bold;
-        padding-top: 10px;
-        padding-left: 10px;
-      }
+        .detailsHeader {
+            font-weight: bold;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        button {
+            border: none;
+            background: none !important;
+            .mat-icon {
+                line-height: 20px;
+            }
+        }
     }
-  }
+    .description-container {
+        border: 2px solid #1c5dd8;
+        border-radius: 8px;
+        margin: 10px 0px;
+        //width: 100%;
+        max-height: 164px;
+        overflow: auto;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        padding: 19px 24px 24px 24px;
+        .descriptionContent {
+            color: #2b2d71;
+            font-weight: bold;
+        }
+    }
+    .compDetails {
+        justify-content: space-between;
+        align-items: center;
+        .code {
+            flex: 1;
+            height: auto;
+            min-height: 645px;
+            align-items: center;
+            border-radius: 8px;
+            width: 50%;
+            padding: 10px;
+            background-color: #ffffff;
+            margin-right: 10px;
+            .codeHeader {
+                color: #2b2d71;
+                font-weight: bold;
+                height: 10%;
+            }
+            .codeDetails {
+                height: 90%;
+                div {
+                    padding: 5px 2px;
+                    a {
+                        background: #1c5dd8;
+                        color: #ffffff;
+                        border: none;
+                        padding: 4px 16px;
+                        font-size: 12px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .images {
+            background-color: #ffffff;
+            border: 2px solid #1c5dd8;
+            height: 100%;
+            min-height: 100px;
+            align-items: center;
+            border-radius: 8px;
+            width: 50%;
+            margin: 0px 10px;
+            margin-right: 0px;
+            .imagesContent {
+                .previewDiv {
+                    width: 100%;
+                    height: 60%;
+                    .previewImg {
+                        width: 569px;
+                        height: 250px;
+                        max-height: 400px;
+                    }
+                }
+                .imagesList {
+                    overflow-x: scroll;
+                    display: flex;
+                    vertical-align: middle;
+                    div {
+                        float: left;
+                        width: fit-content;
+                        align-content: center;
+                        height: fit-content;
+                        text-align: center;
+                        margin: 4px;
+                        .smallImgs {
+                            width: 200px;
+                            height: 200px;
+                            padding: 5px;
+                        }
+                    }
+                    .selectedDiv {
+                        border: 1px solid #2b2d71;
+                    }
+                }
+            }
+            .imagesHeader {
+                color: #2b2d71;
+                font-weight: bold;
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+        }
+    }
 }
