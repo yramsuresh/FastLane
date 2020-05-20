@@ -20,7 +20,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Akhil Thakur"],
-      "thumbnails": "./assets/Data/ReusableComponents/UI_Components.png"
+      "thumbnails": ""
     },
     {
       "cName": "PDF Builder with ESignature",
@@ -34,7 +34,7 @@
           "downloadable": "./assets/Data/ReusableComponents/ESignature/angular-docusign-integration-master.zip"
         },
         {
-          "linkText": "Usage Document",
+          "linkText": "Demo File",
           "downloadable": "./assets/Data/ReusableComponents/ESignature/Demo_file.pdf"
         },
         {
@@ -68,7 +68,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ritu Mahajan", "Ashlesha Panse"],
-      "thumbnails": "./assets/Data/ReusableComponents/UI_Components.png"
+      "thumbnails": ""
     },
     {
       "cName": "Push Notification",
@@ -90,7 +90,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Omkar Ghaisas", ""],
-      "thumbnails": "./assets/Data/ReusableComponents/UI_Components.png"
+      "thumbnails": ""
     },
     {
       "cName": "Voice Command Recognition",
@@ -148,7 +148,65 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Lipsa Champatiroy"],
-      "thumbnails": "./assets/Data/ReusableComponents/UI_Components.png"
+      "thumbnails": ""
+    },
+    {
+      "cName": "Chart Component & Generate PDF",
+      "id": 16,
+      "shortDesc": "This component provides us with reusable charts(Bar, line, donut, pie) created using D3 and capability to export to PDF",
+      "longDesc": "Common chart components which are implemented using d3.js. This library provide Bar, Pie, Line and donut charts. This also extracts the chart in PDF format for sharing",
+      "images": ["img1", "img2", "img3"],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/Common Chart components.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/CommonComponentPOC.zip"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [""],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Form Input Controls",
+      "id": 17,
+      "shortDesc": "This component provides reusable form components like input box, button etc",
+      "longDesc": "This has different react reusable components created for creating a form.",
+      "images": ["./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png", "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"],
+      "files": [
+        {
+          "linkText": "Code",
+          "downloadable": "./assets/Data/ReusableComponents/FormInputControls/SelfDetailForm-master.zip"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Nilesh Sonawane"],
+      "thumbnails": "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
+    },
+    {
+      "cName": "Signature Pad",
+      "id": 18,
+      "shortDesc": "Ability to sign in the app",
+      "longDesc": "This component provides the ability to add a signature pad within the React App",
+      "images": ["./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png", "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"],
+      "files": [
+        {
+          "linkText": "Code",
+          "downloadable": "./assets/Data/ReusableComponents/SignaturePad/SignatureWritingPad-master.zip"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [""],
+      "thumbnails": "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png"
     }
   ],
   "solutions": [
@@ -168,7 +226,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Vinod Gupta"],
-      "thumbnails": "./assets/Data/Solutions/Solution.png"
+      "thumbnails": ""
     },
     {
       "cName": "Exception Handling, Logging and Analytics tool",
@@ -186,7 +244,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ismail Shaikh"],
-      "thumbnails": "./assets/Data/Solutions/Solution.png"
+      "thumbnails": ""
     },
     {
       "cName": "Input Data Sanitization",
@@ -204,7 +262,7 @@
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Vinod Gupta"],
-      "thumbnails": "./assets/Data/Solutions/Solution.png"
+      "thumbnails": ""
     },
     {
       "cName": "SEO Implementation",
@@ -222,7 +280,25 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Sheetal Shinde"],
-      "thumbnails": "./assets/Data/Solutions/Solution.png"
+      "thumbnails": ""
+    },
+    {
+      "cName": "JWT Implementation in .Net",
+      "id": 19,
+      "shortDesc": "How to implement JWT token handling in .Net",
+      "longDesc": "This document lists down the steps requried to be implemented while integrating JWT in .Net",
+      "images": [],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/Solutions/JWT with RS256 httponly-secure cookie with nonce in jti.docx"
+        }
+      ],
+      "type": ".Net",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Omkar Ghaisas"],
+      "thumbnails": ""
     }
   ],
   "bestPractices": [
@@ -242,7 +318,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["", ""],
-      "thumbnails": "./assets/Data/BestPractices/Best_practices.png"
+      "thumbnails": ""
     },
     {
       "cName": "HTML5 Bet Practices",
@@ -260,7 +336,7 @@
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Jitendra Berde"],
-      "thumbnails": "./assets/Data/BestPractices/Best_practices.png"
+      "thumbnails": ""
     },
     {
       "cName": "Frontend Development Standards",
@@ -278,7 +354,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["", ""],
-      "thumbnails": "./assets/Data/BestPractices/Best_practices.png"
+      "thumbnails": ""
     },
     {
       "cName": "Good Practices for Responsive Websites",
@@ -296,7 +372,7 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Jitendra Berde"],
-      "thumbnails": "./assets/Data/BestPractices/Best_practices.png"
+      "thumbnails": ""
     }
   ]
 }
