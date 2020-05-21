@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   components: any;
   solutions: any;
   bestPractices: any;
+  loading= true
   comp: any;
 
   constructor(
@@ -33,6 +34,10 @@ export class DashboardComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.getComponentData();
+    this.loading = true
+      this.getComponentData().then(response=> {
+        this.loading = false
+        return this.loading
+      })
   }
 }

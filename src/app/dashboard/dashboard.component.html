@@ -1,146 +1,69 @@
 <div fxLayout="column" class="main-container1">
-  <div
-    fxLayout="column"
-    fxLayoutAlign="space-around center"
-    class="search-wrapper"
-  >
-    <span class="searchHeader">What are you looking for?</span>
-    <!-- <input type="text" [(ngModel)]="comp" #ctrl="ngModel" /> -->
-    <mat-form-field appearance="outline">
-      <input
-        matInput
-        placeholder="Type here to search "
-        [(ngModel)]="comp"
-        #ctrl="ngModel"
-      />
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
+  <div *ngIf="loading==false">
+    loading...
   </div>
-
-  <div
-    class="sub-head"
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    fxLayout.xs="row"
-    fxLayoutAlign.xs="space-between center"
-  >
-    <h1>Components</h1>
-    <span routerLink="/components">See All</span>
-  </div>
-  <div
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutGap.xs="10px"
-    fxLayoutAlign="start center"
-    fxLayoutAlign.xs="center center"
-    fxLayoutGap="15px"
-    class="flex-row"
-  >
-    <div
-      (click)="navigate('components', data.id)"
-      class="tile"
-      *ngFor="let data of components | filter: comp"
-    >
-      <img
-        src="{{ data.thumbnails }}"
-        alt="{{ data.thumbnails }}"
-        *ngIf="data.thumbnails !== ''"
-      />
-      <img
-        src="assets/images/thumbnails/components.png"
-        alt=""
-        *ngIf="data.thumbnails === ''"
-      />
-      <mat-divider></mat-divider>
-      <div class="content" fxLayout="column" fxLayoutGap="2px">
-        <span class="text-capitalize">{{ data.type }}</span>
-        <span class="cName text-overflow">{{ data.cName }}</span>
-        <span class="text-overflow">{{ data.shortDesc }}</span>
-        <span class="text-overflow1">{{ data.longDesc }}</span>
+  <div *ngIf="loading==true">
+    <div fxLayout="column" fxLayoutAlign="space-around center" class="search-wrapper">
+      <span class="searchHeader">What are you looking for?</span>
+      <!-- <input type="text" [(ngModel)]="comp" #ctrl="ngModel" /> -->
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Type here to search " [(ngModel)]="comp" #ctrl="ngModel" />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row"
+      fxLayoutAlign.xs="space-between center">
+      <h1>Components</h1>
+      <span routerLink="/components">See All</span>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center" fxLayoutGap="15px" class="flex-row">
+      <div (click)="navigate('components', data.id)" class="tile" *ngFor="let data of components | filter: comp">
+        <img src="{{ data.thumbnails }}" alt="{{ data.thumbnails }}" *ngIf="data.thumbnails !== ''" />
+        <img src="assets/images/thumbnails/components.png" alt="" *ngIf="data.thumbnails === ''" />
+        <mat-divider></mat-divider>
+        <div class="content" fxLayout="column" fxLayoutGap="2px">
+          <span class="text-capitalize">{{ data.type }}</span>
+          <span class="cName text-overflow">{{ data.cName }}</span>
+          <span class="text-overflow">{{ data.shortDesc }}</span>
+          <span class="text-overflow1">{{ data.longDesc }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="sub-head"
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    *ngIf="solutions"
-  >
-    <h1>Solutions</h1>
-    <span routerLink="/solutions">See All</span>
-  </div>
-  <div
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutGap.xs="10px"
-    fxLayoutAlign="start center"
-    fxLayoutAlign.xs="center center"
-    fxLayoutGap="15px"
-    class="flex-row"
-  >
-    <div
-      (click)="navigate('solutions', data.id)"
-      class="tile"
-      *ngFor="let data of solutions | filter: comp"
-    >
-      <img
-        src="{{ data.thumbnails }}"
-        alt="thumbnails"
-        *ngIf="data.thumbnails !== ''"
-      />
-      <img
-        src="assets/images/thumbnails/solutions.png"
-        alt=""
-        *ngIf="data.thumbnails === ''"
-      />
-      <mat-divider></mat-divider>
-      <div class="content" fxLayout="column" fxLayoutGap="2px">
-        <span class="text-capitalize">{{ data.type }}</span>
-        <span class="cName text-overflow">{{ data.cName }}</span>
-        <span class="text-overflow">{{ data.shortDesc }}</span>
-        <span class="text-overflow1">{{ data.longDesc }}</span>
+    <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center" *ngIf="solutions">
+      <h1>Solutions</h1>
+      <span routerLink="/solutions">See All</span>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center" fxLayoutGap="15px" class="flex-row">
+      <div (click)="navigate('solutions', data.id)" class="tile" *ngFor="let data of solutions | filter: comp">
+        <img src="{{ data.thumbnails }}" alt="thumbnails" *ngIf="data.thumbnails !== ''" />
+        <img src="assets/images/thumbnails/solutions.png" alt="" *ngIf="data.thumbnails === ''" />
+        <mat-divider></mat-divider>
+        <div class="content" fxLayout="column" fxLayoutGap="2px">
+          <span class="text-capitalize">{{ data.type }}</span>
+          <span class="cName text-overflow">{{ data.cName }}</span>
+          <span class="text-overflow">{{ data.shortDesc }}</span>
+          <span class="text-overflow1">{{ data.longDesc }}</span>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="sub-head"
-    fxLayout="row"
-    fxLayoutAlign="space-between center"
-    *ngIf="bestPractices"
-  >
-    <h1>Best Practice & Guidelines</h1>
-    <span routerLink="/bestpractice">See All</span>
-  </div>
-  <div
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutGap.xs="10px"
-    fxLayoutAlign="start center"
-    fxLayoutAlign.xs="center center"
-    fxLayoutGap="15px"
-    class="flex-row"
-  >
-    <div
-      (click)="navigate('bestPractices', data.id)"
-      class="tile"
-      *ngFor="let data of bestPractices | filter: comp"
-    >
-      <img
-        src="{{ data.thumbnails }}"
-        alt="thumbnails"
-        *ngIf="data.thumbnails !== ''"
-      />
-      <img
-        src="assets/images/thumbnails/bestPractices.png"
-        alt=""
-        *ngIf="data.thumbnails === ''"
-      />
-      <mat-divider></mat-divider>
-      <div class="content" fxLayout="column" fxLayoutGap="2px">
-        <span class="text-capitalize">{{ data.type }}</span>
-        <span class="cName text-overflow">{{ data.cName }}</span>
-        <span class="text-overflow">{{ data.shortDesc }}</span>
-        <span class="text-overflow1">{{ data.longDesc }}</span>
+    <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center" *ngIf="bestPractices">
+      <h1>Best Practice & Guidelines</h1>
+      <span routerLink="/bestpractice">See All</span>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center" fxLayoutGap="15px" class="flex-row">
+      <div (click)="navigate('bestPractices', data.id)" class="tile" *ngFor="let data of bestPractices | filter: comp">
+        <img src="{{ data.thumbnails }}" alt="thumbnails" *ngIf="data.thumbnails !== ''" />
+        <img src="assets/images/thumbnails/bestPractices.png" alt="" *ngIf="data.thumbnails === ''" />
+        <mat-divider></mat-divider>
+        <div class="content" fxLayout="column" fxLayoutGap="2px">
+          <span class="text-capitalize">{{ data.type }}</span>
+          <span class="cName text-overflow">{{ data.cName }}</span>
+          <span class="text-overflow">{{ data.shortDesc }}</span>
+          <span class="text-overflow1">{{ data.longDesc }}</span>
+        </div>
       </div>
     </div>
   </div>
