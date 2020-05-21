@@ -5,21 +5,24 @@
     class="search-wrapper"
   >
     <span class="searchHeader">What are you looking for?</span>
-    <input type="text" [(ngModel)]="comp" #ctrl="ngModel" />
-  </div>
-  <!-- <div fxLayout="column" fxLayoutAlign="space-around center">
-    <span class="searchHeader">What are you looking for?</span>
+    <!-- <input type="text" [(ngModel)]="comp" #ctrl="ngModel" /> -->
     <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <input
+        matInput
+        placeholder="type component Name"
+        [(ngModel)]="comp"
+        #ctrl="ngModel"
+      />
+      <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
-  </div> -->
+  </div>
+
   <div
     class="sub-head"
     fxLayout="row"
     fxLayoutAlign="space-between center"
-    *ngIf="components"
+    fxLayout.xs="row"
+    fxLayoutAlign.xs="space-between center"
   >
     <h1>Components</h1>
     <span routerLink="/components">See All</span>
@@ -37,7 +40,16 @@
       class="tile"
       *ngFor="let data of components | filter: comp"
     >
-      <img src="{{ data.thumbnails }}" alt="{{ data.thumbnails }}" />
+      <img
+        src="{{ data.thumbnails }}"
+        alt="{{ data.thumbnails }}"
+        *ngIf="data.thumbnails !== ''"
+      />
+      <img
+        src="assets/Data/ReusableComponents/UI_Components.png"
+        alt=""
+        *ngIf="data.thumbnails === ''"
+      />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
@@ -69,7 +81,16 @@
       class="tile"
       *ngFor="let data of solutions | filter: comp"
     >
-      <img src="{{ data.thumbnails }}" alt="thumbnails" />
+      <img
+        src="{{ data.thumbnails }}"
+        alt="thumbnails"
+        *ngIf="data.thumbnails !== ''"
+      />
+      <img
+        src="assets/Data/Solutions/Solution.png"
+        alt=""
+        *ngIf="data.thumbnails === ''"
+      />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
@@ -101,7 +122,16 @@
       class="tile"
       *ngFor="let data of bestPratices | filter: comp"
     >
-      <img src="{{ data.thumbnails }}" alt="thumbnails" />
+      <img
+        src="{{ data.thumbnails }}"
+        alt="thumbnails"
+        *ngIf="data.thumbnails !== ''"
+      />
+      <img
+        src="/assets/Data/BestPractices/Best_practices.png"
+        alt=""
+        *ngIf="data.thumbnails === ''"
+      />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>

@@ -16,7 +16,16 @@
       class="tile"
       *ngFor="let data of solutions"
     >
-      <img src="{{ data.thumbnails }}" alt="thumbnails" />
+      <img
+        src="{{ data.thumbnails }}"
+        alt="thumbnails"
+        *ngIf="data.thumbnails !== ''"
+      />
+      <img
+        src="assets/Data/Solutions/Solution.png"
+        alt=""
+        *ngIf="data.thumbnails === ''"
+      />
       <mat-divider></mat-divider>
       <div class="content" fxLayout="column" fxLayoutGap="2px">
         <span>{{ data.type }}</span>
