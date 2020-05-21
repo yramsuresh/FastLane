@@ -27,7 +27,12 @@
       "id": 2,
       "shortDesc": "Create a PDF file using Text/Photo/ESignature",
       "longDesc": "Can be useful to integrate / add E-signature in any input form of web application. Ex. Resume builder, Dynamic PDF creation ",
-      "images": ["assets/Data/ReusableComponents/ESignature/Images/Esign1.png", "assets/Data/ReusableComponents/ESignature/Images/Esign2.png", "assets/Data/ReusableComponents/ESignature/Images/Esign3.png","assets/Data/ReusableComponents/ESignature/Images/Esign4.png"],
+      "images": [
+        "assets/Data/ReusableComponents/ESignature/Images/Esign1.png",
+        "assets/Data/ReusableComponents/ESignature/Images/Esign2.png",
+        "assets/Data/ReusableComponents/ESignature/Images/Esign3.png",
+        "assets/Data/ReusableComponents/ESignature/Images/Esign4.png"
+      ],
       "files": [
         {
           "linkText": "Source Code",
@@ -97,7 +102,12 @@
       "id": 5,
       "shortDesc": "This components converts speech to text without any online API",
       "longDesc": "The main moto of this app is it transmit speech to text recognition. As soon as the page loads we display all the data in the form of data table. So, based on the click of mic icon user would be able to provide input so as to filter the data. And this filter happens through out all the fields in the table and also recognizes the digits and clears the data when the mic icon is clicked back.",
-      "images": ["assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png", "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand2.png", "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand3.png", "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand4.png"],
+      "images": [
+        "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png",
+        "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand2.png",
+        "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand3.png",
+        "assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand4.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -120,7 +130,14 @@
       "id": 6,
       "shortDesc": "This components converts speech to text using online API",
       "longDesc": "This app presents a UI with a mic icon to the user. On initial load, it populates all the data. When user clicks on mic icon and speaks something, speech to text transmission happens. The search string is displayed in read only text box. Then this search string is used to filter the data and presents it to the user. Whenever user clicks on mic symbol, the old search string gets removed and the app starts listening for the new search option. If the transcribed text does not match any record, a message is displayed. The search is happening across all the data fields. The app recognizes the spoken digits too.  ",
-      "images": ["assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png", "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage2.png", "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage3.png", "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage4.png","assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage5.png","assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage6.png"],
+      "images": [
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png",
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage2.png",
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage3.png",
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage4.png",
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage5.png",
+        "assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage6.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -177,7 +194,10 @@
       "id": 17,
       "shortDesc": "This component provides reusable form components like input box, button etc",
       "longDesc": "This has different react reusable components created for creating a form.",
-      "images": ["assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png", "assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"],
+      "images": [
+        "assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png",
+        "assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
+      ],
       "files": [
         {
           "linkText": "Code",
@@ -195,7 +215,10 @@
       "id": 18,
       "shortDesc": "Ability to sign in the app",
       "longDesc": "This component provides the ability to add a signature pad within the React App",
-      "images": ["assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png", "assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"],
+      "images": [
+        "assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png",
+        "assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"
+      ],
       "files": [
         {
           "linkText": "Code",
@@ -269,7 +292,7 @@
       "id": 11,
       "shortDesc": "Integrate SEO in Angular",
       "longDesc": "Search engine optimization (SEO) is the process of affecting the online visibility of a website or a web page in a web search engine's unpaid results. This document explains how we integrater Angular Universal to support SEO",
-      "images": ["img1", "img2", "img3"],
+      "images": [],
       "files": [
         {
           "linkText": "Usage Document",
