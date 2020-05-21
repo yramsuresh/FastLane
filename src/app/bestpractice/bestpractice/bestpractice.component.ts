@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class BestpracticeComponent implements OnInit {
   componentData: any;
   bestPractices: any;
+  comp: any;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -20,7 +21,9 @@ export class BestpracticeComponent implements OnInit {
     });
   }
   navigate(compType, tileId) {
-    this.router.navigate(['/details'], { queryParams: { tile: tileId, compType: compType }  });
+    this.router.navigate(['/details'], {
+      queryParams: { tile: tileId, compType: compType },
+    });
   }
   ngOnInit(): void {
     this.getComponentData();

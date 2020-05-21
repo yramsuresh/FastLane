@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class ComponentsComponent implements OnInit {
   componentData: any;
   components: any;
+  comp: any;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router

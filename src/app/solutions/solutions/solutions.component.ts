@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class SolutionsComponent implements OnInit {
   componentData: any;
   solutions: any;
+  comp: any;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -20,7 +21,9 @@ export class SolutionsComponent implements OnInit {
     });
   }
   navigate(compType, tileId) {
-    this.router.navigate(['/details'], { queryParams: { tile: tileId, compType: compType } });
+    this.router.navigate(['/details'], {
+      queryParams: { tile: tileId, compType: compType },
+    });
   }
 
   ngOnInit(): void {
