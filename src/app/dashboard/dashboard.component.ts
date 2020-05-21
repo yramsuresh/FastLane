@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
   components: any;
   solutions: any;
   bestPractices: any;
-  loading= true
+  loading = true;
   comp: any;
 
   constructor(
@@ -26,6 +26,7 @@ export class DashboardComponent implements OnInit {
       this.solutions = this.componentData.solutions;
       this.bestPractices = this.componentData.bestPractices;
     });
+    this.loading = false;
   }
 
   navigate(compType, tileId) {
@@ -34,10 +35,7 @@ export class DashboardComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.loading = true
-      this.getComponentData().then(response=> {
-        this.loading = false
-        return this.loading
-      })
+    this.loading = true;
+    this.getComponentData();
   }
 }
