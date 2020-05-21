@@ -3,6 +3,7 @@
 </div>
 <div
   class="nav-icon dashboard-icon no-logo"
+  [ngClass]="activeComponent? 'active-link': ''" 
   routerLink="/components"
   routerLinkActive="active-link"
 >
@@ -31,6 +32,7 @@
   class="nav-icon no-logo"
   routerLink="/solutions"
   routerLinkActive="active-link"
+  [ngClass]="activeSolution? 'active-link': ''"
 >
   <img
     class="deselected"
@@ -57,6 +59,7 @@
   class="nav-icon no-logo"
   routerLink="/bestpractice"
   routerLinkActive="active-link"
+  [ngClass]="activeBestPractice? 'active-link': ''"
 >
   <img
     class="deselected"
