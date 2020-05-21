@@ -1,28 +1,6 @@
 {
   "components": [
     {
-      "cName": "Charts - D3 Bar Chart",
-      "id": 1,
-      "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
-      "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
-      "images": [],
-      "files": [
-        {
-          "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3BarChart.docx"
-        },
-        {
-          "linkText": "Source Code",
-          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3-charts.zip"
-        }
-      ],
-      "type": "react",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Akhil Thakur"],
-      "thumbnails": ""
-    },
-    {
       "cName": "PDF Builder with ESignature",
       "id": 2,
       "shortDesc": "Create a PDF file using Text/Photo/ESignature",
@@ -52,6 +30,126 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Sarvesh Joshi"],
       "thumbnails": "./assets/Data/ReusableComponents/ESignature/Images/Esign1.png"
+    },
+    {
+      "cName": "Form Input Controls",
+      "id": 17,
+      "shortDesc": "This component provides reusable form components like input box, button etc",
+      "longDesc": "This has different react reusable components created for creating a form.",
+      "images": [
+        "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png",
+        "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
+      ],
+      "files": [
+        {
+          "linkText": "Code",
+          "downloadable": "./assets/Data/ReusableComponents/FormInputControls/SelfDetailForm-master.zip"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Nilesh Sonawane"],
+      "thumbnails": "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
+    },
+    {
+      "cName": "Voice Search",
+      "id": 6,
+      "shortDesc": "This components converts speech to text using online API",
+      "longDesc": "This app presents a UI with a mic icon to the user. On initial load, it populates all the data. When user clicks on mic icon and speaks something, speech to text transmission happens. The search string is displayed in read only text box. Then this search string is used to filter the data and presents it to the user. Whenever user clicks on mic symbol, the old search string gets removed and the app starts listening for the new search option. If the transcribed text does not match any record, a message is displayed. The search is happening across all the data fields. The app recognizes the spoken digits too.  ",
+      "images": [
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png",
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage2.png",
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage3.png",
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage4.png",
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage5.png",
+        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage6.png"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearch_Component_Details.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearchCode.zip"
+        }
+      ],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Ritu Mahajan"],
+      "thumbnails": "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png"
+    },
+    {
+      "cName": "Voice Command Recognition",
+      "id": 5,
+      "shortDesc": "This components converts speech to text without any online API",
+      "longDesc": "The main moto of this app is it transmit speech to text recognition. As soon as the page loads we display all the data in the form of data table. So, based on the click of mic icon user would be able to provide input so as to filter the data. And this filter happens through out all the fields in the table and also recognizes the digits and clears the data when the mic icon is clicked back.",
+      "images": [
+        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png",
+        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand2.png",
+        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand3.png",
+        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand4.png"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice_command_recognition.docx"
+        },
+        {
+          "linkText": "code",
+          "downloadable": "./assets/Data/ReusableComponents/Voice Command/VoiceCommandRecognition.zip"
+        }
+      ],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Mohan Patil", "Venugopal Thillanayagam"],
+      "thumbnails": "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png"
+    },
+    {
+      "cName": "Signature Pad",
+      "id": 18,
+      "shortDesc": "Ability to sign in the app",
+      "longDesc": "This component provides the ability to add a signature pad within the React App",
+      "images": [
+        "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png",
+        "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Code",
+          "downloadable": "./assets/Data/ReusableComponents/SignaturePad/SignatureWritingPad-master.zip"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [""],
+      "thumbnails": "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png"
+    },
+    {
+      "cName": "Charts - D3 Bar Chart",
+      "id": 1,
+      "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
+      "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
+      "images": [],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3BarChart.docx"
+        },
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3-charts.zip"
+        }
+      ],
+      "type": "react",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Akhil Thakur"],
+      "thumbnails": ""
     },
     {
       "cName": "Instant Table Search",
@@ -98,63 +196,6 @@
       "thumbnails": ""
     },
     {
-      "cName": "Voice Command Recognition",
-      "id": 5,
-      "shortDesc": "This components converts speech to text without any online API",
-      "longDesc": "The main moto of this app is it transmit speech to text recognition. As soon as the page loads we display all the data in the form of data table. So, based on the click of mic icon user would be able to provide input so as to filter the data. And this filter happens through out all the fields in the table and also recognizes the digits and clears the data when the mic icon is clicked back.",
-      "images": [
-        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png",
-        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand2.png",
-        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand3.png",
-        "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand4.png"
-      ],
-      "files": [
-        {
-          "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice_command_recognition.docx"
-        },
-        {
-          "linkText": "code",
-          "downloadable": "./assets/Data/ReusableComponents/Voice Command/VoiceCommandRecognition.zip"
-        }
-      ],
-      "type": "angular",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Mohan Patil", "Venugopal Thillanayagam"],
-      "thumbnails": "./assets/Data/ReusableComponents/Voice Command/Images/VoiceCommand1.png"
-    },
-
-    {
-      "cName": "Voice Search",
-      "id": 6,
-      "shortDesc": "This components converts speech to text using online API",
-      "longDesc": "This app presents a UI with a mic icon to the user. On initial load, it populates all the data. When user clicks on mic icon and speaks something, speech to text transmission happens. The search string is displayed in read only text box. Then this search string is used to filter the data and presents it to the user. Whenever user clicks on mic symbol, the old search string gets removed and the app starts listening for the new search option. If the transcribed text does not match any record, a message is displayed. The search is happening across all the data fields. The app recognizes the spoken digits too.  ",
-      "images": [
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png",
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage2.png",
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage3.png",
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage4.png",
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage5.png",
-        "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage6.png"
-      ],
-      "files": [
-        {
-          "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearch_Component_Details.docx"
-        },
-        {
-          "linkText": "code",
-          "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearchCode.zip"
-        }
-      ],
-      "type": "angular",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Ritu Mahajan"],
-      "thumbnails": "./assets/Data/ReusableComponents/VoiceSearch/Image/VoiceImage1.png"
-    },
-    {
       "cName": "Export Table to excel",
       "id": 7,
       "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
@@ -188,48 +229,6 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": [""],
       "thumbnails": ""
-    },
-    {
-      "cName": "Form Input Controls",
-      "id": 17,
-      "shortDesc": "This component provides reusable form components like input box, button etc",
-      "longDesc": "This has different react reusable components created for creating a form.",
-      "images": [
-        "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png",
-        "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
-      ],
-      "files": [
-        {
-          "linkText": "Code",
-          "downloadable": "./assets/Data/ReusableComponents/FormInputControls/SelfDetailForm-master.zip"
-        }
-      ],
-      "type": "React",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Nilesh Sonawane"],
-      "thumbnails": "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
-    },
-    {
-      "cName": "Signature Pad",
-      "id": 18,
-      "shortDesc": "Ability to sign in the app",
-      "longDesc": "This component provides the ability to add a signature pad within the React App",
-      "images": [
-        "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png",
-        "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"
-      ],
-      "files": [
-        {
-          "linkText": "Code",
-          "downloadable": "./assets/Data/ReusableComponents/SignaturePad/SignatureWritingPad-master.zip"
-        }
-      ],
-      "type": "React",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": [""],
-      "thumbnails": "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png"
     }
   ],
   "solutions": [
