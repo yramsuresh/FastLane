@@ -22,7 +22,7 @@
         },
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/ESignature/ESignature_integration_for_remote_signing.docx"
+          "downloadable": "./assets/Data/ReusableComponents/ESignature/ESignature integration for remote signing.docx"
         }
       ],
       "type": "angular",
