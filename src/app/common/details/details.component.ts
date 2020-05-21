@@ -39,7 +39,7 @@ export class DetailsComponent implements OnInit {
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });
-      if(this.detailobject) {
+      if(this.detailobject && this.detailobject.images.length > 0) {
         this.selectedImgPath = this.detailobject.images[0];
         this.selectedImgIndex = 0;
       }
