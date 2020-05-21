@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { DetailsComponent } from './common/details/details.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
     MatButtonModule,
     CarouselModule,
     WavesModule,
+    MatTooltipModule,
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],
