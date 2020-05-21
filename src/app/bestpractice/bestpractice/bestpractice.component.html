@@ -1,19 +1,38 @@
 <div class="main-container">
-    <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
-        <h1>Best Practice & Guildlines</h1>
-        <span>See All</span>
+  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
+    <h1>Best Practice & Guildlines</h1>
+  </div>
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap.xs="10px"
+    fxLayoutAlign="start center"
+    fxLayoutAlign.xs="center center"
+    fxLayoutGap="15px"
+    class="flex-row"
+  >
+    <div
+      (click)="navigate('bestPractices', data.id)"
+      class="tile"
+      *ngFor="let data of bestPractices"
+    >
+      <img
+        src="{{ data.thumbnails }}"
+        alt="thumbnails"
+        *ngIf="data.thumbnails !== ''"
+      />
+      <img
+        src="/assets/images/thumbnails/bestPractices.png"
+        alt=""
+        *ngIf="data.thumbnails === ''"
+      />
+      <mat-divider></mat-divider>
+      <div class="content" fxLayout="column" fxLayoutGap="2px">
+        <span class="text-capitalize">{{ data.type }}</span>
+        <span class="cName text-overflow">{{ data.cName }}</span>
+        <span class="text-overflow">{{ data.shortDesc }}</span>
+        <span class="text-overflow1">{{ data.longDesc }}</span>
+      </div>
     </div>
-    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutAlign="start center" fxLayoutAlign.xs="center center" fxLayoutGap="15px" class="flex-row">
-        <div (click)="navigate('bestPractices', data.id)" class="tile" *ngFor="let data of bestPractices">
-            <img src="{{ data.thumbnails }}" alt="thumbnails" *ngIf="data.thumbnails !== ''" />
-            <img src="/assets/images/thumbnails/bestPractices.png" alt="" *ngIf="data.thumbnails === ''" />
-            <mat-divider></mat-divider>
-            <div class="content" fxLayout="column" fxLayoutGap="2px">
-                <span>{{ data.type }}</span>
-                <span class="cName text-overflow">{{ data.cName }}</span>
-                <span class="text-overflow">{{ data.shortDesc }}</span>
-                <span class="text-overflow1">{{ data.longDesc }}</span>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

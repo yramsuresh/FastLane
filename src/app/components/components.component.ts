@@ -18,11 +18,12 @@ export class ComponentsComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.components = this.componentData.components;
-      console.log(this.components);
     });
   }
   navigate(compType, tileId) {
-    this.router.navigate(['/details'], { queryParams: { tile: tileId, compType: compType } });
+    this.router.navigate(['/details'], {
+      queryParams: { tile: tileId, compType: compType },
+    });
   }
   ngOnInit(): void {
     this.getComponentData();
