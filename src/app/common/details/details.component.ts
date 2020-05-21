@@ -16,6 +16,7 @@ export class DetailsComponent implements OnInit {
   detailobject: any;
   selectedImgPath: string;
   selectedImgIndex: number;
+  compType: any;
   constructor(
     private componentservices: ComponentServicesService,
     private activatedRoute: ActivatedRoute,
@@ -38,13 +39,16 @@ export class DetailsComponent implements OnInit {
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });
-      this.selectedImgPath = this.detailobject.images[0];
-      this.selectedImgIndex = 0;
+      if(this.detailobject) {
+        this.selectedImgPath = this.detailobject.images[0];
+        this.selectedImgIndex = 0;
+      }
     });
   }
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
-      this.tileId = params['tileId'];
+      this.tileId = params.tile;
+      this.compType= params.compType;
     });
     this.getComponentData();
   }

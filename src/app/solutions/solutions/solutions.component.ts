@@ -15,14 +15,12 @@ export class SolutionsComponent implements OnInit {
   ) {}
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
-      console.log(data);
       this.componentData = data;
       this.solutions = this.componentData.solutions;
-      console.log(this.solutions);
     });
   }
-  navigate(tileId) {
-    this.router.navigate(['/details'], { queryParams: { tileId } });
+  navigate(compType, tileId) {
+    this.router.navigate(['/details'], { queryParams: { tile: tileId, compType: compType } });
   }
 
   ngOnInit(): void {

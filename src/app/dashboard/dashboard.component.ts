@@ -10,7 +10,7 @@ export class DashboardComponent implements OnInit {
   componentData: any;
   components: any;
   solutions: any;
-  bestPratices: any;
+  bestPractices: any;
   comp: any;
 
   constructor(
@@ -23,12 +23,12 @@ export class DashboardComponent implements OnInit {
       this.componentData = data;
       this.components = this.componentData.components;
       this.solutions = this.componentData.solutions;
-      this.bestPratices = this.componentData.bestPractices;
+      this.bestPractices = this.componentData.bestPractices;
     });
   }
 
-  navigate(tileId) {
-    this.router.navigate(['/details'], { queryParams: { tileId } });
+  navigate(compType, tileId) {
+    this.router.navigate(['/details'], { queryParams: { tile: tileId, compType: compType} });
   }
   ngOnInit(): void {
     this.getComponentData();
