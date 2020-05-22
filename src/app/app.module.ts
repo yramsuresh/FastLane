@@ -19,6 +19,8 @@ import { DetailsComponent } from './common/details/details.component';
 import { MatButtonModule } from '@angular/material/button';
 import { CarouselModule, WavesModule } from 'angular-bootstrap-md';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ImagedialogComponent } from './common/imagedialog/imagedialog.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     SideNavComponent,
     // DashboardComponent,
     DetailsComponent,
+    ImagedialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     CarouselModule,
     WavesModule,
     MatTooltipModule,
+    MatDialogModule
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],
