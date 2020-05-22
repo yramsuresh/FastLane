@@ -10,7 +10,7 @@ export class ComponentServicesService {
   constructor(private http: HttpClient) {}
   getComponentData() {
     let baseUrl = environment.apiUrl;
-    console.log(baseUrl)
+    console.log(baseUrl);
     return this.http.get(baseUrl);
   }
 }

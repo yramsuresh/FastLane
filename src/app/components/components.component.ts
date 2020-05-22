@@ -30,8 +30,6 @@ export class ComponentsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loading = true
-    setTimeout(()=> {
-      this.getComponentData()
-    }, 200)
+    this.getComponentData()
   }
 }
