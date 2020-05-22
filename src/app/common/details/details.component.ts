@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { Location } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
+import { ImagedialogComponent } from '../imagedialog/imagedialog.component';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -21,11 +23,14 @@ export class DetailsComponent implements OnInit {
     private componentservices: ComponentServicesService,
     private activatedRoute: ActivatedRoute,
     iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,
-    private location: Location
+    private location: Location, public dialog: MatDialog
   ) {
     iconRegistry.addSvgIcon(
       'arrow-back',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow_back.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow_back.svg')),
+      iconRegistry.addSvgIcon(
+        'close',
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/close.svg'));
   }
 
   getComponentData() {
@@ -60,5 +65,13 @@ export class DetailsComponent implements OnInit {
 
   goToPreviousPage() {
     this.location.back();
+  }
+
+  openPreviewImgDialog() {
+    this.dialog.open(ImagedialogComponent, {
+      data: {
+        img: this.selectedImgPath
+      }
+    });
   }
 }

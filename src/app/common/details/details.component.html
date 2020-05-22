@@ -28,7 +28,7 @@
         Images
     </div>
     <div class="imagesContent">
-        <div class="previewDiv">
+        <div class="previewDiv" (click)="openPreviewImgDialog()">
             <img class="previewImg" src="{{selectedImgPath}}" alt="Image Not Found" *ngIf="detailobject?.images.length !== 0" />
             <img class="previewImg" src="assets/images/thumbnails/{{compType}}.png" alt="" *ngIf="detailobject?.images.length === 0" />
         </div>
