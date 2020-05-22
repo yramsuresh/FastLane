@@ -8,6 +8,8 @@ import { HttpClient } from '@angular/common/http';
 export class ComponentServicesService {
   constructor(private http: HttpClient) {}
   getComponentData() {
-    return this.http.get('../assets/Data/data.Json');
+    let baseUrl = window.location.href + 'assets/Data/data.Json'
+    console.log(baseUrl)
+    return this.http.get(baseUrl);
   }
 }
