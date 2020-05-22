@@ -3,6 +3,11 @@
     padding-left: 32px;
     padding-right: 20px;
     background-color: #FAFCFF;
+    .descriptionHeader
+    {
+        text-transform: capitalize;
+        font-weight: bold;
+    }
     .componentName {
         color: #2b2d71;
         .detailsHeader {
@@ -26,9 +31,6 @@
         overflow: auto;
         background: #ffffff;
         padding: 19px 24px 24px 24px;
-        .descriptionContent {
-            font-weight: bold;
-        }
     }
     .compDetails {
         min-height: 300px;

@@ -73,10 +73,14 @@ mat-form-field {
   display: block;
   margin-bottom: 7px;
 }
-.selectedDiv
+.imagesList
 {
-  cursor: pointer;
+  .selectedDiv,.normalDiv
+  {
+    cursor: pointer;
+  }
 }
+ 
 .tile {
   top: 260px;
   left: 102px;

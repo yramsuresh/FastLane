@@ -42,7 +42,7 @@
       ],
       "files": [
         {
-          "linkText": "Code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/FormInputControls/SelfDetailForm-master.zip"
         }
       ],
@@ -71,7 +71,7 @@
           "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearch_Component_Details.docx"
         },
         {
-          "linkText": "code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearchCode.zip"
         }
       ],
@@ -98,7 +98,7 @@
           "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice_command_recognition.docx"
         },
         {
-          "linkText": "code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/Voice Command/VoiceCommandRecognition.zip"
         }
       ],
@@ -119,7 +119,7 @@
       ],
       "files": [
         {
-          "linkText": "Code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/SignaturePad/SignatureWritingPad-master.zip"
         }
       ],
@@ -156,22 +156,22 @@
       "id": 3,
       "shortDesc": "This component provides auto search with the help of an online API",
       "longDesc": "Instant Search app presents an auto suggest kind of component to the user where he/she types some alphabets as search string and the app hits an online API to come up with the suggestions. On initial load, we are showing all the data. When user selects an option out of the suggestions, the app shows the desired filtered data. User can select multiple options as well. We have given option to remove any of the search options as well. ",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch2.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch3.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch4.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch5.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "InstantSearch-Component Details.docx"
+          "downloadable": "./assets/Data/ReusableComponents/InstantSearch/InstantSearch-Component Details.docx"
         },
         {
-          "linkText": "code",
-          "downloadable": "InstantSearchCode.zip"
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/InstantSearch/InstantSearchCode.zip"
         }
       ],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ritu Mahajan", "Ashlesha Panse"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png"
     },
     {
       "cName": "Push Notification",
@@ -185,7 +185,7 @@
           "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification_Component_Details.docx"
         },
         {
-          "linkText": "code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification_POC.zip"
         }
       ],
@@ -220,7 +220,7 @@
           "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/Common Chart components.docx"
         },
         {
-          "linkText": "code",
+          "linkText": "Source Code",
           "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/CommonComponentPOC.zip"
         }
       ],
