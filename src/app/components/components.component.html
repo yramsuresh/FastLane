@@ -1,4 +1,8 @@
 <div class="main-container1">
+  <div *ngIf="loading" class="load-spinner" fxLayout="row" fxLayoutAlign="center">
+    <img src="../assets/images/Ring-Preloader.gif" width="400"  alt="loading..."/>
+  </div>
+  <div *ngIf="!loading">
   <div
     fxLayout="column"
     fxLayoutAlign="space-around center"
@@ -52,4 +56,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

@@ -134,3 +134,17 @@ mat-form-field {
 .custom-tooltip {
   font-size: 15px;
 }
+.load-spinner
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  @media(max-width: 600px){
+    transform: translate(-30%,-50%);
+    img 
+    {
+      width: 100%;
+    }
+  }
+}

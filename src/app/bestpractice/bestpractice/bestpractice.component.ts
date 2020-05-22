@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class BestpracticeComponent implements OnInit {
   componentData: any;
   bestPractices: any;
+  loading = true
   comp: any;
   constructor(
     private componentservices: ComponentServicesService,
@@ -18,6 +19,7 @@ export class BestpracticeComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.bestPractices = this.componentData.bestPractices;
+      this.loading = false
     });
   }
   navigate(compType, tileId) {
@@ -26,6 +28,9 @@ export class BestpracticeComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.getComponentData();
+    this.loading = true
+    setTimeout(()=> {
+      this.getComponentData()
+    }, 200)
   }
 }

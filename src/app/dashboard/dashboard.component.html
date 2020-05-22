@@ -1,8 +1,9 @@
 <div fxLayout="column" class="main-container1">
-  <div *ngIf="loading == true" fxLayout="row" fxLayoutAlign="center">
-    <mat-spinner value="100" diameter="20" overlay="true"></mat-spinner>
+  <div *ngIf="loading" class="load-spinner" fxLayout="row" fxLayoutAlign="center">
+    <!-- <mat-spinner value="100" diameter="20" overlay="true"></mat-spinner> -->
+    <img src="../assets/images/Ring-Preloader.gif" width="400"  alt="loading..."/>
   </div>
-  <div *ngIf="loading == false">
+  <div *ngIf="!loading">
     <div
       fxLayout="column"
       fxLayoutAlign="space-around center"

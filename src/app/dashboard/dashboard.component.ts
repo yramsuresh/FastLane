@@ -25,8 +25,8 @@ export class DashboardComponent implements OnInit {
       this.components = this.componentData.components;
       this.solutions = this.componentData.solutions;
       this.bestPractices = this.componentData.bestPractices;
+      this.loading = false;
     });
-    this.loading = false;
   }
 
   navigate(compType, tileId) {
@@ -36,6 +36,8 @@ export class DashboardComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loading = true;
-    this.getComponentData();
+    setTimeout(()=> {
+      this.getComponentData()
+    }, 200)
   }
 }

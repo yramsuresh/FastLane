@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class ComponentsComponent implements OnInit {
   componentData: any;
   components: any;
+  loading = true
   comp: any;
   constructor(
     private componentservices: ComponentServicesService,
@@ -19,6 +20,7 @@ export class ComponentsComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.components = this.componentData.components;
+      this.loading = false
     });
   }
   navigate(compType, tileId) {
@@ -27,6 +29,9 @@ export class ComponentsComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.getComponentData();
+    this.loading = true
+    setTimeout(()=> {
+      this.getComponentData()
+    }, 200)
   }
 }

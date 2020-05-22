@@ -1,4 +1,8 @@
 <div class="main-container1">
+  <div *ngIf="loading" class="load-spinner" fxLayout="row" fxLayoutAlign="center">
+    <img src="../assets/images/Ring-Preloader.gif" width="400"  alt="loading..."/>
+  </div>
+  <div *ngIf="!loading">
   <div
     fxLayout="column"
     fxLayoutAlign="space-around center"
@@ -51,5 +55,6 @@
         <span class="text-overflow1">{{ data.longDesc }}</span>
       </div>
     </div>
+  </div>
   </div>
 </div>
