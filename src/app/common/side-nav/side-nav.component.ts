@@ -17,7 +17,6 @@ export class SideNavComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.tileId = params.tile;
       this.compType = params.compType;
-      console.log(this.compType)
       if(this.compType==='solutions'){
         this.activeSolution = true
         this.activeBestPractice = false

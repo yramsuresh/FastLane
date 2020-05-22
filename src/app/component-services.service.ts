@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {environment} from '../environments/environment';
 // import { catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ComponentServicesService {
   constructor(private http: HttpClient) {}
   getComponentData() {
-    let baseUrl = window.location.href + 'assets/Data/data.Json'
+    let baseUrl = environment.apiUrl;
     console.log(baseUrl)
     return this.http.get(baseUrl);
   }
