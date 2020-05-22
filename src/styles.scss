@@ -116,6 +116,10 @@ mat-form-field {
 
   .cName {
     font-size: 18px;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
     font-weight: bold;
   }
   .mat-divider {
@@ -150,4 +154,8 @@ mat-form-field {
       width: 100%;
     }
   }
+}
+.text-capitalize
+{
+  text-transform: capitalize;
 }
