@@ -1,7 +1,16 @@
 <div fxLayout="column" class="main-container1">
-  <div *ngIf="loading" class="load-spinner" fxLayout="row" fxLayoutAlign="center">
+  <div
+    *ngIf="loading"
+    class="load-spinner"
+    fxLayout="row"
+    fxLayoutAlign="center"
+  >
     <!-- <mat-spinner value="100" diameter="20" overlay="true"></mat-spinner> -->
-    <img src="../assets/images/Ring-Preloader.gif" width="400"  alt="loading..."/>
+    <img
+      src="../assets/images/Ring-Preloader.gif"
+      width="400"
+      alt="loading..."
+    />
   </div>
   <div *ngIf="!loading">
     <div
@@ -59,8 +68,20 @@
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>
           <span class="cName text-overflow">{{ data.cName }}</span>
-          <span class="text-overflow">{{ data.shortDesc }}</span>
-          <span class="text-overflow1">{{ data.longDesc }}</span>
+          <div
+            [matTooltip]="data.shortDesc"
+            matTooltipPosition="below"
+            matTooltipClass="custom-tooltip"
+            matTooltipHideDelay="100"
+            class="text-overflow"
+          >
+            {{
+              data.shortDesc.length > 74
+                ? data.shortDesc.slice(0, 75) + "..."
+                : data.shortDesc
+            }}
+          </div>
+          <!-- <span class="text-overflow1">{{ data.longDesc }}</span> -->
         </div>
       </div>
     </div>
@@ -101,8 +122,19 @@
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>
           <span class="cName text-overflow">{{ data.cName }}</span>
-          <span class="text-overflow">{{ data.shortDesc }}</span>
-          <span class="text-overflow1">{{ data.longDesc }}</span>
+          <div
+            [matTooltip]="data.shortDesc"
+            matTooltipPosition="below"
+            matTooltipClass="custom-tooltip"
+            matTooltipHideDelay="100"
+            class="text-overflow"
+          >
+            {{
+              data.shortDesc.length > 74
+                ? data.shortDesc.slice(0, 75) + "..."
+                : data.shortDesc
+            }}
+          </div>
         </div>
       </div>
     </div>
@@ -143,8 +175,19 @@
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>
           <span class="cName text-overflow">{{ data.cName }}</span>
-          <span class="text-overflow">{{ data.shortDesc }}</span>
-          <span class="text-overflow1">{{ data.longDesc }}</span>
+          <div
+            [matTooltip]="data.shortDesc"
+            matTooltipPosition="after"
+            matTooltipClass="custom-tooltip"
+            matTooltipHideDelay="100"
+            class="text-overflow"
+          >
+            {{
+              data.shortDesc.length > 74
+                ? data.shortDesc.slice(0, 75) + "..."
+                : data.shortDesc
+            }}
+          </div>
         </div>
       </div>
     </div>

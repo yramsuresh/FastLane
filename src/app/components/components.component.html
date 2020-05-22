@@ -1,60 +1,80 @@
 <div class="main-container1">
-  <div *ngIf="loading" class="load-spinner" fxLayout="row" fxLayoutAlign="center">
-    <img src="../assets/images/Ring-Preloader.gif" width="400"  alt="loading..."/>
+  <div
+    *ngIf="loading"
+    class="load-spinner"
+    fxLayout="row"
+    fxLayoutAlign="center"
+  >
+    <img
+      src="../assets/images/Ring-Preloader.gif"
+      width="400"
+      alt="loading..."
+    />
   </div>
   <div *ngIf="!loading">
-  <div
-    fxLayout="column"
-    fxLayoutAlign="space-around center"
-    class="search-wrapper"
-  >
-    <span class="searchHeader">What are you looking for?</span>
-    <!-- <input type="text" [(ngModel)]="comp" #ctrl="ngModel" /> -->
-    <mat-form-field appearance="outline">
-      <input
-        matInput
-        placeholder="Type here to search Components"
-        [(ngModel)]="comp"
-        #ctrl="ngModel"
-      />
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
-  </div>
-  <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
-    <h1 routerLink="/components">Components</h1>
-  </div>
-  <div
-    fxLayout="row"
-    fxLayout.xs="column"
-    fxLayoutGap.xs="10px"
-    fxLayoutAlign="start center"
-    fxLayoutAlign.xs="center center"
-    fxLayoutGap="15px"
-    class="flex-row"
-  >
     <div
-      (click)="navigate('components', data.id)"
-      class="tile"
-      *ngFor="let data of components | filter: comp"
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
+      class="search-wrapper"
     >
-      <img
-        src="{{ data.thumbnails }}"
-        alt="{{ data.thumbnails }}"
-        *ngIf="data.thumbnails !== ''"
-      />
-      <img
-        src="assets/images/thumbnails/components.png"
-        alt=""
-        *ngIf="data.thumbnails === ''"
-      />
-      <mat-divider></mat-divider>
-      <div class="content" fxLayout="column" fxLayoutGap="2px">
-        <span class="text-capitalize">{{ data.type }}</span>
-        <span class="cName text-overflow">{{ data.cName }}</span>
-        <span class="text-overflow">{{ data.shortDesc }}</span>
-        <span class="text-overflow1">{{ data.longDesc }}</span>
+      <span class="searchHeader">What are you looking for?</span>
+      <!-- <input type="text" [(ngModel)]="comp" #ctrl="ngModel" /> -->
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Type here to search Components"
+          [(ngModel)]="comp"
+          #ctrl="ngModel"
+        />
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="sub-head" fxLayout="row" fxLayoutAlign="space-between center">
+      <h1 routerLink="/components">Components</h1>
+    </div>
+    <div
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutGap.xs="10px"
+      fxLayoutAlign="start center"
+      fxLayoutAlign.xs="center center"
+      fxLayoutGap="15px"
+      class="flex-row"
+    >
+      <div
+        (click)="navigate('components', data.id)"
+        class="tile"
+        *ngFor="let data of components | filter: comp"
+      >
+        <img
+          src="{{ data.thumbnails }}"
+          alt="{{ data.thumbnails }}"
+          *ngIf="data.thumbnails !== ''"
+        />
+        <img
+          src="assets/images/thumbnails/components.png"
+          alt=""
+          *ngIf="data.thumbnails === ''"
+        />
+        <mat-divider></mat-divider>
+        <div class="content" fxLayout="column" fxLayoutGap="2px">
+          <span class="text-capitalize">{{ data.type }}</span>
+          <span class="cName text-overflow">{{ data.cName }}</span>
+          <div
+            [matTooltip]="data.shortDesc"
+            matTooltipPosition="below"
+            matTooltipClass="custom-tooltip"
+            matTooltipHideDelay="100"
+            class="text-overflow"
+          >
+            {{
+              data.shortDesc.length > 74
+                ? data.shortDesc.slice(0, 75) + "..."
+                : data.shortDesc
+            }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </div>
