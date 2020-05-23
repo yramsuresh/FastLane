@@ -10,7 +10,9 @@ export class SolutionsComponent implements OnInit {
   componentData: any;
   solutions: any;
   loading = true;
+  currentData: any;
   comp: any;
+  list: any;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -18,18 +20,15 @@ export class SolutionsComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
+      this.list = Object.keys(this.componentData);
       this.solutions = this.componentData.solutions;
-      this.loading = false
-    });
-  }
-  navigate(compType, tileId) {
-    this.router.navigate(['/details'], {
-      queryParams: { tile: tileId, compType: compType },
+      this.currentData = this.solutions;
+      this.loading = false;
     });
   }
 
   ngOnInit(): void {
-    this.loading = true
-    this.getComponentData()
+    this.loading = true;
+    this.getComponentData();
   }
 }

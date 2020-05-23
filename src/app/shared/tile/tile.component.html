@@ -1,0 +1,92 @@
+<div
+  *ngIf="type !== 'all'"
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  class="search-wrapper"
+>
+  <span class="searchHeader">What are you looking for?</span>
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      placeholder="Type here to search {{ title }}"
+      [(ngModel)]="comp"
+      #ctrl="ngModel"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>
+<div
+  class="sub-head"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  fxLayout.xs="row"
+  fxLayoutAlign.xs="space-between center"
+>
+  <!-- <h1>Components</h1> -->
+  <h1 class="text-capitalize">{{ title }}</h1>
+</div>
+<div *ngIf="components | filter: comp as result">
+  <div
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutGap.xs="10px"
+    fxLayoutAlign="start center"
+    fxLayoutAlign.xs="center center"
+    fxLayoutGap="15px"
+    class="flex-row"
+  >
+    <!-- {{ components.length }} -->
+
+    <div
+      (click)="navigate('components', data.id)"
+      *ngFor="let data of result; index as i"
+    >
+      <div class="tile" *ngIf="(type == 'all' && i < 8) || type != 'all'">
+        <img
+          src="{{ data.thumbnails }}"
+          alt="{{ data.thumbnails }}"
+          *ngIf="data.thumbnails !== ''"
+        />
+        <img
+          src="assets/images/thumbnails/components.png"
+          alt=""
+          *ngIf="data.thumbnails === ''"
+        />
+        <mat-divider></mat-divider>
+        <div class="content" fxLayout="column" fxLayoutGap="2px">
+          <span class="text-capitalize">{{ data.type }}</span>
+          <span class="cName text-overflow">{{ data.cName }}</span>
+          <div
+            [matTooltip]="data.shortDesc"
+            matTooltipPosition="below"
+            matTooltipClass="custom-tooltip"
+            matTooltipHideDelay="100"
+            class="text-overflow"
+          >
+            {{
+              data.shortDesc.length > 74
+                ? data.shortDesc.slice(0, 75) + "..."
+                : data.shortDesc
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!result.length">
+      No Match Found
+    </div>
+  </div>
+
+  <div
+    *ngIf="components.length === 0"
+    class="load-spinner"
+    fxLayout="row"
+    fxLayoutAlign="center"
+  >
+    <img
+      src="../assets/images/Ring-Preloader.gif"
+      width="400"
+      alt="loading..."
+    />
+  </div>
+</div>
