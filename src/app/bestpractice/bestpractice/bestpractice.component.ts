@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 export class BestpracticeComponent implements OnInit {
   componentData: any;
   bestPractices: any;
-  loading = true
-  comp: any;
+  loading = true;
+  currentData: any;
+  list: any;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -18,17 +19,15 @@ export class BestpracticeComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
+      this.list = Object.keys(this.componentData);
       this.bestPractices = this.componentData.bestPractices;
-      this.loading = false
+      this.currentData = this.bestPractices;
+      this.loading = false;
     });
   }
-  navigate(compType, tileId) {
-    this.router.navigate(['/details'], {
-      queryParams: { tile: tileId, compType: compType },
-    });
-  }
+
   ngOnInit(): void {
-    this.loading = true
-    this.getComponentData()
+    this.loading = true;
+    this.getComponentData();
   }
 }

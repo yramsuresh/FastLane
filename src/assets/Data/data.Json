@@ -39,7 +39,7 @@
                 "./assets/Data/ReusableComponents/FormInputControls/Images/FormInput1.png"
             ],
             "files": [{
-                "linkText": "Code",
+                "linkText": "Source Code",
                 "downloadable": "./assets/Data/ReusableComponents/FormInputControls/SelfDetailForm-master.zip"
             }],
             "type": "React",
@@ -57,7 +57,7 @@
                 "./assets/Data/ReusableComponents/Image Selector/Images/ImagePreviw.PNG"
             ],
             "files": [{
-                    "linkText": "Code",
+                    "linkText": "Source Code",
                     "downloadable": "./assets/Data/ReusableComponents/Image Selector/ImageSelection.7z"
                 },
                 {
@@ -89,7 +89,7 @@
                     "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearch_Component_Details.docx"
                 },
                 {
-                    "linkText": "code",
+                    "linkText": "Source Code",
                     "downloadable": "./assets/Data/ReusableComponents/VoiceSearch/VoiceSearchCode.zip"
                 }
             ],
@@ -115,7 +115,7 @@
                     "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice_command_recognition.docx"
                 },
                 {
-                    "linkText": "code",
+                    "linkText": "Source Code",
                     "downloadable": "./assets/Data/ReusableComponents/Voice Command/VoiceCommandRecognition.zip"
                 }
             ],
@@ -135,7 +135,7 @@
                 "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad2.png"
             ],
             "files": [{
-                "linkText": "Code",
+                "linkText": "Source Code",
                 "downloadable": "./assets/Data/ReusableComponents/SignaturePad/SignatureWritingPad-master.zip"
             }],
             "type": "React",
@@ -176,7 +176,7 @@
                     "downloadable": "InstantSearch-Component Details.docx"
                 },
                 {
-                    "linkText": "code",
+                    "linkText": "Source Code",
                     "downloadable": "InstantSearchCode.zip"
                 }
             ],
@@ -197,7 +197,7 @@
                     "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification_Component_Details.docx"
                 },
                 {
-                    "linkText": "code",
+                    "linkText": "Source Code",
                     "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification_POC.zip"
                 }
             ],
@@ -231,7 +231,7 @@
                     "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/Common Chart components.docx"
                 },
                 {
-                    "linkText": "code",
+                    "linkText": "Source Code",
                     "downloadable": "./assets/Data/ReusableComponents/Common Chart Components/CommonComponentPOC.zip"
                 }
             ],

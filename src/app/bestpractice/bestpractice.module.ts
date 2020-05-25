@@ -11,6 +11,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
@@ -24,15 +26,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    MatSidenavModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
     HttpClientModule,
-    FlexLayoutModule,
-    MatDividerModule,
-    Ng2SearchPipeModule,
-    FormsModule,
+    SharedModule,
   ],
   exports: [BestpracticeComponent],
 })

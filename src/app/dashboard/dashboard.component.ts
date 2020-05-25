@@ -13,7 +13,11 @@ export class DashboardComponent implements OnInit {
   bestPractices: any;
   loading = true;
   comp: any;
-
+  list: any;
+  ifComponents = true;
+  ifSolutions = true;
+  ifBestPractices = true;
+  searchValue: string;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -22,6 +26,8 @@ export class DashboardComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
+      this.list = Object.keys(this.componentData);
+      console.log(this.componentData);
       this.components = this.componentData.components;
       this.solutions = this.componentData.solutions;
       this.bestPractices = this.componentData.bestPractices;
@@ -36,6 +42,6 @@ export class DashboardComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loading = true;
-    this.getComponentData()
+    this.getComponentData();
   }
 }
