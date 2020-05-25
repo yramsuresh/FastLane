@@ -53,23 +53,23 @@
             "shortDesc": "This component provides image selection",
             "longDesc": "This component provides list of images with scroll, initially the first image is selected and shown in larger box. When we click on larger image there is an image preview on full screen. We can click on images below and it will be selected and displayed in larger box. The selected image has border around it",
             "images": [
-                "./assets/Data/ReusableComponents/ImageSelector/Images/ImageSelector.PNG",
-                "./assets/Data/ReusableComponents/ImageSelector/Images/ImagePreviw.PNG"
+                "./assets/Data/ReusableComponents/Image Selector/Images/ImageSelector.PNG",
+                "./assets/Data/ReusableComponents/Image Selector/Images/ImagePreviw.PNG"
             ],
             "files": [{
                     "linkText": "Code",
-                    "downloadable": "./assets/Data/ReusableComponents/ImageSelector/ImageSelection.7z"
+                    "downloadable": "./assets/Data/ReusableComponents/Image Selector/ImageSelection.7z"
                 },
                 {
                     "linkText": "Usage Document",
-                    "downloadable": "./assets/Data/ReusableComponents/ImageSelector/ImageSelector.docx"
+                    "downloadable": "./assets/Data/ReusableComponents/Image Selector/ImageSelector.docx"
                 }
             ],
             "type": "Angular",
             "size": "",
             "lastUpdatedOn": "22 May 2020",
             "contributors": ["Krutika Shekhar"],
-            "thumbnails": "./assets/Data/ReusableComponents/ImageSelector/Images/ImageSelector.PNG"
+            "thumbnails": "./assets/Data/ReusableComponents/Image Selector/Images/ImageSelector.PNG"
         },
         {
             "cName": "Voice Search",

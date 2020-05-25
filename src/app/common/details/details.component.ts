@@ -71,7 +71,8 @@ export class DetailsComponent implements OnInit {
     this.dialog.open(ImagedialogComponent, {
       data: {
         img: this.selectedImgPath
-      }
+      },
+      width: '1100px'
     });
   }
 }
