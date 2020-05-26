@@ -14,7 +14,7 @@ const routes: Routes = [
       import('./solutions/solutions.module').then((m) => m.SolutionsModule),
   },
   {
-    path: 'bestpractice',
+    path: 'bestPractices',
     loadChildren: () =>
       import('./bestpractice/bestpractice.module').then(
         (m) => m.BestpracticeModule

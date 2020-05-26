@@ -22,15 +22,19 @@ export class DetailsComponent implements OnInit {
   constructor(
     private componentservices: ComponentServicesService,
     private activatedRoute: ActivatedRoute,
-    iconRegistry: MatIconRegistry, sanitizer: DomSanitizer,
-    private location: Location, public dialog: MatDialog
+    iconRegistry: MatIconRegistry,
+    sanitizer: DomSanitizer,
+    private location: Location,
+    public dialog: MatDialog
   ) {
     iconRegistry.addSvgIcon(
       'arrow-back',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow_back.svg')),
+      sanitizer.bypassSecurityTrustResourceUrl('assets/images/arrow_back.svg')
+    ),
       iconRegistry.addSvgIcon(
         'close',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/images/close.svg'));
+        sanitizer.bypassSecurityTrustResourceUrl('assets/images/close.svg')
+      );
   }
 
   getComponentData() {
@@ -44,7 +48,7 @@ export class DetailsComponent implements OnInit {
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });
-      if(this.detailobject && this.detailobject.images.length > 0) {
+      if (this.detailobject && this.detailobject.images.length > 0) {
         this.selectedImgPath = this.detailobject.images[0];
         this.selectedImgIndex = 0;
       }
@@ -53,7 +57,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((params) => {
       this.tileId = params.tile;
-      this.compType= params.compType;
+      this.compType = params.compType;
     });
     this.getComponentData();
   }
@@ -70,8 +74,8 @@ export class DetailsComponent implements OnInit {
   openPreviewImgDialog() {
     this.dialog.open(ImagedialogComponent, {
       data: {
-        img: this.selectedImgPath
-      }
+        img: this.selectedImgPath,
+      },
     });
   }
 }
