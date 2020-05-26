@@ -20,6 +20,7 @@ export class TileComponent implements OnInit, OnChanges {
   loading = true;
   components: any;
   comp: any;
+  rlink: any;
   constructor(private router: Router) {}
 
   ngOnInit(): void {
@@ -37,7 +38,10 @@ export class TileComponent implements OnInit, OnChanges {
       this.comp = this.searchValue;
     }
   }
-
+  getLink(pathtitle) {
+    this.rlink = pathtitle;
+    this.router.navigate(['/', this.rlink]);
+  }
   navigate(compType, tileId) {
     this.router.navigate(['/details'], {
       queryParams: { tile: tileId, compType: compType },
