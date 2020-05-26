@@ -58,17 +58,16 @@
           <span class="text-capitalize">{{ data.type }}</span>
           <span class="cName text-overflow">{{ data.cName }}</span>
           <div
-            [matTooltip]="data.shortDesc"
-            matTooltipPosition="below"
-            matTooltipClass="custom-tooltip"
-            matTooltipHideDelay="100"
-            class="text-overflow"
+            class="text-overflow title-tooltip-wrapper"
           >
             {{
               data.shortDesc.length > 74
                 ? data.shortDesc.slice(0, 75) + "..."
                 : data.shortDesc
             }}
+            <div class="title-tooltip"> 
+              {{data.shortDesc}}
+            </div>
           </div>
         </div>
       </div>
