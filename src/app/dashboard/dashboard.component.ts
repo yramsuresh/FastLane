@@ -35,11 +35,6 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  navigate(compType, tileId) {
-    this.router.navigate(['/details'], {
-      queryParams: { tile: tileId, compType: compType },
-    });
-  }
   ngOnInit(): void {
     this.loading = true;
     this.getComponentData();

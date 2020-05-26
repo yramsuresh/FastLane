@@ -39,7 +39,7 @@
     <!-- {{ components.length }} -->
 
     <div
-      (click)="navigate('components', data.id)"
+      (click)="navigate(title, data.id)"
       *ngFor="let data of result; index as i"
     >
       <div class="tile" *ngIf="(type == 'all' && i < 8) || type != 'all'">
@@ -57,16 +57,14 @@
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>
           <span class="cName text-overflow">{{ data.cName }}</span>
-          <div
-            class="text-overflow title-tooltip-wrapper"
-          >
+          <div class="text-overflow title-tooltip-wrapper">
             {{
               data.shortDesc.length > 74
                 ? data.shortDesc.slice(0, 75) + "..."
                 : data.shortDesc
             }}
-            <div class="title-tooltip"> 
-              {{data.shortDesc}}
+            <div class="title-tooltip">
+              {{ data.shortDesc }}
             </div>
           </div>
         </div>
