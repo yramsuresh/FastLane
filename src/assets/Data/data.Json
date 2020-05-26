@@ -54,7 +54,7 @@
             "longDesc": "This component provides list of images with scroll, initially the first image is selected and shown in larger box. When we click on larger image there is an image preview on full screen. We can click on images below and it will be selected and displayed in larger box. The selected image has border around it",
             "images": [
                 "./assets/Data/ReusableComponents/Image Selector/Images/ImageSelector.PNG",
-                "./assets/Data/ReusableComponents/Image Selector/Images/ImagePreviw.PNG"
+                "./assets/Data/ReusableComponents/Image Selector/Images/ImagePreview.PNG"
             ],
             "files": [{
                     "linkText": "Source Code",
@@ -173,11 +173,11 @@
             "images": [],
             "files": [{
                     "linkText": "Usage Document",
-                    "downloadable": "InstantSearch-Component Details.docx"
+                    "downloadable": "./assets/Data/ReusableComponents/InstantSearch/InstantSearch-Component Details.docx"
                 },
                 {
                     "linkText": "Source Code",
-                    "downloadable": "InstantSearchCode.zip"
+                    "downloadable": "./assets/Data/ReusableComponents/InstantSearch/InstantSearchCode.zip"
                 }
             ],
             "type": "angular",
