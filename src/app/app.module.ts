@@ -51,5 +51,6 @@ import { ImagedialogComponent } from './common/imagedialog/imagedialog.component
   ],
   providers: [ComponentServicesService],
   bootstrap: [AppComponent],
+  entryComponents: [ImagedialogComponent]
 })
 export class AppModule {}

@@ -76,6 +76,7 @@ export class DetailsComponent implements OnInit {
       data: {
         img: this.selectedImgPath,
       },
+      width: '1100px',
     });
   }
 }
