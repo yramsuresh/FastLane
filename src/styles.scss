@@ -109,3 +109,38 @@ mat-form-field {
 .text-capitalize {
   text-transform: capitalize;
 }
+.title-tooltip-wrapper
+{
+  position: relative;
+  &:hover{
+    .title-tooltip
+    {
+      display: block;
+    }
+  }
+  .title-tooltip
+  {
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 10px;
+    line-height: 23px;
+    border-radius: 5px;
+    font-size: 17px;
+    position: absolute;
+    top: -90px;
+    // display: none;
+    &:before{
+      content: '/';
+      position: absolute;
+      bottom: -10px;
+      left: 3px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 999;
+      left: 0px;
+      border-width: 10px 10px 0 10px;
+      border-color: rgba(0,0,0,0.8) transparent transparent transparent;
+    }
+  }
+}
