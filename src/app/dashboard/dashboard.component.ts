@@ -12,12 +12,16 @@ export class DashboardComponent implements OnInit {
   solutions: any;
   bestPractices: any;
   loading = true;
+  imageUrl: any;
   comp: any;
   list: any;
   ifComponents = true;
   ifSolutions = true;
   ifBestPractices = true;
   searchValue: string;
+  compimages = 'assets/images/thumbnails/components.png';
+  solimages = 'assets/images/thumbnails/solutions.png';
+  bestimages = 'assets/images/thumbnails/bestPractices.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router

@@ -48,11 +48,7 @@
           alt="{{ data.thumbnails }}"
           *ngIf="data.thumbnails !== ''"
         />
-        <img
-          src="assets/images/thumbnails/components.png"
-          alt=""
-          *ngIf="data.thumbnails === ''"
-        />
+        <img src="{{ imageUrl }}" alt="" *ngIf="data.thumbnails === ''" />
         <mat-divider></mat-divider>
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>
@@ -64,7 +60,7 @@
                 : data.shortDesc
             }}
             <div class="title-tooltip">
-              {{ data.shortDesc }}
+              {{ data.longDesc }}
             </div>
           </div>
         </div>

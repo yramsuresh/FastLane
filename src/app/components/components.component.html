@@ -12,6 +12,11 @@
     />
   </div>
   <div *ngIf="!loading">
-    <tile *ngIf="currentData" [title]="list[0]" [compData]="currentData"></tile>
+    <tile
+      *ngIf="currentData"
+      [title]="list[0]"
+      [compData]="currentData"
+      [imageUrl]="compimages"
+    ></tile>
   </div>
 </div>

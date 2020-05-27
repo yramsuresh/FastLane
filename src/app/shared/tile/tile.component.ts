@@ -17,6 +17,7 @@ export class TileComponent implements OnInit, OnChanges {
   @Input() title: any;
   @Input() type: string;
   @Input() searchValue: any;
+  @Input() imageUrl: any;
   loading = true;
   components: any;
   comp: any;
@@ -25,6 +26,7 @@ export class TileComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.loading = false;
+    this.imageUrl = this.imageUrl;
     this.components = this.compData;
     this.title = this.title;
     console.log(this.type);

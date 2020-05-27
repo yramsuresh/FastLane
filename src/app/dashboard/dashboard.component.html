@@ -34,6 +34,7 @@
       [type]="'all'"
       [compData]="components"
       [searchValue]="searchValue"
+      [imageUrl]="compimages"
     ></tile>
     <tile
       *ngIf="solutions && ifSolutions === true"
@@ -41,6 +42,7 @@
       [type]="'all'"
       [compData]="solutions"
       [searchValue]="searchValue"
+      [imageUrl]="solimages"
     ></tile>
     <tile
       *ngIf="bestPractices && ifBestPractices === true"
@@ -48,6 +50,7 @@
       [title]="list[2]"
       [compData]="bestPractices"
       [searchValue]="searchValue"
+      [imageUrl]="bestimages"
     ></tile>
   </div>
 </div>

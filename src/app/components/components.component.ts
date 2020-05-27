@@ -14,6 +14,7 @@ export class ComponentsComponent implements OnInit {
   comp: any;
   currentData: any;
   list: any;
+  compimages = 'assets/images/thumbnails/components.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router

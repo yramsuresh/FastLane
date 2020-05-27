@@ -12,6 +12,7 @@ export class BestpracticeComponent implements OnInit {
   loading = true;
   currentData: any;
   list: any;
+  bestimages = 'assets/images/thumbnails/bestPractices.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router

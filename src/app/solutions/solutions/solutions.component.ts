@@ -13,6 +13,7 @@ export class SolutionsComponent implements OnInit {
   currentData: any;
   comp: any;
   list: any;
+  solimages = 'assets/images/thumbnails/solutions.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
