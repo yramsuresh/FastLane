@@ -155,28 +155,6 @@
       "thumbnails": "./assets/Data/ReusableComponents/SignaturePad/Images/SignPad1.png"
     },
     {
-      "cName": "Charts - D3 Bar Chart",
-      "id": 1,
-      "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
-      "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
-      "images": [],
-      "files": [
-        {
-          "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3BarChart.docx"
-        },
-        {
-          "linkText": "Source Code",
-          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3-charts.zip"
-        }
-      ],
-      "type": "react",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Akhil Thakur"],
-      "thumbnails": ""
-    },
-    {
       "cName": "Instant Table Search",
       "id": 3,
       "shortDesc": "This component provides auto search with the help of an online API",
@@ -221,19 +199,6 @@
       "thumbnails": ""
     },
     {
-      "cName": "Export Table to excel",
-      "id": 7,
-      "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
-      "longDesc": "This is a javascript library which helps the user to export data displayed in a table to be exported and shared with other people. Unlike other libraries it tries to maintain the same styling, grouping and thus maintaining the usability aspect ",
-      "images": [],
-      "files": [],
-      "type": "javascript",
-      "size": "",
-      "lastUpdatedOn": "15 May 2020",
-      "contributors": ["Lipsa Champatiroy"],
-      "thumbnails": ""
-    },
-    {
       "cName": "Chart Component & Generate PDF",
       "id": 16,
       "shortDesc": "This component provides us with reusable charts(Bar, line, donut, pie) created using D3 and capability to export to PDF",
@@ -253,6 +218,155 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": [""],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Charts - D3 Bar Chart",
+      "id": 1,
+      "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
+      "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
+      "images": [],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3BarChart.docx"
+        },
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/D3-Chart/D3-charts.zip"
+        }
+      ],
+      "type": "react",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Akhil Thakur"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Export Table to excel",
+      "id": 7,
+      "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
+      "longDesc": "This is a javascript library which helps the user to export data displayed in a table to be exported and shared with other people. Unlike other libraries it tries to maintain the same styling, grouping and thus maintaining the usability aspect ",
+      "images": [],
+      "files": [],
+      "type": "javascript",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Lipsa Champatiroy"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Map Component",
+      "id": 21,
+      "shortDesc": "Integrate google Map component and get all the map featues instantly",
+      "longDesc": "This component utilises Google Maps API which can be used to get the location, routes, Point of Interest instantly without much to code",
+      "images": [
+        "./assets/Data/ReusableComponents/Maps/Images/Maps_1.png",
+        "./assets/Data/ReusableComponents/Maps/Images/Maps_2.png",
+        "./assets/Data/ReusableComponents/Maps/Images/Maps_3.png"
+      ],
+      "files": [],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Reshma DAlmeida"],
+      "thumbnails": "./assets/Data/ReusableComponents/Maps/Images/Maps_1.png"
+    },
+    {
+      "cName": "Feedback Form",
+      "id": 22,
+      "shortDesc": "Component for quickly getting customer feedback",
+      "longDesc": "This component will provide the developer with a feedback component which will have option to get teh feedback as well as to get the star ratings from the user",
+      "images": [
+      ],
+      "files": [],
+      "type": "react",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Nagasai Komal"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Dynamic Side Menu Component in Ionic",
+      "id": 23,
+      "shortDesc": "Creation of Dynamic Side Menu Angular Component using angular service inside Ionic Framework",
+      "longDesc": "Creation of Dynamic Side Menu Angular Component using angular service inside Ionic Framework, this component will fetch the data from JSON file and display in Side Menu.",
+      "images": ["./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_1.png", "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_2.png", "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_3.png"],
+      "files": [],
+      "type": "ionic",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Harsh Tiwari"],
+      "thumbnails": "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_1.png"
+    },
+    {
+      "cName": "Dynamic Table ",
+      "id": 24,
+      "shortDesc": "Dynamic table with functionality of searching, pagination and sorting",
+      "longDesc": "Dynamic table component developed using React which has functionality for searching, sorting and pagination",
+      "images": [
+      ],
+      "files": [],
+      "type": "react",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Rahul Kumar"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "File Upload Custom Control",
+      "id": 25,
+      "shortDesc": "Upload mulitple files with drag/drop feature",
+      "longDesc": "This supports the following features 1.It supports single and multiple file upload 2.It gives uploaded file detail list that support delete feature 3.It  support progress bar with uploaded file size with file upload 4.It support drag and drop feature",
+      "images": [
+      ],
+      "files": [],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Anamika Shrivastava"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Drag & Drop Directive",
+      "id": 26,
+      "shortDesc": "This directive is usable for any html element with input and output event support",
+      "longDesc": "This directive is usable for any html element with input and output event support",
+      "images": [
+      ],
+      "files": [],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Anamika Shrivastava"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Custom Sort Pipe",
+      "id": 27,
+      "shortDesc": "This Pipe sort array with any given property",
+      "longDesc": "This Pipe sort array with any given property",
+      "images": [
+      ],
+      "files": [],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Anamika Shrivastava"],
+      "thumbnails": ""
+    },
+    {
+      "cName": "Subscription Sink Class",
+      "id": 28,
+      "shortDesc": "This class is useful to release memory on component destroy",
+      "longDesc": "We need to import the class , create the instance and add all subscription to the subscription list",
+      "images": [
+      ],
+      "files": [],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Anamika Shrivastava"],
       "thumbnails": ""
     }
   ],
@@ -349,6 +463,27 @@
     }
   ],
   "bestPractices": [
+    {
+      "cName": "Rapid Assessment Tool",
+      "id": 29,
+      "shortDesc": "Tool to assess the customer readiness with respect to the requirements",
+      "longDesc": "This tool will be used by the Solution Architect/ PM / Project Lead to gauge customers current position and future aspiration with respect to the project. There are various points on which a customer is assessed and a final output in a form of Chart is presented to the customer",
+      "images": [
+        "./assets/Data/BestPractices/Rapid Assessment Tool/Images/RAT_1.png",
+        "./assets/Data/BestPractices/Rapid Assessment Tool/Images/RAT_2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Guideline",
+          "downloadable": "./assets/Data/BestPractices/Rapid Assessment Tool/FED Rapid Assessment Tool.xlsx"
+        }
+      ],
+      "type": "Excel",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Ismail Shaikh"],
+      "thumbnails": "./assets/Data/BestPractices/Rapid Assessment Tool/Images/RAT_1.png"
+    },
     {
       "cName": "Angular Code Review Checklist",
       "id": 12,
