@@ -14,7 +14,7 @@
   <div *ngIf="!loading">
     <tile
       *ngIf="currentData"
-      title="Best Practices And Guidelines"
+      [title]="list[2]"
       [compData]="currentData"
       [imageUrl]="bestimages"
     ></tile>

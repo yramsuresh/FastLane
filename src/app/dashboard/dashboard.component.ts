@@ -13,7 +13,6 @@ export class DashboardComponent implements OnInit {
   bestPractices: any;
   loading = true;
   imageUrl: any;
-  bestTitle= "Best Practices and Guidelines";
   comp: any;
   list: any;
   ifComponents = true;

@@ -23,7 +23,7 @@
   fxLayoutAlign.xs="space-between center"
 >
   <!-- <h1>Components</h1> -->
-  <h1 class="text-capitalize">{{ title }}</h1>
+  <h1 class="text-capitalize">{{ title==="bestPractices"? 'Best Practices And Guidelines': title }} </h1>
   <a *ngIf="type == 'all'" (click)="getLink(title)">See All</a>
 </div>
 <div *ngIf="components | filter: comp as result">
