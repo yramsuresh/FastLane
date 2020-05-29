@@ -159,7 +159,7 @@
       "id": 3,
       "shortDesc": "This component provides auto search with the help of an online API",
       "longDesc": "Instant Search app presents an auto suggest kind of component to the user where he/she types some alphabets as search string and the app hits an online API to come up with the suggestions. On initial load, we are showing all the data. When user selects an option out of the suggestions, the app shows the desired filtered data. User can select multiple options as well. We have given option to remove any of the search options as well. ",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch2.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch3.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch4.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch5.png"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -174,14 +174,14 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ritu Mahajan", "Ashlesha Panse"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png"
     },
     {
       "cName": "Push Notification",
       "id": 4,
       "shortDesc": "This components uses Angular and .Net Core Backend service to send-receive push notifications",
       "longDesc": "Uses service worker Angular service and a .Net Core backend service to send-receive the push notifications. The notification channels are subscribed to from the front-end Angular application. The given channels are then broadcasted with required notifications (controlled via any user defined custom logic) from the backend .Net Core server. ",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/PushNotifications/Images/Push_Notification.jpg"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -196,14 +196,14 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Omkar Ghaisas", ""],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/PushNotifications/Images/Push_Notification.jpg"
     },
     {
       "cName": "Chart Component & Generate PDF",
       "id": 16,
       "shortDesc": "This component provides us with reusable charts(Bar, line, donut, pie) created using D3 and capability to export to PDF",
       "longDesc": "Common chart components which are implemented using d3.js. This library provide Bar, Pie, Line and donut charts. This also extracts the chart in PDF format for sharing",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/Common Chart Components/Images/ECTCPCModel.jpg"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -218,14 +218,14 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": [""],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/Common Chart Components/Images/ECTCPCModel.jpg"
     },
     {
       "cName": "Charts - D3 Bar Chart",
       "id": 1,
       "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
       "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/D3-Chart/Images/bar_chart1.jpg"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -240,20 +240,20 @@
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Akhil Thakur"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/D3-Chart/Images/bar_chart1.jpg"
     },
     {
       "cName": "Export Table to excel",
       "id": 7,
       "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
       "longDesc": "This is a javascript library which helps the user to export data displayed in a table to be exported and shared with other people. Unlike other libraries it tries to maintain the same styling, grouping and thus maintaining the usability aspect ",
-      "images": [],
+      "images": ["./assets/Data/ReusableComponents/Export Table to excel/Images/table-excel-button.jpg"],
       "files": [],
       "type": "javascript",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Lipsa Champatiroy"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/Export Table to excel/Images/table-excel-button.jpg"
     },
     {
       "cName": "Map Component",
@@ -277,14 +277,13 @@
       "id": 22,
       "shortDesc": "Component for quickly getting customer feedback",
       "longDesc": "This component will provide the developer with a feedback component which will have option to get teh feedback as well as to get the star ratings from the user",
-      "images": [
-      ],
+      "images": ["./assets/Data/ReusableComponents/Feedback Form/Images/feedback-form.png"],
       "files": [],
       "type": "react",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Nagasai Komal"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/Feedback Form/Images/feedback-form.png"
     },
     {
       "cName": "Dynamic Side Menu Component in Ionic",
@@ -326,56 +325,52 @@
       "id": 25,
       "shortDesc": "Upload mulitple files with drag/drop feature",
       "longDesc": "This supports the following features 1.It supports single and multiple file upload 2.It gives uploaded file detail list that support delete feature 3.It  support progress bar with uploaded file size with file upload 4.It support drag and drop feature",
-      "images": [
-      ],
+      "images": ["./assets/Data/ReusableComponents/File Upload Custom Control/Images/firCC.png"],
       "files": [],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Anamika Shrivastava"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/File Upload Custom Control/Images/firCC.png"
     },
     {
       "cName": "Drag & Drop Directive",
       "id": 26,
       "shortDesc": "This directive is usable for any html element with input and output event support",
       "longDesc": "This directive is usable for any html element with input and output event support",
-      "images": [
-      ],
+      "images": ["./assets/Data/ReusableComponents/Drag & Drop Directive/Images/Drag & Drop Directive.png"],
       "files": [],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Anamika Shrivastava"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/Drag & Drop Directive/Images/Drag & Drop Directive.png"
     },
     {
       "cName": "Custom Sort Pipe",
       "id": 27,
       "shortDesc": "This Pipe sort array with any given property",
       "longDesc": "This Pipe sort array with any given property",
-      "images": [
-      ],
+      "images": ["./assets/Data/ReusableComponents/angular-custom-pipe/Images/angular-custom-pipe.png"],
       "files": [],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Anamika Shrivastava"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/angular-custom-pipe/Images/angular-custom-pipe.png"
     },
     {
       "cName": "Subscription Sink Class",
       "id": 28,
       "shortDesc": "This class is useful to release memory on component destroy",
       "longDesc": "We need to import the class , create the instance and add all subscription to the subscription list",
-      "images": [
-      ],
+      "images": ["./assets/Data/ReusableComponents/subscription_sink/Images/subscription_sink.png"],
       "files": [],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Anamika Shrivastava"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/subscription_sink/Images/subscription_sink.png"
     }
   ],
   "solutions": [
