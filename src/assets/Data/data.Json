@@ -185,7 +185,7 @@
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification_Component_Details.docx"
+          "downloadable": "./assets/Data/ReusableComponents/PushNotifications/Push_Notification _Component_Details.docx"
         },
         {
           "linkText": "Source Code",
@@ -304,14 +304,22 @@
       "id": 24,
       "shortDesc": "Dynamic table with functionality of searching, pagination and sorting",
       "longDesc": "Dynamic table component developed using React which has functionality for searching, sorting and pagination",
-      "images": [
+      "images": ["./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_1.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_2.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_3.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_4.PNG"],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/DynamicTable/App_Usage_Document.docx"
+        },
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/DynamicTable/Dynamic-Table.zip"
+        }
       ],
-      "files": [],
       "type": "react",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Rahul Kumar"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_1.PNG"
     },
     {
       "cName": "File Upload Custom Control",
