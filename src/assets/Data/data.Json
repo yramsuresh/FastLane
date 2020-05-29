@@ -379,90 +379,90 @@
       "id": 8,
       "shortDesc": "Encrypt the connection string for database",
       "longDesc": "Encrypt the connection string for database",
-      "images": [],
+      "images": ["./assets/Data/Solutions/Encrypting the connection string/Images/encryption.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/Solutions/Encrypting_the_Connection_String.docx"
+          "downloadable": "./assets/Data/Solutions/Encrypting the connection string/Encrypting_the_Connection_String.docx"
         }
       ],
       "type": ".Net",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Vinod Gupta"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/Solutions/Encrypting the connection string/Images/encryption.png"
     },
     {
       "cName": "Exception Handling, Logging and Analytics tool",
       "id": 9,
       "shortDesc": "Exception Handling, Logging and Analytics tool",
       "longDesc": "This document explains how to handle exceptions in you Web API code and how to use Splunk for logging & analytics",
-      "images": [],
+      "images": ["./assets/Data/Solutions/Exception Handling, Logging and Analytics tool/Images/Exception_Handling.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/Solutions/Exception Handling, Logging and Analytics tools.docx"
+          "downloadable": "./assets/Data/Solutions/Exception Handling, Logging and Analytics tool/Exception Handling, Logging and Analytics tools.docx"
         }
       ],
       "type": ".Net",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ismail Shaikh"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/Solutions/Exception Handling, Logging and Analytics tool/Images/Exception_Handling.png"
     },
     {
       "cName": "Input Data Sanitization",
       "id": 10,
       "shortDesc": "Sanitizes input data using Regex",
       "longDesc": "Validate a model is by using Data Annotations. It has a set of attributes and classes defined in the System.ComponentModel.DataAnnotations assembly. Data Annotations allow us to decorate model classes with metadata. This metadata describes a set of rules that are used to validate a property. ",
-      "images": [],
+      "images": ["./assets/Data/Solutions/Input Data Sanitization/Images/sanitization.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/Solutions/Input Data Sanitization using Regex.docx"
+          "downloadable": "./assets/Data/Solutions/Input Data Sanitization/Input Data Sanitization using Regex.docx"
         }
       ],
       "type": ".Net",
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Vinod Gupta"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/Solutions/Input Data Sanitization/Images/sanitization.png"
     },
     {
       "cName": "SEO Implementation",
       "id": 11,
       "shortDesc": "Integrate SEO in Angular",
       "longDesc": "Search engine optimization (SEO) is the process of affecting the online visibility of a website or a web page in a web search engine's unpaid results. This document explains how we integrater Angular Universal to support SEO",
-      "images": [],
+      "images": ["./assets/Data/Solutions/SEO Implementation/Images/SEO-Banner-2.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/Solutions/SEO Document.docx"
+          "downloadable": "./assets/Data/Solutions/SEO Implementation/SEO Document.docx"
         }
       ],
       "type": "Angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Sheetal Shinde"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/Solutions/SEO Implementation/Images/SEO-Banner-2.png"
     },
     {
       "cName": "JWT Implementation in .Net",
       "id": 19,
       "shortDesc": "How to implement JWT token handling in .Net",
       "longDesc": "This document lists down the steps requried to be implemented while integrating JWT in .Net",
-      "images": [],
+      "images": ["./assets/Data/Solutions/JWT Implementation in .Net/Images/jwt-authentication-1.png"],
       "files": [
         {
           "linkText": "Usage Document",
-          "downloadable": "./assets/Data/Solutions/JWT with RS256 httponly-secure cookie with nonce in jti.docx"
+          "downloadable": "./assets/Data/Solutions/JWT Implementation in .Net/JWT with RS256 httponly-secure cookie with nonce in jti.docx"
         }
       ],
       "type": ".Net",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Omkar Ghaisas"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/Solutions/JWT Implementation in .Net/Images/jwt-authentication-1.png"
     }
   ],
   "bestPractices": [
