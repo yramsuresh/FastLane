@@ -159,7 +159,13 @@
       "id": 3,
       "shortDesc": "This component provides auto search with the help of an online API",
       "longDesc": "Instant Search app presents an auto suggest kind of component to the user where he/she types some alphabets as search string and the app hits an online API to come up with the suggestions. On initial load, we are showing all the data. When user selects an option out of the suggestions, the app shows the desired filtered data. User can select multiple options as well. We have given option to remove any of the search options as well. ",
-      "images": ["./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch2.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch3.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch4.png", "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch5.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch1.png",
+        "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch2.png",
+        "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch3.png",
+        "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch4.png",
+        "./assets/Data/ReusableComponents/InstantSearch/Images/InstantSearch5.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -181,7 +187,9 @@
       "id": 4,
       "shortDesc": "This components uses Angular and .Net Core Backend service to send-receive push notifications",
       "longDesc": "Uses service worker Angular service and a .Net Core backend service to send-receive the push notifications. The notification channels are subscribed to from the front-end Angular application. The given channels are then broadcasted with required notifications (controlled via any user defined custom logic) from the backend .Net Core server. ",
-      "images": ["./assets/Data/ReusableComponents/PushNotifications/Images/Push_Notification.jpg"],
+      "images": [
+        "./assets/Data/ReusableComponents/PushNotifications/Images/Push_Notification.jpg"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -203,7 +211,9 @@
       "id": 16,
       "shortDesc": "This component provides us with reusable charts(Bar, line, donut, pie) created using D3 and capability to export to PDF",
       "longDesc": "Common chart components which are implemented using d3.js. This library provide Bar, Pie, Line and donut charts. This also extracts the chart in PDF format for sharing",
-      "images": ["./assets/Data/ReusableComponents/Common Chart Components/Images/ECTCPCModel.jpg"],
+      "images": [
+        "./assets/Data/ReusableComponents/Common Chart Components/Images/ECTCPCModel.jpg"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -225,7 +235,9 @@
       "id": 1,
       "shortDesc": "Reusable Bar, Stacked Bar Charts created using D3 Library",
       "longDesc": "This component is created using D3 library. It helps the developer to create simple bar charts (vertical & Horizontal) and Stacked Bar charts. This library takes data in a specific format and displays the chart to the user",
-      "images": ["./assets/Data/ReusableComponents/D3-Chart/Images/bar_chart1.jpg"],
+      "images": [
+        "./assets/Data/ReusableComponents/D3-Chart/Images/bar_chart1.jpg"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -247,7 +259,9 @@
       "id": 7,
       "shortDesc": "This components to export data displayed on a table to an excel keeping the formatting as is",
       "longDesc": "This is a javascript library which helps the user to export data displayed in a table to be exported and shared with other people. Unlike other libraries it tries to maintain the same styling, grouping and thus maintaining the usability aspect ",
-      "images": ["./assets/Data/ReusableComponents/Export Table to excel/Images/table-excel-button.jpg"],
+      "images": [
+        "./assets/Data/ReusableComponents/Export Table to excel/Images/table-excel-button.jpg"
+      ],
       "files": [],
       "type": "javascript",
       "size": "",
@@ -277,7 +291,9 @@
       "id": 22,
       "shortDesc": "Component for quickly getting customer feedback",
       "longDesc": "This component will provide the developer with a feedback component which will have option to get teh feedback as well as to get the star ratings from the user",
-      "images": ["./assets/Data/ReusableComponents/Feedback Form/Images/feedback-form.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/Feedback Form/Images/feedback-form.png"
+      ],
       "files": [],
       "type": "react",
       "size": "",
@@ -290,7 +306,11 @@
       "id": 23,
       "shortDesc": "Creation of Dynamic Side Menu Angular Component using angular service inside Ionic Framework",
       "longDesc": "Creation of Dynamic Side Menu Angular Component using angular service inside Ionic Framework, this component will fetch the data from JSON file and display in Side Menu.",
-      "images": ["./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_1.png", "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_2.png", "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_3.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_1.png",
+        "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_2.png",
+        "./assets/Data/ReusableComponents/DynamicSideMenuComponentIonic/Images/ionic_3.png"
+      ],
       "files": [],
       "type": "ionic",
       "size": "",
@@ -303,7 +323,12 @@
       "id": 24,
       "shortDesc": "Dynamic table with functionality of searching, pagination and sorting",
       "longDesc": "Dynamic table component developed using React which has functionality for searching, sorting and pagination",
-      "images": ["./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_1.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_2.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_3.PNG", "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_4.PNG"],
+      "images": [
+        "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_1.PNG",
+        "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_2.PNG",
+        "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_3.PNG",
+        "./assets/Data/ReusableComponents/DynamicTable/Images/dyanim_table_4.PNG"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -325,7 +350,9 @@
       "id": 25,
       "shortDesc": "Upload mulitple files with drag/drop feature",
       "longDesc": "This supports the following features 1.It supports single and multiple file upload 2.It gives uploaded file detail list that support delete feature 3.It  support progress bar with uploaded file size with file upload 4.It support drag and drop feature",
-      "images": ["./assets/Data/ReusableComponents/File Upload Custom Control/Images/firCC.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/File Upload Custom Control/Images/firCC.png"
+      ],
       "files": [],
       "type": "angular",
       "size": "",
@@ -338,7 +365,9 @@
       "id": 26,
       "shortDesc": "This directive is usable for any html element with input and output event support",
       "longDesc": "This directive is usable for any html element with input and output event support",
-      "images": ["./assets/Data/ReusableComponents/Drag & Drop Directive/Images/Drag & Drop Directive.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/Drag & Drop Directive/Images/Drag & Drop Directive.png"
+      ],
       "files": [],
       "type": "angular",
       "size": "",
@@ -351,7 +380,9 @@
       "id": 27,
       "shortDesc": "This Pipe sort array with any given property",
       "longDesc": "This Pipe sort array with any given property",
-      "images": ["./assets/Data/ReusableComponents/angular-custom-pipe/Images/angular-custom-pipe.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/angular-custom-pipe/Images/angular-custom-pipe.png"
+      ],
       "files": [],
       "type": "angular",
       "size": "",
@@ -364,7 +395,9 @@
       "id": 28,
       "shortDesc": "This class is useful to release memory on component destroy",
       "longDesc": "We need to import the class , create the instance and add all subscription to the subscription list",
-      "images": ["./assets/Data/ReusableComponents/subscription_sink/Images/subscription_sink.png"],
+      "images": [
+        "./assets/Data/ReusableComponents/subscription_sink/Images/subscription_sink.png"
+      ],
       "files": [],
       "type": "angular",
       "size": "",
@@ -379,7 +412,9 @@
       "id": 8,
       "shortDesc": "Encrypt the connection string for database",
       "longDesc": "Encrypt the connection string for database",
-      "images": ["./assets/Data/Solutions/Encrypting the connection string/Images/encryption.png"],
+      "images": [
+        "./assets/Data/Solutions/Encrypting the connection string/Images/encryption.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -397,7 +432,9 @@
       "id": 9,
       "shortDesc": "Exception Handling, Logging and Analytics tool",
       "longDesc": "This document explains how to handle exceptions in you Web API code and how to use Splunk for logging & analytics",
-      "images": ["./assets/Data/Solutions/Exception Handling, Logging and Analytics tool/Images/Exception_Handling.png"],
+      "images": [
+        "./assets/Data/Solutions/Exception Handling, Logging and Analytics tool/Images/Exception_Handling.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -415,7 +452,9 @@
       "id": 10,
       "shortDesc": "Sanitizes input data using Regex",
       "longDesc": "Validate a model is by using Data Annotations. It has a set of attributes and classes defined in the System.ComponentModel.DataAnnotations assembly. Data Annotations allow us to decorate model classes with metadata. This metadata describes a set of rules that are used to validate a property. ",
-      "images": ["./assets/Data/Solutions/Input Data Sanitization/Images/sanitization.png"],
+      "images": [
+        "./assets/Data/Solutions/Input Data Sanitization/Images/sanitization.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -433,7 +472,9 @@
       "id": 11,
       "shortDesc": "Integrate SEO in Angular",
       "longDesc": "Search engine optimization (SEO) is the process of affecting the online visibility of a website or a web page in a web search engine's unpaid results. This document explains how we integrater Angular Universal to support SEO",
-      "images": ["./assets/Data/Solutions/SEO Implementation/Images/SEO-Banner-2.png"],
+      "images": [
+        "./assets/Data/Solutions/SEO Implementation/Images/SEO-Banner-2.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -451,7 +492,9 @@
       "id": 19,
       "shortDesc": "How to implement JWT token handling in .Net",
       "longDesc": "This document lists down the steps requried to be implemented while integrating JWT in .Net",
-      "images": ["./assets/Data/Solutions/JWT Implementation in .Net/Images/jwt-authentication-1.png"],
+      "images": [
+        "./assets/Data/Solutions/JWT Implementation in .Net/Images/jwt-authentication-1.png"
+      ],
       "files": [
         {
           "linkText": "Usage Document",
@@ -492,72 +535,80 @@
       "id": 12,
       "shortDesc": "Lists down the items to be verified while reviewing Angular code",
       "longDesc": "Lists down the items to be verified while reviewing Angular code",
-      "images": [],
+      "images": [
+        "./assets/Data/BestPractices/Angular Code Review Checklist/Images/code_review checkList.png"
+      ],
       "files": [
         {
           "linkText": "AngularCodeReviewChecklist",
-          "downloadable": "./assets/Data/BestPractices/Angular_Code_Review_Checklist.xlsx"
+          "downloadable": "./assets/Data/BestPractices/Angular Code Review Checklist/Angular_Code_Review_Checklist.xlsx"
         }
       ],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["", ""],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/BestPractices/Angular Code Review Checklist/Images/code_review checkList.png"
     },
     {
       "cName": "HTML5 Best Practices",
       "id": 13,
       "shortDesc": "Best Practices for writing HTML5",
       "longDesc": "Best Practices for writing HTML5",
-      "images": [],
+      "images": [
+        "./assets/Data/BestPractices/HTML5 Best Practices/Images/HTML5-Best-Practices.png"
+      ],
       "files": [
         {
           "linkText": "HTML5 Best Practices",
-          "downloadable": "./assets/Data/BestPractices/Best Practices of Writing HTML 5.pptx"
+          "downloadable": "./assets/Data/BestPractices/HTML5 Best Practices/Best Practices of Writing HTML 5.pptx"
         }
       ],
       "type": "HTML5",
       "size": "30Kb",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Jitendra Berde"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/BestPractices/HTML5 Best Practices/Images/HTML5-Best-Practices.png"
     },
     {
       "cName": "Frontend Development Standards",
       "id": 14,
       "shortDesc": "Development Standards for a frontend app",
       "longDesc": "Development Standards for a frontend app",
-      "images": [],
+      "images": [
+        "./assets/Data/BestPractices/Frontend Development Standards/Images/forntend_developer.png"
+      ],
       "files": [
         {
           "linkText": "Standard",
-          "downloadable": "./assets/Data/BestPractices/Frontend Development Standards_v1.docx"
+          "downloadable": "./assets/Data/BestPractices/Frontend Development Standards/Frontend Development Standards_v1.docx"
         }
       ],
       "type": "angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["", ""],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/BestPractices/Frontend Development Standards/Images/forntend_developer.png"
     },
     {
       "cName": "Good Practices for Responsive Websites",
       "id": 15,
       "shortDesc": "Good Practices for Responsive Websites",
       "longDesc": "Guideline for creating Responsive Websites",
-      "images": [],
+      "images": [
+        "./assets/Data/BestPractices/Good Practices for Responsive Websites/Images/responsive-web-design-png-6.png"
+      ],
       "files": [
         {
           "linkText": "Guideline",
-          "downloadable": "./assets/Data/BestPractices/LTI_Good_Practices_Document_Responsive_WebSites.pdf"
+          "downloadable": "./assets/Data/BestPractices/Good Practices for Responsive Websites/LTI_Good_Practices_Document_Responsive_WebSites.pdf"
         }
       ],
       "type": "HTML/CSS",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Jitendra Berde"],
-      "thumbnails": ""
+      "thumbnails": "./assets/Data/BestPractices/Good Practices for Responsive Websites/Images/responsive-web-design-png-6.png"
     }
   ]
 }
