@@ -76,12 +76,33 @@ export class DetailsComponent implements OnInit {
     this.location.back();
   }
 
-  openPreviewImgDialog() {
-    this.dialog.open(ImagedialogComponent, {
-      data: {
-        img: this.selectedImgPath,
-      },
-      width: '1100px',
-    });
+  openPreviewImgDialog(x, y) {
+    if(x==='image'){
+      this.dialog.open(ImagedialogComponent, {
+        data: {
+          img: this.selectedImgPath,
+          video: y,
+          type: x
+        },
+        width: '100%',
+        height: 'auto',
+        maxWidth: '90vw',
+      });
+    }
+    else 
+    {
+      this.dialog.open(ImagedialogComponent, {
+        data: {
+          img: this.selectedImgPath,
+          video: y,
+          type: x
+        },
+        width: '100%',
+        height: 'auto',
+        maxWidth: '50vw',
+        maxHeight: '50vw'
+      });
+    }
+   
   }
 }

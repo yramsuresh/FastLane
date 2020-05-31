@@ -50,8 +50,9 @@
             .codeDetails {
                 div {
                     padding: 5px 2px;
-                    a {
+                    a,button {
                         background: #1c5dd8;
+                        margin-left: 5px;
                         color: #ffffff;
                         border: none;
                         padding: 4px 16px;
