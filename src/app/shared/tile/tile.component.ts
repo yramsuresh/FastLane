@@ -29,7 +29,6 @@ export class TileComponent implements OnInit, OnChanges {
     this.imageUrl = this.imageUrl;
     this.components = this.compData;
     this.title = this.title;
-    console.log(this.type);
   }
   ngOnChanges(changes: SimpleChanges) {
     if (

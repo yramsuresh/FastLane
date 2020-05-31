@@ -31,7 +31,6 @@ export class DashboardComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.list = Object.keys(this.componentData);
-      console.log(this.componentData);
       this.components = this.componentData.components;
       this.solutions = this.componentData.solutions;
       this.bestPractices = this.componentData.bestPractices;

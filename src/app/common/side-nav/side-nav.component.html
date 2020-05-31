@@ -1,4 +1,4 @@
-<div class="nav-icon blue-bg" routerLink="/">
+<div class="nav-icon blue-bg" routerLink="/dashboard">
   <img src=".\assets\logos\LTI_logo.svg" alt="Lti-logo" />
 </div>
 <div
@@ -8,7 +8,7 @@
   routerLinkActive="active-link"
 >
   <img
-    class="deselected"
+    *ngIf="!activeComponent"
     matTooltip="Reusable Components"
     matTooltipPosition="below"
     matTooltipClass="custom-tooltip"
@@ -18,7 +18,7 @@
     alt="Components"
   />
   <img
-    class="Selected"
+    *ngIf="activeComponent"
     matTooltip="Reusable Components"
     matTooltipClass="custom-tooltip"
     matTooltipPosition="below"
@@ -35,7 +35,7 @@
   [ngClass]="activeSolution ? 'active-link' : ''"
 >
   <img
-    class="deselected"
+    *ngIf="!activeSolution"
     matTooltip="Solutions"
     matTooltipPosition="below"
     matTooltipHideDelay="100"
@@ -45,7 +45,7 @@
     alt="Solutions"
   />
   <img
-    class="Selected"
+    *ngIf="activeSolution"
     matTooltip="Solutions"
     matTooltipPosition="below"
     matTooltipHideDelay="100"
@@ -62,7 +62,7 @@
   [ngClass]="activeBestPractice ? 'active-link' : ''"
 >
   <img
-    class="deselected"
+    *ngIf="!activeBestPractice"
     matTooltip="Best practices and Guidelines"
     matTooltipPosition="below"
     matTooltipHideDelay="100"
@@ -72,7 +72,7 @@
     alt="BestPractices"
   />
   <img
-    class="Selected"
+    *ngIf="activeBestPractice"
     matTooltip="Best practices and Guidelines"
     matTooltipPosition="below"
     matTooltipClass="custom-tooltip"

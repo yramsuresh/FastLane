@@ -1,42 +1,54 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 @Component({
   selector: 'side-nav',
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss'],
 })
 export class SideNavComponent implements OnInit {
-  tileId: any;
   compType: any;
+  compTypeDetails: any;
   activeComponent = false;
   activeSolution = false;
   activeBestPractice = false;
-  constructor(private activatedRoute: ActivatedRoute) {}
-
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private location: Location
+  ) {}
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
-      this.tileId = params.tile;
-      this.compType = params.compType;
-      if (this.compType === 'solutions') {
-        this.activeSolution = true;
-        this.activeBestPractice = false;
-        this.activeComponent = false;
-      }
-      if (this.compType === 'bestPractices') {
-        this.activeBestPractice = true;
-        this.activeSolution = false;
-        this.activeComponent = false;
-      }
-      if (this.compType === 'components') {
-        this.activeBestPractice = false;
-        this.activeSolution = false;
-        this.activeComponent = true;
-      }
-      if (this.compType === undefined) {
-        this.activeBestPractice = false;
-        this.activeSolution = false;
-        this.activeComponent = false;
+    this.router.events.subscribe((val) => {
+      if (this.location.path() !== '') {
+        this.compType = this.location.path().replace('/', '');
+        this.activatedRoute.queryParams.subscribe((params) => {
+          if (params.compType) {
+            this.compTypeDetails = params.compType;
+            this.getUrlType(this.compTypeDetails);
+          } else {
+            this.getUrlType(this.compType);
+          }
+        });
       }
     });
+  }
+  getUrlType(compType: string): void {
+    if (compType === 'solutions') {
+      this.activeSolution = true;
+      this.activeBestPractice = false;
+      this.activeComponent = false;
+    } else if (compType === 'bestPractices') {
+      this.activeBestPractice = true;
+      this.activeSolution = false;
+      this.activeComponent = false;
+    } else if (compType === 'components') {
+      this.activeBestPractice = false;
+      this.activeSolution = false;
+      this.activeComponent = true;
+    } else if (compType === 'dashboard') {
+      this.activeBestPractice = false;
+      this.activeSolution = false;
+      this.activeComponent = false;
+    }
   }
 }

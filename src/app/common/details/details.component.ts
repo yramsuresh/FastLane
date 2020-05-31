@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentServicesService } from 'src/app/component-services.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
 import { Location } from '@angular/common';
@@ -25,7 +25,8 @@ export class DetailsComponent implements OnInit {
     iconRegistry: MatIconRegistry,
     sanitizer: DomSanitizer,
     private location: Location,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router
   ) {
     iconRegistry.addSvgIcon(
       'arrow-back',
@@ -41,10 +42,14 @@ export class DetailsComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.details = this.componentData;
-      let localCompArray = this.details.components;
-      let localSolArray = this.details.solutions;
-      let localbestArray = this.details.bestPractices;
-      let localArray = [...localCompArray, ...localSolArray, ...localbestArray];
+      const localCompArray = this.details.components;
+      const localSolArray = this.details.solutions;
+      const localbestArray = this.details.bestPractices;
+      const localArray = [
+        ...localCompArray,
+        ...localSolArray,
+        ...localbestArray,
+      ];
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });
