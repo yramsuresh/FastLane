@@ -531,6 +531,29 @@
       "thumbnails": "./assets/Data/BestPractices/Rapid Assessment Tool/Images/RAT_1.png"
     },
     {
+      "cName": "Fastlane Portal",
+      "id": 30,
+      "shortDesc": "FASTLANE is our continuous learning platform which provides direct access to Reusable Components, Solutions and benchmarked Best Practices followed by LTI",
+      "longDesc": "FASTLANE is a continuous learning platform which provided direct access to Reusable Components, Solutions and benchmarked Best Practices followed by LTI. This is best platform to search and also upload any component that you think would be beneficial for other developers. Sharing is Caring",
+      "images": [
+        "./assets/Data/BestPractices/FastLane/Images/Fastlane_01.PNG",
+        "./assets/Data/BestPractices/FastLane/Images/Fastlane_02.PNG",
+        "./assets/Data/BestPractices/FastLane/Images/Fastlane_03.PNG",
+        "./assets/Data/BestPractices/FastLane/Images/Fastlane_04.PNG"
+      ],
+      "files": [
+        {
+          "linkText": "Video",
+          "downloadable": "./assets/Data/BestPractices/FastLane/Fastlane.mov"
+        }
+      ],
+      "type": "Portal",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Ismail Shaikh"],
+      "thumbnails": "./assets/Data/BestPractices/FastLane/Images/Fastlane_01.PNG"
+    },
+    {
       "cName": "Angular Code Review Checklist",
       "id": 12,
       "shortDesc": "Lists down the items to be verified while reviewing Angular code",
