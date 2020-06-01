@@ -21,18 +21,22 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'details',
-    component: DetailsComponent,
-  },
-  {
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
+    path: 'details',
+    component: DetailsComponent,
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full',
+  },
+  {
     path: '**',
-    loadChildren: () =>
-      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+    redirectTo: '/dashboard',
   },
 ];
 

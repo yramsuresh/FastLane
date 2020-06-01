@@ -17,6 +17,15 @@ export class SideNavComponent implements OnInit {
     private router: Router,
     private location: Location
   ) {}
+
+  onButtonClick() {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/']);
+  }
+
   ngOnInit(): void {
     this.router.events.subscribe((val) => {
       if (this.location.path() !== '') {

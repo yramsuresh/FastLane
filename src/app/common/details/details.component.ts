@@ -77,32 +77,29 @@ export class DetailsComponent implements OnInit {
   }
 
   openPreviewImgDialog(x, y) {
-    if(x==='image'){
+    if (x === 'image') {
       this.dialog.open(ImagedialogComponent, {
         data: {
           img: this.selectedImgPath,
           video: y,
-          type: x
+          type: x,
         },
         width: '100%',
         height: 'auto',
         maxWidth: '90vw',
       });
-    }
-    else 
-    {
+    } else {
       this.dialog.open(ImagedialogComponent, {
         data: {
           img: this.selectedImgPath,
           video: y,
-          type: x
+          type: x,
         },
         width: '100%',
         height: 'auto',
         maxWidth: '50vw',
-        maxHeight: '50vw'
+        maxHeight: '50vw',
       });
     }
-   
   }
 }
