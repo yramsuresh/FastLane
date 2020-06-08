@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "../assets/Data/data.Json"
+  apiUrl: '../assets/Data/data.Json',
+  // apiUrl: 'http://localhost:5000/fastlane',
 };
 
 /*

@@ -404,6 +404,34 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Anamika Shrivastava"],
       "thumbnails": "./assets/Data/ReusableComponents/subscription_sink/Images/subscription_sink.png"
+    },
+    {
+      "cName": "React Customizable side menu with panel",
+      "id": 31,
+      "shortDesc": "React Reusable side Menu with panel",
+      "longDesc": " React Side Menu with panel provides reusable side menu component with responsive interface for mobile devices. Sidebar can dock both left side or right side with reusable menu and menu items. ",
+      "images": [
+        "./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu.png",
+        " ./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu01.png",
+        " ./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu02.png",
+        " ./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu03.png",
+        " ./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu04.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/React_Slide_Menu_Component/react-side-menu.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/React_Slide_Menu_Component/Usage Document.doc"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Amit Bidkar"],
+      "thumbnails": "./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu.png"
     }
   ],
   "solutions": [
