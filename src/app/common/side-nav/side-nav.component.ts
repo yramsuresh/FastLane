@@ -33,8 +33,8 @@ export class SideNavComponent implements OnInit {
         if (this.compType.indexOf('?') === -1) {
           this.getUrlType(this.compType);
         } else {
-          const str = this.compType.substr(this.compType.indexOf('?') + 1);
-          const params = str.split('&');
+          const strValue = this.compType.substr(this.compType.indexOf('?') + 1);
+          const params = strValue.split('&');
           const paramsDetails = params[1].split('=');
           this.compTypeDetails = paramsDetails[1];
           this.getUrlType(this.compTypeDetails);
