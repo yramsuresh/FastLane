@@ -30,14 +30,15 @@ export class SideNavComponent implements OnInit {
     this.router.events.subscribe((val) => {
       if (this.location.path() !== '') {
         this.compType = this.location.path().replace('/', '');
-        this.activatedRoute.queryParams.subscribe((params) => {
-          if (params.compType) {
-            this.compTypeDetails = params.compType;
-            this.getUrlType(this.compTypeDetails);
-          } else {
-            this.getUrlType(this.compType);
-          }
-        });
+        if (this.compType.indexOf('?') === -1) {
+          this.getUrlType(this.compType);
+        } else {
+          const strValue = this.compType.substr(this.compType.indexOf('?') + 1);
+          const params = strValue.split('&');
+          const paramsDetails = params[1].split('=');
+          this.compTypeDetails = paramsDetails[1];
+          this.getUrlType(this.compTypeDetails);
+        }
       }
     });
   }
