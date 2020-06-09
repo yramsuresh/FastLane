@@ -432,6 +432,30 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Amit Bidkar"],
       "thumbnails": "./assets/Data/ReusableComponents/React_Slide_Menu_Component/Images/React_resuable_side_menu.png"
+    },
+    {
+      "cName": "Reusable React Loading Spinners",
+      "id": 38,
+      "shortDesc": "React Loading spinners with custom color, size and additional classesss",
+      "longDesc": "React Loaders are amazing collection of  reusable React loader components with plain CSS to use with any asynchronous activity. It requires no additional dependency.",
+      "images": [
+        "./assets/Data/ReusableComponents/Reusable React Loading Spinners/Images/loading.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Reusable React Loading Spinners/reusable-react-loaders.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Reusable React Loading Spinners/Usage Document.doc"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "08 June 2020",
+      "contributors": ["Amit Bidkar"],
+      "thumbnails": "./assets/Data/ReusableComponents/Reusable React Loading Spinners/Images/loading.png"
     }
   ],
   "solutions": [
