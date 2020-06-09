@@ -534,6 +534,66 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Omkar Ghaisas"],
       "thumbnails": "./assets/Data/Solutions/JWT Implementation in .Net/Images/jwt-authentication-1.png"
+    },
+    {
+      "cName": "VirtualBranchPhase2 UI Issues Faced",
+      "id": 33,
+      "shortDesc": "Solutions for issues faced in CORS, Meta Tag for IE, Caching on IE, Image Binding From Server... etc ",
+      "longDesc": "This document mentions the issues faced while developing the Angular 6 based Virtual Branch App",
+      "images": [
+        "./assets/Data/Solutions/VirtualBranchPhase2 UI Issues Faced/Images/UI Issues.png"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/Solutions/VirtualBranchPhase2 UI Issues Faced/VirtualBranchPhase2_UI_IssuesFaced.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Sheetal Shinde"],
+      "thumbnails": "./assets/Data/Solutions/VirtualBranchPhase2 UI Issues Faced/Images/UI Issues.png"
+    },
+    {
+      "cName": "XSS On WebAPI ",
+      "id": 34,
+      "shortDesc": "XSS(Cross Site Security) is a security attack where the attacker injects malicious code while doing data entry.",
+      "longDesc": "XSS(Cross Site Security) is a security attack where the attacker injects malicious code while doing data entry. This code can be a javascript, vbscript or any other scripting code. Once the code is injected in end user’s browser. This code can run and gain access to cookies,sessions, local files and so on.",
+      "images": [
+        "./assets/Data/Solutions/XSS On WebAPI/Images/xss_attack.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/Solutions/XSS On WebAPI/Stopping XSS On WebAPI.docx"
+        }
+      ],
+      "type": ".net",
+      "size": "",
+      "lastUpdatedOn": "10 March 2019",
+      "contributors": ["Vinod Gupta"],
+      "thumbnails": "./assets/Data/Solutions/XSS On WebAPI/Images/xss_attack.jpg"
+    },
+    {
+      "cName": "Penetration Testing - Issues and Solutions",
+      "id": 35,
+      "shortDesc": "Guidelines for overall System Wide Security fixes",
+      "longDesc": "Guidelines for overall System Wide Security fixes which will also take care of Penetration Testing issue.",
+      "images": [
+        "./assets/Data/Solutions/Penetration Testing - Issues and Solutions/Images/penetration_testing.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/Solutions/Penetration Testing - Issues and Solutions/Penetration Testing - Issues & Solutions.docx"
+        }
+      ],
+      "type": "JWT",
+      "size": "",
+      "lastUpdatedOn": "28 FEB 2019",
+      "contributors": ["Omkar Ghaisas"],
+      "thumbnails": "./assets/Data/Solutions/Penetration Testing - Issues and Solutions/Images/penetration_testing.jpg"
     }
   ],
   "bestPractices": [
@@ -660,6 +720,67 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Jitendra Berde"],
       "thumbnails": "./assets/Data/BestPractices/Good Practices for Responsive Websites/Images/responsive-web-design-png-6.png"
+    },
+    {
+      "cName": "Serverless AWS deployment",
+      "id": 32,
+      "shortDesc": "Serverless AWS Deployment Steps for your Angular application",
+      "longDesc": "This Guideline gives brief explanation and steps to follow  to deploy Serverless AWS Deployment for Angular Application",
+      "images": [
+        "./assets/Data/BestPractices/Serverless AWS deployment/Images/Server_less_aws_deployment.png"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/BestPractices/Serverless AWS deployment/Serverless AWS Deployment.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [],
+      "thumbnails": "./assets/Data/BestPractices/Serverless AWS deployment/Images/Server_less_aws_deployment.png"
+    },
+    {
+      "cName": "Transforming Legacy apps to Angular",
+      "id": 36,
+      "shortDesc": "A legacy application is any application based on older technologies and hardwaress",
+      "longDesc": "A legacy application is any application based on older technologies and hardware, such as mainframes, that continues to provide core services to an organization. Legacy applications are frequently large, monolithic, and difficult to modify, and scrapping or replacing them often means reengineering an organization's business processes as well. Legacy transformation is about retaining and extending the value of the legacy investment through migration to new platforms.",
+      "images": [
+        "./assets/Data/BestPractices/Transforming Legacy apps to Angular/Images/Transforming_Legacy_apps.png"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/BestPractices/Transforming Legacy apps to Angular/FEDStrategy.pptx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [],
+      "thumbnails": "./assets/Data/BestPractices/Transforming Legacy apps to Angular/Images/Transforming_Legacy_apps.png"
+    },
+    {
+      "cName": "CI/ CD Process",
+      "id": 37,
+      "shortDesc": "Continuous Integration, Delivery and Deployment",
+      "longDesc": "A CI/CD pipeline helps you automate steps in your software delivery process, such as initiating code builds, running automated tests, and deploying to a staging or production environment. Automated pipelines remove manual errors, provide standardized development feedback loops and enable fast product iterations.",
+      "images": [
+        "./assets/Data/BestPractices/CI CD Process/Images/CI_CD.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/BestPractices/CI CD Process/CI-CD-Process.pptx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": [],
+      "thumbnails": "./assets/Data/BestPractices/CI CD Process/Images/CI_CD.jpg"
     }
+
   ]
 }
