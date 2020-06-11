@@ -492,6 +492,30 @@
       "lastUpdatedOn": "08 June 2020",
       "contributors": ["Amit Bidkar"],
       "thumbnails": "./assets/Data/ReusableComponents/Reusable React Loading Spinners/Images/loading.png"
+    },
+    {
+      "cName": "Accordian Component",
+      "id": 40,
+      "shortDesc": "Accordian component is useful in FAQ Functionality.",
+      "longDesc": " Used the data array to store title & content. Which can act as question & answer term in FAQ. Also use JSX , JSX stands for JavaScript XML.JSX allows us to write HTML in React. This component utilise any other component as the pure css applied for UI Styling",
+      "images": [
+        "./assets/Data/ReusableComponents/React-Accordian/Images/accordian.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/React-Accordian/React- Accordian.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/React-Accordian/document.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "11 June 2020",
+      "contributors": ["Rupali Mane"],
+      "thumbnails": "./assets/Data/ReusableComponents/React-Accordian/Images/accordian.png"
     }
   ],
   "solutions": [
