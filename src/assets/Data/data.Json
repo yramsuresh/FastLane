@@ -516,6 +516,31 @@
       "lastUpdatedOn": "11 June 2020",
       "contributors": ["Rupali Mane"],
       "thumbnails": "./assets/Data/ReusableComponents/React-Accordian/Images/accordian.png"
+    },
+    {
+      "cName": "Switch Theme Component",
+      "id": 41,
+      "shortDesc": "The main moto of this app is that we can switch the theme type (light/dark) to change the colour scheme of the complete application.",
+      "longDesc": "The main moto of this app is that we can switch the theme type (light/dark) to change the colour scheme of the complete application. As soon as the page loads, we display the page in light theme. When the theme switch toggle is clicked it changes the theme to dark mode, which changes the overall colour scheme of the page. When the toggle button is clicked again, it will change the colour scheme to the light mode.",
+      "images": [
+        "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_1.png",
+        "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Switch_Theme_Component/theme-sample.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Switch_Theme_Component/Usage Document.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Aayush Bhandari"],
+      "thumbnails": "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_1.png"
     }
   ],
   "solutions": [
