@@ -22,7 +22,13 @@
     <!-- Title Column -->
     <ng-container matColumnDef="cName">
       <th mat-header-cell *matHeaderCellDef>Title</th>
-      <td mat-cell *matCellDef="let element">{{ element.cName }}</td>
+      <td
+        mat-cell
+        *matCellDef="let element"
+        (click)="navigate(element.cName, element.id)"
+      >
+        {{ element.cName }}
+      </td>
     </ng-container>
 
     <!-- Type Column -->
