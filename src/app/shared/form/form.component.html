@@ -1,0 +1,184 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <h1>Add Components Form</h1>
+  <div *ngIf="!post; else forminfo" novalidate>
+    <form
+      [formGroup]="formGroup"
+      (ngSubmit)="onSubmit(formGroup.value)"
+      class="form"
+    >
+      <mat-form-field class="form-element">
+        <mat-label>Select an Category</mat-label>
+        <mat-select [(value)]="selected" formControlName="category">
+          <mat-option>None</mat-option>
+          <mat-option value="Components">Components</mat-option>
+          <mat-option value="Solutions">Solutions</mat-option>
+          <mat-option value="Best Practice">Best practice</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <span>You selected: {{ selected }}</span>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Component Name" formControlName="cName" />
+        <mat-error *ngIf="!cName.valid && cName.touched">
+          {{ titleAlert }}
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <textarea
+          matInput
+          #Short_Description
+          placeholder=" Short Description"
+          matTextareaAutosize
+          matAutosizeMinRows="2"
+          matAutosizeMaxRows="5"
+          formControlName="shortDesc"
+        ></textarea>
+        <mat-hint align="end"
+          >{{ Short_Description.value.length }} / 78</mat-hint
+        >
+        <mat-error
+          *ngIf="
+            !formGroup.controls['shortDesc'].valid &&
+            formGroup.controls['shortDesc'].touched
+          "
+        >
+          Required field, must be between 5 and 78 characters.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <textarea
+          matInput
+          #Long_Description
+          placeholder=" Long Description"
+          matTextareaAutosize
+          matAutosizeMinRows="2"
+          matAutosizeMaxRows="5"
+          formControlName="longDesc"
+        ></textarea>
+        <mat-hint align="end"
+          >{{ Long_Description.value.length }} / 500</mat-hint
+        >
+        <mat-error
+          *ngIf="
+            !formGroup.controls['longDesc'].valid &&
+            formGroup.controls['longDesc'].touched
+          "
+        >
+          Required field, must be between 5 and 500 characters.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Technology" formControlName="type" />
+        <mat-hint align="start">hint: Angular/.Net/Node/Reactjs/etc..</mat-hint>
+        <mat-error *ngIf="!type.valid && type.touched">
+          {{ titleAlert }}
+        </mat-error>
+      </mat-form-field>
+
+      <div
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        class="form-element"
+      >
+        <span>Add Images</span>
+        <input
+          class="pd-l"
+          type="file"
+          multiple
+          accept="image/*"
+          (change)="onSelectFile($event)"
+          formControlName="AddImage"
+        />
+      </div>
+      <span>Add Files</span>
+
+      <div
+        fxLayout="column"
+        fxLayoutAlign="space-evenly center"
+        formArrayName="files"
+      >
+        <div
+          *ngFor="let file of files().controls; let fileIndex = index"
+          class="width"
+        >
+          <div
+            [formGroupName]="fileIndex"
+            fxLayout="row"
+            fxLayoutAlign="space-between center"
+          >
+            <div class="width">
+              <div>
+                <mat-form-field class="form-element">
+                  <input
+                    matInput
+                    placeholder="Title"
+                    formControlName="linkText"
+                  />
+                  <mat-hint align="start"
+                    >hint: Usage Document/Source code</mat-hint
+                  >
+                </mat-form-field>
+              </div>
+              <div class="pd-l">
+                <input
+                  type="file"
+                  multiple
+                  accept="files/*"
+                  formControlName="downloadable"
+                />
+              </div>
+            </div>
+            <mat-icon (click)="removefile(fileIndex)">delete</mat-icon>
+            <mat-icon (click)="addFiles()">add</mat-icon>
+          </div>
+        </div>
+      </div>
+
+      <div formArrayName="contributors">
+        <div
+          *ngFor="
+            let contributor of contributors().controls;
+            let conIndex = index
+          "
+          fxLayout="row"
+          fxLayoutAlign="space-around center"
+        >
+          <div class="width" [formGroupName]="conIndex">
+            <mat-form-field class="form-element">
+              <input
+                matInput
+                placeholder="Contributors"
+                formControlName="contributor"
+              />
+              <mat-hint align="start">Contributors Name</mat-hint>
+              <!-- <mat-error *ngIf="!contributors.valid && contributors.touched">
+                {{ titleAlert }}
+              </mat-error> -->
+            </mat-form-field>
+          </div>
+          <mat-icon (click)="removeCont(conIndex)">delete</mat-icon>
+          <mat-icon (click)="addContributors()">add</mat-icon>
+        </div>
+      </div>
+
+      <div class="form-element">
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          class="button"
+          [disabled]="!formGroup.valid"
+        >
+          Submit Form
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <ng-template #forminfo>
+    <div class="container">
+      {{ post }}
+    </div>
+  </ng-template>
+</div>

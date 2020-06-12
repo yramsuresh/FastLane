@@ -1,0 +1,47 @@
+<div class="main-container1">
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <h2>Components</h2>
+    <button class="addbutton" routerLink="/AddForm">Add +</button>
+  </div>
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input
+      matInput
+      (keyup)="applyFilter($event)"
+      placeholder="Ex. Title Name"
+    />
+  </mat-form-field>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Id Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+
+    <!-- Title Column -->
+    <ng-container matColumnDef="cName">
+      <th mat-header-cell *matHeaderCellDef>Title</th>
+      <td mat-cell *matCellDef="let element">{{ element.cName }}</td>
+    </ng-container>
+
+    <!-- Type Column -->
+    <ng-container matColumnDef="type">
+      <th mat-header-cell *matHeaderCellDef>Technology</th>
+      <td mat-cell *matCellDef="let element">{{ element.type }}</td>
+    </ng-container>
+
+    <!-- Contibutors Column -->
+    <ng-container matColumnDef="contributors">
+      <th mat-header-cell *matHeaderCellDef>Contributors</th>
+      <td mat-cell *matCellDef="let element">{{ element.contributors }}</td>
+    </ng-container>
+    <!-- lastUpdate Column -->
+    <ng-container matColumnDef="lastUpdatedOn">
+      <th mat-header-cell *matHeaderCellDef>lastUpdatedOn</th>
+      <td mat-cell *matCellDef="let element">{{ element.lastUpdatedOn }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

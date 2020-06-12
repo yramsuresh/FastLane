@@ -7,12 +7,18 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTooltipModule } from '@angular/material/tooltip';
-
+import { FormComponent } from './form/form.component';
+import { MatButtonModule } from '@angular/material/button';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
-  declarations: [TileComponent],
+  declarations: [TileComponent, FormComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -20,11 +26,18 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     FlexLayoutModule,
     MatDividerModule,
+    MatButtonModule,
     Ng2SearchPipeModule,
     FormsModule,
     MatProgressSpinnerModule,
     MatTooltipModule,
+    ReactiveFormsModule,
+    // BrowserAnimationsModule,
+    MatProgressBarModule,
+    HttpClientModule,
+    MatCardModule,
+    MatSelectModule,
   ],
-  exports: [TileComponent],
+  exports: [TileComponent, FormComponent],
 })
 export class SharedModule {}

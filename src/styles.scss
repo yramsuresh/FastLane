@@ -32,8 +32,8 @@ html {
 }
 .menu-Holder {
   position: absolute !important;
-  top: 44px !important;
-  right: 17px !important;
+  top: 10px !important;
+  right: 20px !important;
   z-index: 999 !important;
   overflow: hidden !important;
 }
@@ -109,18 +109,15 @@ mat-form-field {
 .text-capitalize {
   text-transform: capitalize;
 }
-.title-tooltip-wrapper
-{
+.title-tooltip-wrapper {
   position: relative;
-  &:hover{
-    .title-tooltip
-    {
+  &:hover {
+    .title-tooltip {
       display: block;
     }
   }
-  .title-tooltip
-  {
-    background-color: rgba(0,0,0,0.8);
+  .title-tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 10px;
     line-height: 23px;
@@ -128,16 +125,15 @@ mat-form-field {
     font-size: 17px;
     position: absolute;
     display: none;
-    &:before 
-    {
-      content: '';
+    &:before {
+      content: "";
       position: absolute;
       width: 0;
       height: 0;
       top: -10px;
       border-style: solid;
       border-width: 0 10px 10px 10px;
-      border-color: transparent transparent rgba(0,0,0,0.8) transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
     }
   }
 }
