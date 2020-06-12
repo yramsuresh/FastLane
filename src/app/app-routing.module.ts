@@ -26,17 +26,32 @@ const routes: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
+    path: 'Admin',
+    loadChildren: () =>
+      import('./Admin/admin/admin.module').then((m) => m.AdminModule),
+  },
+  {
+    path: 'AddForm',
+    loadChildren: () =>
+      import('./Admin/add-form/addform.module').then((m) => m.AddformModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./login/login.module').then((m) => m.LoginModule),
+  },
+  {
     path: 'details',
     component: DetailsComponent,
   },
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
   {
     path: '**',
-    redirectTo: '/dashboard',
+    redirectTo: '/login',
   },
 ];
 

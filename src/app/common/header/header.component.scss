@@ -1,19 +1,61 @@
 .topheader {
-    font-family: "Goutham Ultraitalic";
-    font-size: 25px;
-    color: #2b2d71;
-    margin: 0px;
-    line-height: 70px;
-    text-transform: uppercase;
+  font-family: "Goutham Ultraitalic";
+  font-size: 25px;
+  color: #2b2d71;
+  margin: 0px;
+  line-height: 70px;
+  text-transform: uppercase;
 }
 
 .menu-Holder {
-    position: absolute !important;
-    top: 44px !important;
-    right: 17px !important;
-    z-index: 999 !important;
+  position: absolute !important;
+  top: 44px !important;
+  right: 17px !important;
+  z-index: 999 !important;
 }
 
 .header-container {
-    padding-left: 32px;
+  padding-left: 32px;
+}
+mat-icon {
+  cursor: pointer;
+}
+.pd-l {
+  padding-right: 10px;
+}
+/** No CSS for this example */
+::ng-deep button.mat-menu-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  /** set line height to desired height */
+  line-height: 18px;
+  /** set height to auto */
+  height: auto;
+  padding: 0 16px;
+  text-align: left;
+  text-decoration: none;
+  max-width: 100%;
+  position: relative;
+}
+
+::ng-deep div.mat-menu-panel {
+  min-width: 80px;
+  /** set width to 500px */
+  max-width: 500px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: calc(100vh - 48px);
+  border-radius: 4px;
+  outline: 0;
+  min-height: 15px;
 }

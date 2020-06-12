@@ -7,8 +7,8 @@
   <div>
     <h1 class="topheader">FastLane</h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <!-- <span>Richard Bension</span> -->
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <span class="pd-l">Admin</span>
     <!-- <img
       src="../assets/images/userAvathar.png"
       alt="userAvathar"
@@ -16,9 +16,10 @@
       mat-button
       [matMenuTriggerFor]="menu"
     /> -->
+    <mat-icon [matMenuTriggerFor]="menu">account_circle</mat-icon>
     <mat-menu #menu="matMenu" class="menu-Holder">
-      <button mat-menu-item>Profile</button>
-      <button mat-menu-item>Logout</button>
+      <!-- <button mat-menu-item>Profile</button> -->
+      <button mat-menu-item routerLink="/login">Logout</button>
     </mat-menu>
   </div>
 </div>

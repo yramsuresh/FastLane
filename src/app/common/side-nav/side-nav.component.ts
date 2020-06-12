@@ -23,7 +23,7 @@ export class SideNavComponent implements OnInit {
       return false;
     };
     this.router.onSameUrlNavigation = 'reload';
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 
   ngOnInit(): void {
@@ -56,6 +56,10 @@ export class SideNavComponent implements OnInit {
       this.activeSolution = false;
       this.activeComponent = true;
     } else if (compType === 'dashboard') {
+      this.activeBestPractice = false;
+      this.activeSolution = false;
+      this.activeComponent = false;
+    } else if (compType === 'Admin') {
       this.activeBestPractice = false;
       this.activeSolution = false;
       this.activeComponent = false;

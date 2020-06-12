@@ -12,4 +12,8 @@ export class ComponentServicesService {
     let baseUrl = environment.apiUrl;
     return this.http.get(baseUrl);
   }
+  postFormData(post) {
+    console.log(post);
+    return this.http.post('http://localhost:5000/api/create-tile', post);
+  }
 }
