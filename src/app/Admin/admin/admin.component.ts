@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ComponentServicesService } from 'src/app/component-services.service';
+import { Router } from '@angular/router';
 
 let TABLE_DATA: [];
 
@@ -19,7 +20,10 @@ export class AdminComponent implements OnInit {
   currentData: any;
   list: any;
   // dataSource: any;
-  constructor(private componentservices: ComponentServicesService) {}
+  constructor(
+    private componentservices: ComponentServicesService,
+    private router: Router
+  ) {}
   displayedColumns: string[] = [
     'id',
     'cName',
@@ -46,6 +50,11 @@ export class AdminComponent implements OnInit {
       TABLE_DATA = value;
       this.dataSource = new MatTableDataSource(TABLE_DATA);
       this.loading = false;
+    });
+  }
+  navigate(compType, tileId) {
+    this.router.navigate(['/details'], {
+      queryParams: { tile: tileId, compType: compType },
     });
   }
   ngOnInit(): void {
