@@ -591,6 +591,30 @@
       "lastUpdatedOn": "12 June 2020",
       "contributors": ["Ketan Valsangkar"],
       "thumbnails": "./assets/Data/ReusableComponents/CommonDialog/Images/Dialog.png"
+    },
+    {
+      "cName": "Drag & Drop file directive",
+      "id": 44,
+      "shortDesc": "Drag and drop is a very common feature. It is when you grab an object and drag it to a different location.",
+      "longDesc": "In computer graphical user interfaces, drag and drop is a pointing device gesture in which the user selects a virtual object by grabbing it and dragging it to a different location or onto another virtual object.",
+      "images": [
+        "./assets/Data/ReusableComponents/Drag & Drop_ File_Directive/Images/DragDropDirective.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Drag & Drop_ File_Directive/DragDropDirective.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Drag & Drop_ File_Directive/Usage Document.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Ketan Valsangkar"],
+      "thumbnails": "./assets/Data/ReusableComponents/Drag & Drop_ File_Directive/Images/DragDropDirective.png"
     }
   ],
   "solutions": [
