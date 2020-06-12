@@ -1,10 +1,10 @@
 {
   "components": [
     {
-      "cName": "PDF Builder with ESignature",
+      "cName": "DocuSign integration for remote signing ",
       "id": 2,
-      "shortDesc": "Create a PDF file using Text/Photo/ESignature",
-      "longDesc": "Can be useful to integrate / add E-signature in any input form of web application. Ex. Resume builder, Dynamic PDF creation ",
+      "shortDesc": "Docusign API integration with Select PDF file & configure signature / input fields position, Send it to signer features",
+      "longDesc": "Can be useful to integrate / add E-signature in any web application. Ex. Rent Agreement, Confidential document approval",
       "images": [
         "./assets/Data/ReusableComponents/ESignature/Images/Esign1.png",
         "./assets/Data/ReusableComponents/ESignature/Images/Esign2.png",
@@ -30,6 +30,34 @@
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Sarvesh Joshi"],
       "thumbnails": "./assets/Data/ReusableComponents/ESignature/Images/Esign1.png"
+    },
+    {
+      "cName": "PDF Builder with ESignature",
+      "id": 39,
+      "shortDesc": "Create a PDF file using Text/Photo/ESignature",
+      "longDesc": "Can be useful to integrate / add E-signature in any input form of web application. Ex. Resume builder, Dynamic PDF creation ",
+      "images": [
+        "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder1.png",
+        "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder2.png",
+        "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder3.png",
+        "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder4.png",
+        "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder5.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/PDF Builder with Esignature/online-resume-builder-with-esignature-master.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/PDF Builder with Esignature/PDF builder with Esignature.docx"
+        }
+      ],
+      "type": "angular",
+      "size": "",
+      "lastUpdatedOn": "15 May 2020",
+      "contributors": ["Sarvesh Joshi"],
+      "thumbnails": "./assets/Data/ReusableComponents/PDF Builder with Esignature/Images/PDFbuilder1.png"
     },
     {
       "cName": "Form Input Controls",
@@ -119,15 +147,23 @@
       ],
       "files": [
         {
-          "linkText": "Usage Document",
+          "linkText": "Angular Usage Document",
           "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice_command_recognition.docx"
         },
         {
-          "linkText": "Source Code",
+          "linkText": "Angular Source Code",
           "downloadable": "./assets/Data/ReusableComponents/Voice Command/VoiceCommandRecognition.zip"
+        },
+        {
+          "linkText": "React Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Voice Command/Voice command recognition - React.docx"
+        },
+        {
+          "linkText": "React Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Voice Command/react-speech-recognition.zip"
         }
       ],
-      "type": "angular",
+      "type": "Angular| React",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Mohan Patil", "Venugopal Thillanayagam"],
@@ -456,6 +492,55 @@
       "lastUpdatedOn": "08 June 2020",
       "contributors": ["Amit Bidkar"],
       "thumbnails": "./assets/Data/ReusableComponents/Reusable React Loading Spinners/Images/loading.png"
+    },
+    {
+      "cName": "Accordian Component",
+      "id": 40,
+      "shortDesc": "Accordian component is useful in FAQ Functionality.",
+      "longDesc": " Used the data array to store title & content. Which can act as question & answer term in FAQ. Also use JSX , JSX stands for JavaScript XML.JSX allows us to write HTML in React. This component utilise any other component as the pure css applied for UI Styling",
+      "images": [
+        "./assets/Data/ReusableComponents/React-Accordian/Images/accordian.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/React-Accordian/React- Accordian.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/React-Accordian/document.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "11 June 2020",
+      "contributors": ["Rupali Mane"],
+      "thumbnails": "./assets/Data/ReusableComponents/React-Accordian/Images/accordian.png"
+    },
+    {
+      "cName": "Switch Theme Component",
+      "id": 41,
+      "shortDesc": "The main moto of this app is that we can switch the theme type (light/dark) to change the colour scheme of the complete application.",
+      "longDesc": "The main moto of this app is that we can switch the theme type (light/dark) to change the colour scheme of the complete application. As soon as the page loads, we display the page in light theme. When the theme switch toggle is clicked it changes the theme to dark mode, which changes the overall colour scheme of the page. When the toggle button is clicked again, it will change the colour scheme to the light mode.",
+      "images": [
+        "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_1.png",
+        "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Switch_Theme_Component/theme-sample.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Switch_Theme_Component/Usage Document.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Aayush Bhandari"],
+      "thumbnails": "./assets/Data/ReusableComponents/Switch_Theme_Component/Images/switch_1.png"
     }
   ],
   "solutions": [
