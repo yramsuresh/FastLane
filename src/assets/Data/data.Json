@@ -615,6 +615,31 @@
       "lastUpdatedOn": "12 June 2020",
       "contributors": ["Ketan Valsangkar"],
       "thumbnails": "./assets/Data/ReusableComponents/Drag & Drop_ File_Directive/Images/DragDropDirective.png"
+    },
+    {
+      "cName": "User Details Form",
+      "id": 45,
+      "shortDesc": "Registration Form is an reusable component in react which has form features like input, select drop down, checkbox, text Area, buttons.",
+      "longDesc": "Registration Form is an reusable component in react which has form features like input, select drop down, checkbox, text Area, buttons. This reusable component can be integrated with different forms by passing required/specific data as its registration form with edit and remove option.",
+      "images": [
+        "./assets/Data/ReusableComponents/User_Details_Form/Images/User_details_form1.png",
+        "./assets/Data/ReusableComponents/User_Details_Form/Images/User_details_form2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/User_Details_Form/User Details Form.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/User_Details_Form/User Details Form.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Venugopal Thillanayagam"],
+      "thumbnails": "./assets/Data/ReusableComponents/User_Details_Form/Images/User_details_form1.png"
     }
   ],
   "solutions": [
