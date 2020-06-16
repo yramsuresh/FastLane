@@ -875,6 +875,30 @@
       "lastUpdatedOn": "28 FEB 2019",
       "contributors": ["Omkar Ghaisas"],
       "thumbnails": "./assets/Data/Solutions/Penetration Testing - Issues and Solutions/Images/penetration_testing.jpg"
+    },
+    {
+      "cName": "Migrating from AngularJS/Angular 5 to Angular 9",
+      "id": 49,
+      "shortDesc": "Steps to be performed while migrating an application from AngularJS/Angular 5 to Angular 9",
+      "longDesc": "Steps to be performed while migrating an application from AngularJS/Angular 5 to Angular 9",
+      "images": [
+        "./assets/Data/Solutions/Migrating Angular 5 to Angular 9/Images/Migrating.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Migrating from AngularJs to Angular9",
+          "downloadable": "./assets/Data/Solutions/Migrating Angular 5 to Angular 9/AngularjsToAngular9.doc"
+        },
+        {
+          "linkText": "Migrating from Angular5 to Angular9",
+          "downloadable": "./assets/Data/Solutions/Migrating Angular 5 to Angular 9/AngularjsToAngular9.doc"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "16 May 2020",
+      "contributors": [""],
+      "thumbnails": "./assets/Data/Solutions/Migrating Angular 5 to Angular 9/Images/Migrating.jpg"
     }
   ],
   "bestPractices": [

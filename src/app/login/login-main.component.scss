@@ -7,12 +7,13 @@
   .logo-title {
     color: #ffffff !important;
     padding: 30px 30px 10px 5%;
-    h2,
+    img 
+    {
+      margin-right: 15px;
+      vertical-align: baseline;
+    }
     p {
       color: #ffffff !important;
-      strong {
-        color: #ffffff !important;
-      }
     }
   }
   .left-container {
@@ -74,4 +75,13 @@
     color: #dc3545;
     margin-top: 10px;
   }
+}
+.topheader {
+  font-family: "Goutham Ultraitalic";
+  margin-bottom: 0px;
+  font-size: 25px;
+  display: inline-block;
+  color:#fff;
+  line-height: auto;
+  text-transform: uppercase;
 }
