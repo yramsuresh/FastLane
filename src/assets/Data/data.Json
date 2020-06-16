@@ -689,6 +689,30 @@
       "lastUpdatedOn": "12 June 2020",
       "contributors": ["Ram Suresh"],
       "thumbnails": "./assets/Data/ReusableComponents/React_Carousel_Component/Images/carousel1.png"
+    },
+    {
+      "cName": "Comment Box Using React",
+      "id": 48,
+      "shortDesc": "Comment box component offers the post comment and comment count",
+      "longDesc": "Comment box component offers the post comment and comment count functionalities, It can be useful to add commets on any blogging site or any discussion section of component.",
+      "images": [
+        "./assets/Data/ReusableComponents/Comment Box Using React/Images/CommentBox.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Comment Box Using React/React-commentbox.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Comment Box Using React/document.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "13 June 2020",
+      "contributors": ["Rupali mane"],
+      "thumbnails": "./assets/Data/ReusableComponents/Comment Box Using React/Images/CommentBox.png"
     }
   ],
   "solutions": [
