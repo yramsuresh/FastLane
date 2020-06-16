@@ -619,7 +619,7 @@
     {
       "cName": "User Details Form",
       "id": 45,
-      "shortDesc": "Registration Form is an reusable component in react which has form features like input, select drop down, checkbox, text Area, buttons.",
+      "shortDesc": "Registration Form is an reusable component in react which has form",
       "longDesc": "Registration Form is an reusable component in react which has form features like input, select drop down, checkbox, text Area, buttons. This reusable component can be integrated with different forms by passing required/specific data as its registration form with edit and remove option.",
       "images": [
         "./assets/Data/ReusableComponents/User_Details_Form/Images/User_details_form1.png",
@@ -640,6 +640,55 @@
       "lastUpdatedOn": "12 June 2020",
       "contributors": ["Venugopal Thillanayagam"],
       "thumbnails": "./assets/Data/ReusableComponents/User_Details_Form/Images/User_details_form1.png"
+    },
+    {
+      "cName": "Quick UI Routing",
+      "id": 46,
+      "shortDesc": "This reusable component can be integrated with any page and use",
+      "longDesc": "Quick UI Routing is kind of a website with menu’s and specific icons displays basic information on selection of the specific menu in the application. Also contains child component like Header, Footer, Contact etc.",
+      "images": [
+        "./assets/Data/ReusableComponents/Quick UI Routing/Images/UI_React.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Quick UI Routing/Quick UI Routing.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Quick UI Routing/Quick UI Routing.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Venugopal Thillanayagam"],
+      "thumbnails": "./assets/Data/ReusableComponents/Quick UI Routing/Images/UI_React.png"
+    },
+    {
+      "cName": "React Carousel Component",
+      "id": 47,
+      "shortDesc": "The carousel is a slideshow for cycling through a series of content",
+      "longDesc": "The carousel is a slideshow for cycling through a series of content, While carousels support previous/next controls and indicators",
+      "images": [
+        "./assets/Data/ReusableComponents/React_Carousel_Component/Images/carousel1.png",
+        "./assets/Data/ReusableComponents/React_Carousel_Component/Images/carousel2.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Quick UI Routing/Quick UI Routing.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Quick UI Routing/Quick UI Routing.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "12 June 2020",
+      "contributors": ["Ram Suresh"],
+      "thumbnails": "./assets/Data/ReusableComponents/React_Carousel_Component/Images/carousel1.png"
     }
   ],
   "solutions": [
