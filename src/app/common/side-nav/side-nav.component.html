@@ -6,6 +6,7 @@
   [ngClass]="activeComponent ? 'active-link' : ''"
   routerLink="/components"
   routerLinkActive="active-link"
+  *ngIf="!isAdmin"
 >
   <img
     *ngIf="!activeComponent"
@@ -33,6 +34,7 @@
   routerLink="/solutions"
   routerLinkActive="active-link"
   [ngClass]="activeSolution ? 'active-link' : ''"
+  *ngIf="!isAdmin"
 >
   <img
     *ngIf="!activeSolution"
@@ -60,6 +62,7 @@
   routerLink="/bestPractices"
   routerLinkActive="active-link"
   [ngClass]="activeBestPractice ? 'active-link' : ''"
+  *ngIf="!isAdmin"
 >
   <img
     *ngIf="!activeBestPractice"
@@ -83,7 +86,7 @@
   />
 </div>
 
-<div class="nav-icon" routerLink="/Admin">
+<div class="nav-icon" routerLink="/Admin" *ngIf="isAdmin">
   <mat-icon class="place" aria-hidden="false" aria-label="Example admin icon"
     >admin_panel_settings</mat-icon
   >

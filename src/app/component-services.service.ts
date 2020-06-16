@@ -9,8 +9,8 @@ import { environment } from '../environments/environment';
 export class ComponentServicesService {
   constructor(private http: HttpClient) {}
   getComponentData() {
-    let baseUrl = environment.apiUrl;
-    return this.http.get(baseUrl);
+    // let baseUrl = environment.apiUrl;
+    return this.http.get('../assets/Data/data.Json');
   }
   postFormData(post) {
     console.log(post);

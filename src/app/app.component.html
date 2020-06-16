@@ -1,9 +1,9 @@
 <mat-drawer-container class="custom-container example-container">
-  <mat-drawer class="custom-sidebar" mode="side" opened *ngIf="!loginpage">
+  <mat-drawer class="custom-sidebar" mode="side" opened *ngIf="isAdmin">
     <side-nav></side-nav>
   </mat-drawer>
   <mat-drawer-content class="custom-wrapper">
-    <header class="top-navbar" *ngIf="!loginpage"></header>
+    <header class="top-navbar" *ngIf="isAdmin"></header>
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>

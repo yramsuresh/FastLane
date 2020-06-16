@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthenticationService } from 'src/app/_services';
+import { User, Role } from '../../_models';
 @Component({
   selector: 'side-nav',
   templateUrl: './side-nav.component.html',
@@ -12,12 +14,20 @@ export class SideNavComponent implements OnInit {
   activeComponent = false;
   activeSolution = false;
   activeBestPractice = false;
+  currentUser: User;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private location: Location
-  ) {}
-
+    private location: Location,
+    private authenticationService: AuthenticationService
+  ) {
+    this.authenticationService.currentUser.subscribe(
+      (x) => (this.currentUser = x)
+    );
+  }
+  get isAdmin() {
+    return this.currentUser && this.currentUser.role === Role.Admin;
+  }
   onButtonClick() {
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;

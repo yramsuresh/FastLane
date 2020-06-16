@@ -1,0 +1,160 @@
+﻿<div class="login-main">
+  <div class="container-fluid">
+    <div class="row header">
+      <div class="col-12 logo-title">
+        <h2>
+          LTI
+          <small
+            ><em><strong>FRONTLANE</strong></em></small
+          >
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7 d-none d-md-block d-lg-block">
+        <div class="left-container">
+          <h2>
+            <em><strong>Welcome</strong></em>
+          </h2>
+          <!-- <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p> -->
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="alert alert-info">
+          <strong>Normal User</strong> - U: user P: user<br />
+          <strong>Administrator</strong> - U: admin P: admin
+        </div>
+        <div class="card">
+          <h4 class="card-header">Login</h4>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  formControlName="username"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.username.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.username.errors.required">
+                    Username is required
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                />
+                <div
+                  *ngIf="submitted && f.password.errors"
+                  class="invalid-feedback"
+                >
+                  <div *ngIf="f.password.errors.required">
+                    Password is required
+                  </div>
+                </div>
+              </div>
+              <button [disabled]="loading" class="btn btn-primary">
+                <span
+                  *ngIf="loading"
+                  class="spinner-border spinner-border-sm mr-1"
+                ></span>
+                Login
+              </button>
+              <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
+                {{ error }}
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card card-layout">
+          <h3 class="login-head text-center">Login</h3>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+                formControlName="email"
+                type="text"
+                placeholder="Email Address*"
+              />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+                <div *ngIf="f.email.errors.pattern">
+                  Email must be a valid email address
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input
+                class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
+                formControlName="password"
+                type="password"
+                placeholder="Password*"
+              />
+              <div
+                *ngIf="submitted && f.password.errors"
+                class="invalid-feedback"
+              >
+                <div *ngIf="f.password.errors.required">
+                  Password is required
+                </div>
+                <div *ngIf="f.password.errors.minlength">
+                  Password must be at least 6 characters
+                </div>
+              </div>
+              <div *ngIf="errorMessage" class="error-server">
+                {{ errorMessage }}
+              </div>
+            </div>
+            <div class="login-spin">
+              <i
+                class="fa fa-spinner fa-spin spin-adjust"
+                *ngIf="loderStatus"
+              ></i>
+              <input
+                class="btn btn-primary btn-block login-button"
+                type="submit"
+                value="Login"
+                [disabled]="!loginForm.valid"
+              />
+            </div>
+          </form>
+          <div class="text-center signup-container">
+            <span><a href="">Sign Up</a></span> |
+            <span><a href="">Forgot Password</a></span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+      <div class="footer-container">
+        <div class="col-11">
+          <div class="row footer">
+            <p>Components | Chats | Code</p>
+          </div>
+        </div>
+        <div class="col-11">
+          <div class="row footer-copyright">
+            <p>Copyright 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
