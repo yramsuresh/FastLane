@@ -139,7 +139,11 @@ mat-form-field {
 }
 .previewBox span.carousel-control-next-icon {
   background-color: #2b2d71;
+  position: fixed;
+  top: 50%;
 }
 .previewBox span.carousel-control-prev-icon {
   background-color: #2b2d71;
+  position: fixed;
+  top: 50%;
 }
