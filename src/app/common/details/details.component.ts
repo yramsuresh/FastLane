@@ -19,6 +19,8 @@ export class DetailsComponent implements OnInit {
   selectedImgPath: string;
   selectedImgIndex: number;
   compType: any;
+  imgIndex: any;
+  selectedImgArray = [];
   constructor(
     private componentservices: ComponentServicesService,
     private activatedRoute: ActivatedRoute,
@@ -55,6 +57,7 @@ export class DetailsComponent implements OnInit {
       });
       if (this.detailobject && this.detailobject.images.length > 0) {
         this.selectedImgPath = this.detailobject.images[0];
+        this.selectedImgArray = this.detailobject.images;
         this.selectedImgIndex = 0;
       }
     });
@@ -69,6 +72,7 @@ export class DetailsComponent implements OnInit {
 
   chooseImg(index) {
     this.selectedImgPath = this.detailobject.images[index];
+    this.imgIndex = this.detailobject.images[index];
     this.selectedImgIndex = index;
   }
 
@@ -83,6 +87,8 @@ export class DetailsComponent implements OnInit {
           img: this.selectedImgPath,
           video: y,
           type: x,
+          imgArray: this.selectedImgArray,
+          indexImg: this.selectedImgIndex
         },
         width: '100%',
         height: 'auto',
@@ -94,6 +100,8 @@ export class DetailsComponent implements OnInit {
           img: this.selectedImgPath,
           video: y,
           type: x,
+          imgArray: this.selectedImgArray,
+          indexImg: this.selectedImgIndex
         },
         width: '100%',
         height: 'auto',
