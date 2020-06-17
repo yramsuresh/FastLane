@@ -713,6 +713,54 @@
       "lastUpdatedOn": "13 June 2020",
       "contributors": ["Rupali mane"],
       "thumbnails": "./assets/Data/ReusableComponents/Comment Box Using React/Images/CommentBox.png"
+    },
+    {
+      "cName": "Angular-i18",
+      "id": 50,
+      "shortDesc": "This is a multilingual application. US English is the default language set for the app.",
+      "longDesc": "This is a multilingual application. US English is the default language set for the app. User can select language of his choice from the drop down shown on the top left corner of the screen, accordingly the translation of the contents will take place on the fly.",
+      "images": [
+        "./assets/Data/ReusableComponents/Angular-i18/Images/angular-i18n.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Angular-i18/Angular-i18n.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Angular-i18/Angulari18-Component Details.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "17 June 2020",
+      "contributors": ["Ritu Mahajan"],
+      "thumbnails": "./assets/Data/ReusableComponents/Angular-i18/Images/angular-i18n.png"
+    },
+    {
+      "cName": "Multileveltreetable",
+      "id": 51,
+      "shortDesc": "Multileveltreetable component offers Display hierarchical data in tree structure",
+      "longDesc": "Multileveltreetable component offers Display hierarchical data in tree structure. It Can be useful to integrate in any web application where a nested data needs to be displayed in a Tree-table structure with node selection and row selection",
+      "images": [
+        "./assets/Data/ReusableComponents/Multileveltreetable/Images/Multi-Select-Dropdown.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Multileveltreetable/multileveltree.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Multileveltreetable/MultilevelTreeTable_UsageDocument.docx"
+        }
+      ],
+      "type": "Angular",
+      "size": "",
+      "lastUpdatedOn": "17 June 2020",
+      "contributors": ["Krutika Shekhar"],
+      "thumbnails": "./assets/Data/ReusableComponents/Multileveltreetable/Images/Multi-Select-Dropdown.jpg"
     }
   ],
   "solutions": [
