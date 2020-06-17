@@ -1,13 +1,13 @@
 ﻿<div class="login-main">
   <div class="container-fluid">
-    <div class="row header">
+    <div class="header">
       <div class="col-12 logo-title">
         <img src=".\assets\logos\LTI_logo.svg" alt="Lti-logo" />
         <h1 class="topheader">FastLane</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-7 d-none d-md-block d-lg-block">
+      <div class="col-6 d-none d-md-block d-lg-block">
         <div class="left-container">
           <h2 class="welcome-text">
             Welcome,
@@ -18,22 +18,23 @@
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p> -->
+          <div class="alert alert-info">
+            <strong>Normal User</strong> - U: user P: user<br />
+            <strong>Administrator</strong> - U: admin P: admin
+          </div>
         </div>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <div class="alert alert-info">
-          <strong>Normal User</strong> - U: user P: user<br />
-          <strong>Administrator</strong> - U: admin P: admin
-        </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pd-x-21">
+        
         <div class="card card-layout">
           <h3 class="login-head text-center">Login</h3>
           <div class="card-body">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
               <div class="form-group">
                 <input
                   type="text"
                   formControlName="username"
-                  placeholder="Email Address"
+                  placeholder="Email Address*"
                   class="form-control"
                   [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
                 />
@@ -47,10 +48,10 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="password">Password</label>
                 <input
                   type="password"
                   formControlName="password"
+                  placeholder="Password*"
                   class="form-control"
                   [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
                 />
@@ -63,7 +64,7 @@
                   </div>
                 </div>
               </div>
-              <button [disabled]="loading" class="btn btn-primary">
+              <button [disabled]="loading" class="btn btn-primary btn-block btn-login">
                 <span
                   *ngIf="loading"
                   class="spinner-border spinner-border-sm mr-1"
@@ -74,6 +75,10 @@
                 {{ error }}
               </div>
             </form>
+            <div class="text-center signup-container">
+              <span><a href="">Sign Up</a></span> |
+              <span><a href="">Forgot Password</a></span>
+            </div>
           </div>
         </div>
       </div>
@@ -143,7 +148,7 @@
     <div class="footer-container">
       <div class="col-11">
         <div class="row footer pb-1">
-          <p>Components | Chats | Code</p>
+          <p>Components &nbsp;| &nbsp;Chats &nbsp;| &nbsp;Code</p>
         </div>
       </div>
       <div class="col-11">
