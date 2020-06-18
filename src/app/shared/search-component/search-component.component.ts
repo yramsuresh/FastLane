@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef, OnChanges } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 // import { EventEmitter } from 'protractor';
 
 @Component({
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef, OnCh
   templateUrl: './search-component.component.html',
   styleUrls: ['./search-component.component.scss'],
 })
-export class SearchComponentComponent implements OnInit, OnChanges {
+export class SearchComponentComponent implements OnInit {
   searchValue: string;
   @Input() title: any;
   @Output() search = new EventEmitter();
@@ -30,9 +30,6 @@ export class SearchComponentComponent implements OnInit, OnChanges {
       // speech recognition API not supported
     }
   }
-  ngOnChanges(){
-    this.search.emit((<HTMLInputElement>document.getElementById('textToSearch')).value);
-  }
   voiceSearch(): void {
     //console.log('Inside speech-recognition voiceSearch()');
     this.resetData.emit();
@@ -48,6 +45,7 @@ export class SearchComponentComponent implements OnInit, OnChanges {
       (<HTMLInputElement>document.getElementById('textToSearch')).value = this.speechToText;
       if(this.speechToText){
         this.emitSearchValue();
+        this.search.emit(this.speechToText);
       }
     }
 
