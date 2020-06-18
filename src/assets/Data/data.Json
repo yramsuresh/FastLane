@@ -761,6 +761,30 @@
       "lastUpdatedOn": "17 June 2020",
       "contributors": ["Krutika Shekhar"],
       "thumbnails": "./assets/Data/ReusableComponents/Multileveltreetable/Images/Multi-Select-Dropdown.jpg"
+    },
+    {
+      "cName": "Filter by Categories Using React",
+      "id": 52,
+      "shortDesc": "This Component can be useful to filter the product on the basis of category",
+      "longDesc": "This Component can be useful to filter the product on the basis of category.",
+      "images": [
+        "./assets/Data/ReusableComponents/Filter by Categories Using React/Images/select_category.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Filter by Categories Using React/FilterByCategories.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Filter by Categories Using React/document.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "17 June 2020",
+      "contributors": ["Rupali Mane"],
+      "thumbnails": "./assets/Data/ReusableComponents/Filter by Categories Using React/Images/select_category.png"
     }
   ],
   "solutions": [
