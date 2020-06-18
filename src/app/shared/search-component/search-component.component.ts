@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class SearchComponentComponent implements OnInit {
   searchValue: string;
+  @Input() title: any;
   @Output() search = new EventEmitter();
   constructor() {}
   keyup(event) {

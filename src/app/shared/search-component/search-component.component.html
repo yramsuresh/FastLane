@@ -7,7 +7,7 @@
   <mat-form-field appearance="outline">
     <input
       matInput
-      placeholder=" Type here to Search"
+      placeholder=" Type here to Search {{ title }}"
       (keyup)="keyup($event.target.value)"
     />
     <mat-icon matSuffix>search</mat-icon>

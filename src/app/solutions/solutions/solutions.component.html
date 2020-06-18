@@ -12,6 +12,7 @@
     />
   </div>
   <app-search-component
+    [title]="list[1]"
     (search)="searchComponent($event)"
   ></app-search-component>
   <div *ngIf="!loading">
