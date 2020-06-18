@@ -23,7 +23,9 @@
   fxLayoutAlign.xs="space-between center"
 >
   <!-- <h1>Components</h1> -->
-  <h1 class="text-capitalize">{{ title==="bestPractices"? 'Best Practices And Guidelines': title }} </h1>
+  <h1 class="text-capitalize">
+    {{ title === "bestPractices" ? "Best Practices And Guidelines" : title }}
+  </h1>
   <a *ngIf="type == 'all'" (click)="getLink(title)">See All</a>
 </div>
 <div *ngIf="components | filter: comp as result">
@@ -43,12 +45,14 @@
       *ngFor="let data of result; index as i"
     >
       <div class="tile" *ngIf="(type == 'all' && i < 8) || type != 'all'">
-        <img
-          src="{{ data.thumbnails }}"
-          alt="{{ data.thumbnails }}"
-          *ngIf="data.thumbnails !== ''"
-        />
-        <img src="{{ imageUrl }}" alt="" *ngIf="data.thumbnails === ''" />
+        <div class="tile-image">
+          <img
+            src="{{ data.thumbnails }}"
+            alt="{{ data.thumbnails }}"
+            *ngIf="data.thumbnails !== ''"
+          />
+          <img src="{{ imageUrl }}" alt="" *ngIf="data.thumbnails === ''" />
+        </div>
         <mat-divider></mat-divider>
         <div class="content" fxLayout="column" fxLayoutGap="2px">
           <span class="text-capitalize">{{ data.type }}</span>

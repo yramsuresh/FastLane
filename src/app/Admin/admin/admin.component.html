@@ -23,6 +23,7 @@
     <ng-container matColumnDef="cName">
       <th mat-header-cell *matHeaderCellDef>Title</th>
       <td
+        class="ptr"
         mat-cell
         *matCellDef="let element"
         (click)="navigate(element.cName, element.id)"
