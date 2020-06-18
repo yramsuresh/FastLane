@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef, OnCh
 })
 export class SearchComponentComponent implements OnInit, OnChanges {
   searchValue: string;
+  @Input() title: any;
   @Output() search = new EventEmitter();
   @Output() searchTextEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Output() resetData: EventEmitter<string> = new EventEmitter<string>();
