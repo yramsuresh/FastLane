@@ -12,11 +12,15 @@ export class BestpracticeComponent implements OnInit {
   loading = true;
   currentData: any;
   list: any;
+  searchValue: string;
   bestimages = 'assets/images/thumbnails/bestPractices.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
   ) {}
+  searchComponent(search) {
+    this.searchValue = search;
+  }
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;

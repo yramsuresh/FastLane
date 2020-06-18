@@ -28,6 +28,7 @@ import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login';
 import { CommonModule } from '@angular/common';
+// import { SearchComponentComponent } from './common/search-component/search-component.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CommonModule } from '@angular/common';
     DetailsComponent,
     ImagedialogComponent,
     LoginComponent,
+    // SearchComponentComponent,
   ],
   imports: [
     BrowserModule,

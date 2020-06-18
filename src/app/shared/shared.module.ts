@@ -17,8 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
+import { SearchComponentComponent } from './search-component/search-component.component';
 @NgModule({
-  declarations: [TileComponent, FormComponent],
+  declarations: [TileComponent, FormComponent, SearchComponentComponent],
   imports: [
     CommonModule,
     MatIconModule,
@@ -38,6 +39,6 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatSelectModule,
   ],
-  exports: [TileComponent, FormComponent],
+  exports: [TileComponent, FormComponent, SearchComponentComponent],
 })
 export class SharedModule {}
