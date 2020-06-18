@@ -15,16 +15,16 @@ import { User, Role } from '../_models';
 const users: User[] = [
   {
     id: 1,
-    username: 'admin',
-    password: 'admin',
+    username: 'admin@lntinfotech.com',
+    password: 'admin@123',
     firstName: 'Admin',
     lastName: 'User',
     role: Role.Admin,
   },
   {
     id: 2,
-    username: 'user',
-    password: 'user',
+    username: 'user@lntinfotech.com',
+    password: 'user@123',
     firstName: 'Normal',
     lastName: 'User',
     role: Role.User,
