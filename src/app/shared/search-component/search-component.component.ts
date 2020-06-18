@@ -45,7 +45,6 @@ export class SearchComponentComponent implements OnInit {
       (<HTMLInputElement>document.getElementById('textToSearch')).value = this.speechToText;
       if(this.speechToText){
         this.emitSearchValue();
-        this.search.emit(this.speechToText);
       }
     }
 
