@@ -6,10 +6,14 @@
   <span class="searchHeader">What are you looking for?</span>
   <mat-form-field appearance="outline">
     <input
+      id="textToSearch"
       matInput
-      placeholder=" Type here to Search"
+      placeholder="Type here to Search"
       (keyup)="keyup($event.target.value)"
+      (mouseleave)="keyup($event.target.value)"
+      (mouseenter)="keyup($event.target.value)"
     />
+    <input type="image" alt="Start" id="image" src="assets/mic.gif" (click)="voiceSearch()"> 
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
 </div>
