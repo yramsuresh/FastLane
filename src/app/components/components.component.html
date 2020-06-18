@@ -11,10 +11,14 @@
       alt="loading..."
     />
   </div>
+  <app-search-component
+    (search)="searchComponent($event)"
+  ></app-search-component>
   <div *ngIf="!loading">
     <tile
       *ngIf="currentData"
       [title]="list[0]"
+      [searchValue]="searchValue"
       [compData]="currentData"
       [imageUrl]="compimages"
     ></tile>

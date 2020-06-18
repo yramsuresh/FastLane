@@ -13,11 +13,15 @@ export class SolutionsComponent implements OnInit {
   currentData: any;
   comp: any;
   list: any;
+  searchValue: string;
   solimages = 'assets/images/thumbnails/solutions.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
   ) {}
+  searchComponent(search) {
+    this.searchValue = search;
+  }
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;

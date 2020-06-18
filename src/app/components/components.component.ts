@@ -13,16 +13,21 @@ export class ComponentsComponent implements OnInit {
   loading = true;
   comp: any;
   currentData: any;
+  searchValue: string;
   list: any;
   compimages = 'assets/images/thumbnails/components.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
   ) {}
+  searchComponent(search) {
+    this.searchValue = search;
+  }
   ngOnInit(): void {
     this.loading = true;
     this.getComponentData();
   }
+
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;

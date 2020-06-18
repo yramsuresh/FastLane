@@ -1,0 +1,15 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="space-around center"
+  class="search-wrapper"
+>
+  <span class="searchHeader">What are you looking for?</span>
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      placeholder=" Type here to Search"
+      (keyup)="keyup($event.target.value)"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</div>

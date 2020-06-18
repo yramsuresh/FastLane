@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ComponentServicesService } from '../component-services.service';
 import { Router } from '@angular/router';
 @Component({
@@ -22,11 +22,14 @@ export class DashboardComponent implements OnInit {
   compimages = 'assets/images/thumbnails/components.png';
   solimages = 'assets/images/thumbnails/solutions.png';
   bestimages = 'assets/images/thumbnails/bestPractices.png';
+
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
   ) {}
-
+  searchComponent(search) {
+    this.searchValue = search;
+  }
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
