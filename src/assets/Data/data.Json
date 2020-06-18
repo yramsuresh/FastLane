@@ -785,6 +785,31 @@
       "lastUpdatedOn": "17 June 2020",
       "contributors": ["Rupali Mane"],
       "thumbnails": "./assets/Data/ReusableComponents/Filter by Categories Using React/Images/select_category.png"
+    },
+    {
+      "cName": "React ToolTip Component",
+      "id": 53,
+      "shortDesc": "A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element.",
+      "longDesc": "A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element. You can customize this tooltip position by passing props.",
+      "images": [
+        "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip.PNG",
+        "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip1.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/React ToolTip Component/React_tooltip.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/React ToolTip Component/React_tooltip Documentation.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "18 June 2020",
+      "contributors": ["Ram Suresh"],
+      "thumbnails":  "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip.PNG"
     }
   ],
   "solutions": [
