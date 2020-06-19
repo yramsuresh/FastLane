@@ -12,24 +12,28 @@
           <h2 class="welcome-text">
             Welcome,
           </h2>
-          <!-- <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p> -->
-          <div class="alert alert-info">
+          <p>
+            <b>Fastlane</b> is our <b>Portal</b> which helps developers, project
+            managers to utilize reusable components, check best practices and
+            solutions. This portal allow customers to go through the LTI’s
+            Strength & Capabilities. It helps to validate business requirements
+            and significantly increase development pace.
+          </p>
+          <!-- <div class="alert alert-info">
             <strong>Normal User</strong> - U: user P: user<br />
             <strong>Administrator</strong> - U: admin P: admin
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pd-x-21">
-        
         <div class="card card-layout">
           <h3 class="login-head text-center">Login</h3>
           <div class="card-body">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+            <form
+              [formGroup]="loginForm"
+              (ngSubmit)="onSubmit()"
+              class="login-form"
+            >
               <div class="form-group">
                 <input
                   type="text"
@@ -64,7 +68,10 @@
                   </div>
                 </div>
               </div>
-              <button [disabled]="loading" class="btn btn-primary btn-block btn-login">
+              <button
+                [disabled]="loading"
+                class="btn btn-primary btn-block btn-login"
+              >
                 <span
                   *ngIf="loading"
                   class="spinner-border spinner-border-sm mr-1"

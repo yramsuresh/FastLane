@@ -5,8 +5,7 @@
   .logo-title {
     color: #ffffff !important;
     padding: 30px 30px 10px 5%;
-    img 
-    {
+    img {
       margin-right: 15px;
       vertical-align: baseline;
     }
@@ -25,6 +24,10 @@
       strong {
         color: #ffffff !important;
       }
+      b {
+        font-weight: 600;
+        color: #ffffff !important;
+      }
     }
   }
   .card-layout {
@@ -37,8 +40,7 @@
     font-weight: bold;
     text-transform: uppercase;
   }
-  .welcome-text
-  {
+  .welcome-text {
     font-size: 37px;
     font-family: "Goutham Ultraitalic";
   }
@@ -87,29 +89,24 @@
   margin-bottom: 0px;
   font-size: 25px;
   display: inline-block;
-  color:#fff;
+  color: #fff;
   line-height: auto;
   text-transform: uppercase;
 }
-.login-form
-{ 
-  .form-group
-  {
+.login-form {
+  .form-group {
     margin-bottom: 20px;
   }
-  .form-control
-  {
+  .form-control {
     padding: 1.6rem 1rem;
     font-size: 20px;
   }
-  .btn-login
-  {
-      height: 40px;
-      margin-top: 35px;
-      text-transform: uppercase;
+  .btn-login {
+    height: 40px;
+    margin-top: 35px;
+    text-transform: uppercase;
   }
 }
-.pd-x-21
-{
+.pd-x-21 {
   padding: 0px 21px;
 }

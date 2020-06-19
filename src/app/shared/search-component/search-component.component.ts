@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 // import { EventEmitter } from 'protractor';
 
 @Component({
@@ -13,7 +13,7 @@ export class SearchComponentComponent implements OnInit {
   @Output() searchTextEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Output() resetData: EventEmitter<string> = new EventEmitter<string>();
   speechToText: string;
-  constructor() {}
+  constructor(private cd: ChangeDetectorRef) {}
   keyup(event) {
     this.searchValue = event;
     this.search.emit(this.searchValue);
@@ -51,9 +51,14 @@ export class SearchComponentComponent implements OnInit {
     recognition.start();
 
     recognition.onspeechend = function() {
+      if(this.speechToText){
+        (<HTMLInputElement>document.getElementById('textToSearch')).value = this.speechToText;
+      }
       recognition.stop();
+      setTimeout(() => {
+        (<HTMLInputElement>document.getElementById('textToSearch')).click()
+      }, 2000);
     }
-
     recognition.onaudioend = function() {
       (<HTMLImageElement>document.getElementById('image')).src = 'assets/mic.gif';
     }
