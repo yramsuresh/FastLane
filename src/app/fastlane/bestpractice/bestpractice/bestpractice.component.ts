@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentServicesService } from 'src/app/component-services.service';
+import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'app-solutions',
-  templateUrl: './solutions.component.html',
-  styleUrls: ['./solutions.component.scss'],
+  selector: 'app-bestpractice',
+  templateUrl: './bestpractice.component.html',
+  styleUrls: ['./bestpractice.component.scss'],
 })
-export class SolutionsComponent implements OnInit {
+export class BestpracticeComponent implements OnInit {
   componentData: any;
-  solutions: any;
+  bestPractices: any;
   loading = true;
   currentData: any;
-  comp: any;
   list: any;
   searchValue: string;
-  solimages = 'assets/images/thumbnails/solutions.png';
+  bestimages = 'assets/images/thumbnails/bestPractices.png';
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -26,8 +25,8 @@ export class SolutionsComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.list = Object.keys(this.componentData);
-      this.solutions = this.componentData.solutions;
-      this.currentData = this.solutions;
+      this.bestPractices = this.componentData.bestPractices;
+      this.currentData = this.bestPractices;
       this.loading = false;
     });
   }

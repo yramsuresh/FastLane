@@ -9,6 +9,8 @@ import { User, Role } from '../../_models';
 })
 export class HeaderComponent implements OnInit {
   currentUser: User;
+  role: any;
+  loginpage: boolean;
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService
@@ -17,12 +19,25 @@ export class HeaderComponent implements OnInit {
       (x) => (this.currentUser = x)
     );
   }
-  get isAdmin() {
-    return this.currentUser && this.currentUser.role === Role.Admin;
-  }
+  // get isAdmin() {
+  //   return this.currentUser && this.currentUser.role === Role.Admin;
+  // }
+  // get isAdmin() {
+  //   this.role = localStorage.getItem('data');
+  //   if (this.role === 0) {
+  //     this.loginpage = true;
+  //   }
+  // }
   logout() {
     this.authenticationService.logout();
     this.router.navigate(['/login']);
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.role = localStorage.getItem('data');
+    if (this.role === '0') {
+      this.loginpage = true;
+    } else {
+      this.loginpage = false;
+    }
+  }
 }

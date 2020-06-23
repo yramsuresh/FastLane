@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentServicesService } from 'src/app/component-services.service';
+import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
@@ -88,7 +88,7 @@ export class DetailsComponent implements OnInit {
           video: y,
           type: x,
           imgArray: this.selectedImgArray,
-          indexImg: this.selectedImgIndex
+          indexImg: this.selectedImgIndex,
         },
         width: '100%',
         height: 'auto',
@@ -101,7 +101,7 @@ export class DetailsComponent implements OnInit {
           video: y,
           type: x,
           imgArray: this.selectedImgArray,
-          indexImg: this.selectedImgIndex
+          indexImg: this.selectedImgIndex,
         },
         width: '100%',
         height: 'auto',

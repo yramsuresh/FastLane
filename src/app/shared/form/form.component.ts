@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentServicesService } from 'src/app/component-services.service';
+import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import {
   FormBuilder,
   FormGroup,

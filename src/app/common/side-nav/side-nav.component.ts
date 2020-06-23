@@ -15,6 +15,8 @@ export class SideNavComponent implements OnInit {
   activeSolution = false;
   activeBestPractice = false;
   currentUser: User;
+  role: any;
+  loginpage: boolean;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -25,9 +27,12 @@ export class SideNavComponent implements OnInit {
       (x) => (this.currentUser = x)
     );
   }
-  get isAdmin() {
-    return this.currentUser && this.currentUser.role === Role.Admin;
-  }
+  // get isAdmin() {
+  //   this.role = localStorage.getItem('data');
+  //   if (this.role === 0) {
+  //     return this.currentUser && this.currentUser.role === this.role;
+  //   }
+  // }
   onButtonClick() {
     this.router.routeReuseStrategy.shouldReuseRoute = () => {
       return false;
@@ -37,6 +42,12 @@ export class SideNavComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.role = localStorage.getItem('data');
+    if (this.role === '0') {
+      this.loginpage = true;
+    } else {
+      this.loginpage = false;
+    }
     this.router.events.subscribe((val) => {
       if (this.location.path() !== '') {
         this.compType = this.location.path().replace('/', '');

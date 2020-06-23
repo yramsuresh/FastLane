@@ -11,7 +11,8 @@ import { User, Role } from './_models';
 export class AppComponent implements OnInit {
   title = 'frontLane';
   // compType: any;
-  // loginpage = false;
+  loginpage = false;
+  role: any;
   currentUser: User;
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,24 +25,11 @@ export class AppComponent implements OnInit {
     );
   }
   get isAdmin() {
-    if (this.currentUser && this.currentUser.role === Role.Admin) {
-      return this.currentUser && this.currentUser.role === Role.Admin;
-    } else {
-      return this.currentUser && this.currentUser.role === Role.User;
+    this.role = localStorage.getItem('data');
+    if (this.currentUser && this.currentUser.role === this.role) {
+      return this.currentUser && this.currentUser.role === this.role;
     }
   }
 
-  ngOnInit(): void {
-    // this.router.events.subscribe((val) => {
-    //   if (this.location.path() !== '') {
-    //     this.compType = this.location.path().replace('/', '');
-    //     console.log(this.compType);
-    //     if (this.compType === 'login') {
-    //       this.loginpage = true;
-    //     } else {
-    //       this.loginpage = false;
-    //     }
-    //   }
-    // });
-  }
+  ngOnInit(): void {}
 }

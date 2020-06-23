@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNavComponent } from './common/side-nav/side-nav.component';
 // import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ComponentServicesService } from './component-services.service';
+import { ComponentServicesService } from './fastlane/component-services.service';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDividerModule } from '@angular/material/divider';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,8 +23,8 @@ import { ImagedialogComponent } from './common/imagedialog/imagedialog.component
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers';
-import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+// import { fakeBackendProvider } from './@Core/_helpers';
+import { JwtInterceptor, ErrorInterceptor } from './@Core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login';
 import { CommonModule } from '@angular/common';
@@ -68,7 +68,7 @@ import { CommonModule } from '@angular/common';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
     // provider used to create fake backend
-    fakeBackendProvider,
+    // fakeBackendProvider,
   ],
   bootstrap: [AppComponent],
   entryComponents: [ImagedialogComponent],

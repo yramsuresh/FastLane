@@ -10,7 +10,7 @@
       <div class="col-6 d-none d-md-block d-lg-block">
         <div class="left-container">
           <h2 class="welcome-text">
-            Welcome,
+            Welcome
           </h2>
           <p>
             <b>Fastlane</b> is our <b>Portal</b> which helps developers, project
@@ -37,16 +37,16 @@
               <div class="form-group">
                 <input
                   type="text"
-                  formControlName="username"
+                  formControlName="email"
                   placeholder="Email Address*"
                   class="form-control"
-                  [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
+                  [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
                 />
                 <div
-                  *ngIf="submitted && f.username.errors"
+                  *ngIf="submitted && f.email.errors"
                   class="invalid-feedback"
                 >
-                  <div *ngIf="f.username.errors.required">
+                  <div *ngIf="f.email.errors.required">
                     Username is required
                   </div>
                 </div>

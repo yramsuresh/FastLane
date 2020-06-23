@@ -785,6 +785,55 @@
       "lastUpdatedOn": "17 June 2020",
       "contributors": ["Rupali Mane"],
       "thumbnails": "./assets/Data/ReusableComponents/Filter by Categories Using React/Images/select_category.png"
+    },
+    {
+      "cName": "React ToolTip Component",
+      "id": 53,
+      "shortDesc": "A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element.",
+      "longDesc": "A tooltip is often used to specify extra information about something when the user moves the mouse pointer over an element. You can customize this tooltip position by passing props.",
+      "images": [
+        "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip.PNG",
+        "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip1.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/React ToolTip Component/React_tooltip.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/React ToolTip Component/React_tooltip Documentation.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "18 June 2020",
+      "contributors": ["Ram Suresh"],
+      "thumbnails": "./assets/Data/ReusableComponents/React ToolTip Component/Images/Tooltip.PNG"
+    },
+    {
+      "cName": "Timer Using React",
+      "id": 54,
+      "shortDesc": "It can be useful to Set countdown for any activity, launch",
+      "longDesc": "It can be useful to Set countdown for any activity, launch with start, pause and stop features.",
+      "images": [
+        "./assets/Data/ReusableComponents/Timer Using React/Images/react_timer.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Timer Using React/timer.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Timer Using React/document.docx"
+        }
+      ],
+      "type": "React",
+      "size": "",
+      "lastUpdatedOn": "19 June 2020",
+      "contributors": ["Rupali Mane"],
+      "thumbnails": "./assets/Data/ReusableComponents/Timer Using React/Images/react_timer.png"
     }
   ],
   "solutions": [
@@ -913,9 +962,7 @@
       "id": 34,
       "shortDesc": "XSS(Cross Site Security) is a security attack where the attacker injects malicious code while doing data entry.",
       "longDesc": "XSS(Cross Site Security) is a security attack where the attacker injects malicious code while doing data entry. This code can be a javascript, vbscript or any other scripting code. Once the code is injected in end user’s browser. This code can run and gain access to cookies,sessions, local files and so on.",
-      "images": [
-        "./assets/Data/Solutions/XSS On WebAPI/Images/xss_attack.jpg"
-      ],
+      "images": ["./assets/Data/Solutions/XSS On WebAPI/Images/xss_attack.jpg"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -1012,7 +1059,7 @@
           "downloadable": "./assets/Data/BestPractices/FastLane/Fastlane.mov"
         }
       ],
-      "type": "Portal",
+      "type": "Angular",
       "size": "",
       "lastUpdatedOn": "15 May 2020",
       "contributors": ["Ismail Shaikh"],
@@ -1143,9 +1190,7 @@
       "id": 37,
       "shortDesc": "Continuous Integration, Delivery and Deployment",
       "longDesc": "A CI/CD pipeline helps you automate steps in your software delivery process, such as initiating code builds, running automated tests, and deploying to a staging or production environment. Automated pipelines remove manual errors, provide standardized development feedback loops and enable fast product iterations.",
-      "images": [
-        "./assets/Data/BestPractices/CI CD Process/Images/CI_CD.jpg"
-      ],
+      "images": ["./assets/Data/BestPractices/CI CD Process/Images/CI_CD.jpg"],
       "files": [
         {
           "linkText": "Usage Document",
@@ -1158,6 +1203,5 @@
       "contributors": [],
       "thumbnails": "./assets/Data/BestPractices/CI CD Process/Images/CI_CD.jpg"
     }
-
   ]
 }

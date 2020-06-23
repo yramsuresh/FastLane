@@ -1,6 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ComponentServicesService } from 'src/app/component-services.service';
+import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import { Router } from '@angular/router';
 
 let TABLE_DATA: [];

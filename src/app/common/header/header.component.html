@@ -8,8 +8,8 @@
     <h1 class="topheader">FastLane</h1>
   </div>
   <div fxLayout="row" fxLayoutAlign="space-around center">
-    <span class="pd-l" *ngIf="isAdmin">Admin</span>
-    <span class="pd-l" *ngIf="!isAdmin">User</span>
+    <span class="pd-l" *ngIf="loginpage">Admin </span>
+    <span class="pd-l" *ngIf="!loginpage">User </span>
     <!-- <img
       src="../assets/images/userAvathar.png"
       alt="userAvathar"
