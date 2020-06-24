@@ -24,10 +24,9 @@ export class AuthenticationService {
 
   login(email: string, password: string) {
     return this.http
-      .post<any>(`${environment.apiUrl}/admin/login`, {
+      .post<any>(`${environment.apiUrl}auth/login`, {
         email,
         password,
-        role: 1,
       })
       .pipe(
         map((user) => {

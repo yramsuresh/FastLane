@@ -44,9 +44,9 @@ export class DetailsComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.details = this.componentData;
-      const localCompArray = this.details.components;
-      const localSolArray = this.details.solutions;
-      const localbestArray = this.details.bestPractices;
+      const localCompArray = this.details[0];
+      const localSolArray = this.details[1];
+      const localbestArray = this.details[2];
       const localArray = [
         ...localCompArray,
         ...localSolArray,

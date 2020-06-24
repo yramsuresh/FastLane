@@ -42,9 +42,9 @@ export class AdminComponent implements OnInit {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
       this.list = Object.keys(this.componentData);
-      this.components = this.componentData.components;
-      this.solutions = this.componentData.solutions;
-      this.bestPractices = this.componentData.bestPractices;
+      this.components = this.componentData[0];
+      this.solutions = this.componentData[1];
+      this.bestPractices = this.componentData[2];
       this.alldata = this.components.concat(this.bestPractices, this.solutions);
       let value = this.alldata.sort();
       TABLE_DATA = value;

@@ -32,11 +32,13 @@ export class DashboardComponent implements OnInit {
   }
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
+      console.log(data);
       this.componentData = data;
-      this.list = Object.keys(this.componentData);
-      this.components = this.componentData.components;
-      this.solutions = this.componentData.solutions;
-      this.bestPractices = this.componentData.bestPractices;
+      this.list = ['components', 'solutions', 'bestPractices'];
+      // this.list = Object.keys(this.componentData);
+      this.components = this.componentData[0];
+      this.solutions = this.componentData[1];
+      this.bestPractices = this.componentData[2];
       this.loading = false;
     });
   }

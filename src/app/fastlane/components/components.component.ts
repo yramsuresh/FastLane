@@ -31,8 +31,9 @@ export class ComponentsComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
-      this.list = Object.keys(this.componentData);
-      this.components = this.componentData.components;
+      // this.list = Object.keys(this.componentData);
+      this.list = ['components', 'solutions', 'bestPractices'];
+      this.components = this.componentData[0];
       this.currentData = this.components;
       this.loading = false;
     });

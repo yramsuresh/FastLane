@@ -25,8 +25,9 @@ export class SolutionsComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
-      this.list = Object.keys(this.componentData);
-      this.solutions = this.componentData.solutions;
+      // this.list = Object.keys(this.componentData);
+      this.list = ['components', 'solutions', 'bestPractices'];
+      this.solutions = this.componentData[1];
       this.currentData = this.solutions;
       this.loading = false;
     });

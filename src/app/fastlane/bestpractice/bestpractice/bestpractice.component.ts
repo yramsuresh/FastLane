@@ -24,8 +24,9 @@ export class BestpracticeComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
-      this.list = Object.keys(this.componentData);
-      this.bestPractices = this.componentData.bestPractices;
+      // this.list = Object.keys(this.componentData);
+      this.list = ['components', 'solutions', 'bestPractices'];
+      this.bestPractices = this.componentData[2];
       this.currentData = this.bestPractices;
       this.loading = false;
     });
