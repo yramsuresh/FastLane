@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'bestPractices',
     loadChildren: () =>
-      import('./fastlane/bestpractice/bestpractice/bestpractice.module').then(
+      import('./fastlane/bestpractice/bestpractice.module').then(
         (m) => m.BestpracticeModule
       ),
     canActivate: [AuthGuard],

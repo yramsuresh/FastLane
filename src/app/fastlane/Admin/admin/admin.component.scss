@@ -1,14 +1,80 @@
 table {
-  width: 95%;
+  width: 98%;
+  border: 2px solid #2b2d71;
 }
 
+.admin-subheading {
+  font-weight: 600 !important;
+  font-size: 22px;
+}
+.fliter-section {
+  width: 98%;
+  margin-bottom: 10px;
+  .filter-wrapper {
+    .fa {
+      font-size: 24px;
+      margin-left: 10px;
+    }
+    .addbutton {
+      margin-left: 30px;
+      .mat-button-base {
+        width: 40px;
+        height: 40px;
+        &::ng-deep .mat-button-wrapper {
+          padding: 0px !important;
+          display: inline-block !important;
+          line-height: 0px !important;
+          .mat-icon {
+            font-size: 34px;
+            font-weight: 200;
+            line-height: 22px;
+            margin-left: -11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.admin-table {
+  th {
+    font-weight: 600;
+    font-size: 18px;
+    color: #2b2d71;
+    border-bottom: 2px solid #2b2d71;
+    text-transform: capitalize;
+  }
+
+  tr {
+    td {
+      border-bottom-width: 0px;
+      color: #2b2d71;
+      font-size: 17px;
+    }
+  }
+}
 .mat-form-field {
   font-size: 14px;
-  width: 95%;
+  width: 98%;
 }
-.addbutton {
-  margin-right: 6%;
-}
+
 .ptr {
   cursor: pointer;
 }
+mat-icon {
+  color: white;
+}
+.wd-95 {
+  width: 98%;
+}
+.btm {
+  margin-bottom: 30px;
+}
+
+// th.mat-header-cell,
+// td.mat-cell,
+// td.mat-footer-cell {
+//   padding: 0;
+//   border-bottom-width: 2px;
+//   border-bottom-style: solid;
+// }

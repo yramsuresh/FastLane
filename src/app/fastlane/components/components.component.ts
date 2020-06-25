@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentServicesService } from '../component-services.service';
 import { Router } from '@angular/router';
+import { ComponentsService } from './components.service';
 
 @Component({
   selector: 'components',
@@ -17,7 +17,7 @@ export class ComponentsComponent implements OnInit {
   list: any;
   compimages = 'assets/images/thumbnails/components.png';
   constructor(
-    private componentservices: ComponentServicesService,
+    private componentservices: ComponentsService,
     private router: Router
   ) {}
   searchComponent(search) {
@@ -33,7 +33,7 @@ export class ComponentsComponent implements OnInit {
       this.componentData = data;
       // this.list = Object.keys(this.componentData);
       this.list = ['components', 'solutions', 'bestPractices'];
-      this.components = this.componentData[0];
+      this.components = this.componentData;
       this.currentData = this.components;
       this.loading = false;
     });

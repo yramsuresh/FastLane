@@ -52,6 +52,7 @@ export class DetailsComponent implements OnInit {
         ...localSolArray,
         ...localbestArray,
       ];
+      console.log(localArray);
       this.detailobject = localArray.find((comp) => {
         return comp.id === +this.tileId;
       });

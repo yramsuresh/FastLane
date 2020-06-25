@@ -8,6 +8,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Observable } from 'rxjs';
+import * as moment from 'moment';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -80,7 +81,7 @@ export class FormComponent implements OnInit {
       Images: [],
       files: this.formBuilder.array([this.newFiles()]),
       type: [null, Validators.required],
-      lastUpdatedOn: new Date(),
+      lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
       contributors: this.formBuilder.array([this.newContributors()]),
     });
   }

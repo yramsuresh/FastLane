@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import { Router } from '@angular/router';
+import { BestPracticeService } from './best-practice.service';
 @Component({
   selector: 'app-bestpractice',
   templateUrl: './bestpractice.component.html',
@@ -15,7 +15,7 @@ export class BestpracticeComponent implements OnInit {
   searchValue: string;
   bestimages = 'assets/images/thumbnails/bestPractices.png';
   constructor(
-    private componentservices: ComponentServicesService,
+    private componentservices: BestPracticeService,
     private router: Router
   ) {}
   searchComponent(search) {
@@ -26,7 +26,7 @@ export class BestpracticeComponent implements OnInit {
       this.componentData = data;
       // this.list = Object.keys(this.componentData);
       this.list = ['components', 'solutions', 'bestPractices'];
-      this.bestPractices = this.componentData[2];
+      this.bestPractices = this.componentData;
       this.currentData = this.bestPractices;
       this.loading = false;
     });

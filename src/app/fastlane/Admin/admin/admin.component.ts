@@ -1,7 +1,15 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import { Router } from '@angular/router';
+import { MatPaginator } from '@angular/material/paginator';
+import * as moment from 'moment';
 
 let TABLE_DATA: [];
 
@@ -19,16 +27,19 @@ export class AdminComponent implements OnInit {
   loading = true;
   currentData: any;
   list: any;
+  itemsPerPageLabel: string;
   // dataSource: any;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
   ) {}
+
   displayedColumns: string[] = [
     'id',
     'cName',
-    'type',
     'contributors',
+    'type',
     'lastUpdatedOn',
   ];
   dataSource = new MatTableDataSource(TABLE_DATA);
@@ -36,6 +47,10 @@ export class AdminComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
   }
 
   getComponentData() {
@@ -47,8 +62,10 @@ export class AdminComponent implements OnInit {
       this.bestPractices = this.componentData[2];
       this.alldata = this.components.concat(this.bestPractices, this.solutions);
       let value = this.alldata.sort();
+      console.log(value);
       TABLE_DATA = value;
       this.dataSource = new MatTableDataSource(TABLE_DATA);
+      this.dataSource.paginator = this.paginator;
       this.loading = false;
     });
   }
@@ -59,5 +76,6 @@ export class AdminComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getComponentData();
+    console.log(moment(new Date()).format('DD MMMM YYYY'));
   }
 }

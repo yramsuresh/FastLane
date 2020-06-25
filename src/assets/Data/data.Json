@@ -834,6 +834,81 @@
       "lastUpdatedOn": "19 June 2020",
       "contributors": ["Rupali Mane"],
       "thumbnails": "./assets/Data/ReusableComponents/Timer Using React/Images/react_timer.png"
+    },
+    {
+      "cName": "Raycasting",
+      "id": 55,
+      "shortDesc": "A component to implement raycasting in Unity based apps",
+      "longDesc": "AR-VR component that helps to casts a ray, from point origin to a specified direction using ControllerScript class",
+      "images": [
+        "./assets/Data/ReusableComponents/Raycasting/Images/detail-image.png",
+        "./assets/Data/ReusableComponents/Raycasting/Images/thumbnail-image.jpg"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Raycasting/Code.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Raycasting/Component Usage.docx"
+        }
+      ],
+      "type": "C#",
+      "size": "",
+      "lastUpdatedOn": "24 June 2020",
+      "contributors": ["Alina D'mello"],
+      "thumbnails": "./assets/Data/ReusableComponents/Raycasting/Images/thumbnail-image.jpg"
+    },
+    {
+      "cName": "Skype calling",
+      "id": 56,
+      "shortDesc": "A component to make skype calls ",
+      "longDesc": "Android component to make a skype call using the \"skypelib\"  jar file",
+      "images": [
+        "./assets/Data/ReusableComponents/Skype calling/Images/detail-image.png",
+        "./assets/Data/ReusableComponents/Skype calling/Images/thumbnail-image.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Skype calling/Code.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Skype calling/Component usage.docx"
+        }
+      ],
+      "type": "Android ",
+      "size": "",
+      "lastUpdatedOn": "24 June 2020",
+      "contributors": ["Karan Balkar"],
+      "thumbnails": "./assets/Data/ReusableComponents/Skype calling/Images/thumbnail-image.png"
+    },
+    {
+      "cName": "Vuzix Voice recognition",
+      "id": 57,
+      "shortDesc": "A component to implement speech recognition in Vuzix ",
+      "longDesc": "Android component which does speech recognition using the \"voicelib\" jar file",
+      "images": [
+        "./assets/Data/ReusableComponents/Vuzix Voice recognition/Images/detail-view-image.jpg",
+        "./assets/Data/ReusableComponents/Vuzix Voice recognition/Images/thumbnail-image.png"
+      ],
+      "files": [
+        {
+          "linkText": "Source Code",
+          "downloadable": "./assets/Data/ReusableComponents/Vuzix Voice recognition/Code.zip"
+        },
+        {
+          "linkText": "Usage Document",
+          "downloadable": "./assets/Data/ReusableComponents/Vuzix Voice recognition/Component usage.docx"
+        }
+      ],
+      "type": "Android ",
+      "size": "",
+      "lastUpdatedOn": "24 June 2020",
+      "contributors": ["Karan Balkar"],
+      "thumbnails": "./assets/Data/ReusableComponents/Vuzix Voice recognition/Images/thumbnail-image.png"
     }
   ],
   "solutions": [
