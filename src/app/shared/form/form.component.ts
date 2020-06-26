@@ -135,14 +135,52 @@ export class FormComponent implements OnInit {
     // post.contributors = this.contributorsArray;
     const myObjStr = JSON.stringify(post);
     this.post = myObjStr;
-    this.componentservices.postFormData(this.post).subscribe(
-      (x) => {
-        alert('Succesfully data Added');
-      },
-      (err) => {
-        alert('UnSuccesfully data Added');
-        console.error(err);
-      }
-    );
+    alert(JSON.parse(this.post).category)
+    let cat = JSON.parse(this.post)
+    if(cat.category === 'Components'){
+      alert('comp');
+      this.componentservices.postFormData(this.post, 'components').subscribe(
+        (x) => {
+          alert('Succesfully data Added');
+        },
+        (err) => {
+          alert('UnSuccesfully data Added');
+          console.error(err);
+        }
+      );
+    }
+    if(cat.category === 'Solutions'){
+      alert('sol');
+      this.componentservices.postFormData(this.post, 'solutions').subscribe(
+        (x) => {
+          alert('Succesfully data Added');
+        },
+        (err) => {
+          alert('UnSuccesfully data Added');
+          console.error(err);
+        }
+      );
+    }
+    if(cat.category === 'Best Practice'){
+      alert('best');
+      this.componentservices.postFormData(this.post, 'bestPractices').subscribe(
+        (x) => {
+          alert('Succesfully data Added');
+        },
+        (err) => {
+          alert('UnSuccesfully data Added');
+          console.error(err);
+        }
+      );
+    }
+    // this.componentservices.postFormData(this.post).subscribe(
+    //   (x) => {
+    //     alert('Succesfully data Added');
+    //   },
+    //   (err) => {
+    //     alert('UnSuccesfully data Added');
+    //     console.error(err);
+    //   }
+    // );
   }
 }

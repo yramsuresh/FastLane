@@ -24,8 +24,8 @@ export class ComponentServicesService {
     let data = forkJoin([component, solutions, bestPractices]);
   }
 
-  postFormData(post) {
+  postFormData(post, type) {
     console.log(post);
-    return this.http.post('http://localhost:5000/api/create-tile', post);
+    return this.http.post('http://localhost:5000/api/'+type, post);
   }
 }
