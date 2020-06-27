@@ -18,10 +18,12 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { SearchComponentComponent } from './search-component/search-component.component';
+import { FileUploadModule } from 'ng2-file-upload';
 @NgModule({
   declarations: [TileComponent, FormComponent, SearchComponentComponent],
   imports: [
     CommonModule,
+    FileUploadModule,
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,

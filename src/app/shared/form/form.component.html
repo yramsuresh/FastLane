@@ -112,6 +112,54 @@
               (change)="onSelectFile($event)"
               formControlName="AddImage"
             />
+            <!-- <input type="file" ng2FileSelect accept="image/*"
+             [uploader]="uploader" multiple /> -->
+
+
+             <!--  
+             <table class="table">
+              <thead>
+              <tr>
+                  <th width="50%">Name</th>
+                  <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let item of uploader.queue">
+                  <td><strong>{{ item?.file?.name }}</strong></td>
+                  <td nowrap>
+                      <button type="button" class="btn btn-success btn-xs"
+                              (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                          <span class="glyphicon glyphicon-upload"></span> Upload
+                      </button>
+                      <button type="button" class="btn btn-warning btn-xs"
+                              (click)="item.cancel()" [disabled]="!item.isUploading">
+                          <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                      </button>
+                      <button type="button" class="btn btn-danger btn-xs"
+                              (click)="item.remove()">
+                          <span class="glyphicon glyphicon-trash"></span> Remove
+                      </button>
+                  </td>
+              </tr>
+              </tbody>
+          </table>
+
+
+          <button type="button" class="btn btn-success btn-s"
+                        (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+                    <span class="glyphicon glyphicon-upload"></span> Upload all
+                </button>
+                <button type="button" class="btn btn-warning btn-s"
+                        (click)="uploader.cancelAll()" [disabled]="!uploader.isUploading">
+                    <span class="glyphicon glyphicon-ban-circle"></span> Cancel all
+                </button>
+                <button type="button" class="btn btn-danger btn-s"
+                        (click)="uploader.clearQueue()" [disabled]="!uploader.queue.length">
+                    <span class="glyphicon glyphicon-trash"></span> Remove all
+                </button>
+
+            -->
           </div>
         </div>
       </div>
@@ -180,6 +228,7 @@
                   multiple
                   accept="files/*"
                   formControlName="downloadable"
+                  (change)="onChangeFile($event)"
                 />
               </div>
             </div>
