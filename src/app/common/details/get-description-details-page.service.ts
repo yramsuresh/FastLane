@@ -14,10 +14,7 @@ export class GetDescriptionDetailsPageService {
       `${environment.apiUrl}${details.compType}/${details.Id}`
     );
   }
-  // getDownloadFiles(fileId) {
-  //   console.log(fileId);
-  //   return this.http.get(`${environment.apiUrl}download/file/${fileId}`);
-  // }
+
   getDownloadFiles(fileId): Observable<Blob> {
     return this.http
       .get(`${environment.apiUrl}download/file/${fileId}`, {
@@ -25,16 +22,9 @@ export class GetDescriptionDetailsPageService {
       })
       .pipe(
         tap(
-          // Log the result or error
           (data) => console.log('You received data'),
           (error) => console.log(error)
         )
       );
-    // let options = new RequestOptions({
-    //   responseType: ResponseContentType.Blob,
-    // });
-    // return this.http
-    //   .get(`${environment.apiUrl}download/file/${fileId}`, options)
-    //   .pipe(map((res) => res.blob()));
   }
 }

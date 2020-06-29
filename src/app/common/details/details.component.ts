@@ -68,10 +68,8 @@ export class DetailsComponent implements OnInit {
       .subscribe((data) => {
         this.componentData = data;
         this.detailobject = this.componentData;
-        console.log('details object', this.detailobject.files);
         if (this.detailobject && this.detailobject.images.length > 0) {
           this.selectedImgPath = this.detailobject.images[0].fileURL;
-          console.log(this.selectedImgPath);
           this.selectedImgArray = this.detailobject.images;
           this.selectedImgIndex = 0;
         }
