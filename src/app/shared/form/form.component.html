@@ -3,13 +3,17 @@
   <div class="container" *ngIf="!post; else forminfo" novalidate>
     <form
       [formGroup]="formGroup"
-      (ngSubmit)="onSubmit(formGroup.value)"
+      (ngSubmit)="onSubmit($event, formGroup.value)"
+      autocomplete="off"
       class="form"
     >
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6 col-xs-12">
           <label>Select an Category</label>
-          <mat-form-field class="form-element" appearance="outline">
+          <mat-form-field
+            class="form-element custom-form-input"
+            appearance="outline"
+          >
             <mat-select [(value)]="selected" formControlName="category">
               <mat-option>None</mat-option>
               <mat-option value="Components">Components</mat-option>
@@ -18,12 +22,15 @@
             </mat-select>
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-xs-12">
           <label>You selected: {{ selected }}</label>
-          <mat-form-field class="form-element" appearance="outline">
+          <mat-form-field
+            class="form-element custom-form-input"
+            appearance="outline"
+          >
             <input
               matInput
-              placeholder="Component Name"
+              placeholder="{{ selected }} Name"
               formControlName="cName"
             />
             <mat-error *ngIf="!cName.valid && cName.touched">
@@ -31,21 +38,27 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-xs-12">
           <label>Short Description</label>
-          <mat-form-field class="form-element" appearance="outline">
+          <mat-form-field
+            class="form-element description-Input"
+            appearance="outline"
+          >
             <textarea
               matInput
               #Short_Description
-              placeholder=" Short Description"
+              placeholder=" Type Here"
               matTextareaAutosize
               matAutosizeMinRows="2"
               matAutosizeMaxRows="5"
               formControlName="shortDesc"
             ></textarea>
-            <mat-hint align="end"
+            <p class="position-hint">
+              {{ Short_Description.value.length }} / 78
+            </p>
+            <!-- <mat-hint align="end"
               >{{ Short_Description.value.length }} / 78</mat-hint
-            >
+            > -->
             <mat-error
               *ngIf="
                 !formGroup.controls['shortDesc'].valid &&
@@ -56,21 +69,27 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-xs-12">
           <label>Long Description</label>
-          <mat-form-field class="form-element" appearance="outline">
+          <mat-form-field
+            class="form-element description-Input"
+            appearance="outline"
+          >
             <textarea
               matInput
               #Long_Description
-              placeholder=" Long Description"
+              placeholder=" Type Here"
               matTextareaAutosize
               matAutosizeMinRows="2"
               matAutosizeMaxRows="5"
               formControlName="longDesc"
             ></textarea>
-            <mat-hint align="end"
+            <p class="position-hint">
+              {{ Long_Description.value.length }} / 500
+            </p>
+            <!-- <mat-hint class="position-hint" align="end"
               >{{ Long_Description.value.length }} / 500</mat-hint
-            >
+            > -->
             <mat-error
               *ngIf="
                 !formGroup.controls['longDesc'].valid &&
@@ -81,12 +100,15 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-6">
+        <div class="col-md-6 col-xs-12">
           <label>Technology</label>
-          <mat-form-field class="form-element" appearance="outline">
+          <mat-form-field
+            class="form-element custom-form-input"
+            appearance="outline"
+          >
             <input
               matInput
-              placeholder="hint: Angular/.Net/Node/Reactjs/etc.."
+              placeholder="hint: Angular/.Net/Android/SharePoint/Ionic/etc.."
               formControlName="type"
             />
 
@@ -98,106 +120,132 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <label>Add Images</label>
+          <label class="fs-18">Add Images</label>
           <div
-            fxLayout="row"
-            fxLayoutAlign="space-between center"
-            class="form-element"
+            class="uploadfilecontainer"
+            (click)="fileInput.click()"
+            appDragDrop
+            (onFileDropped)="uploadFile($event)"
           >
             <input
-              class="pd-l"
+              hidden
               type="file"
               multiple
               accept="image/*"
-              (change)="onSelectFile($event)"
-              formControlName="AddImage"
+              #fileInput
+              (change)="uploadFile($event.target.files)"
             />
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6"></div>
-        <div class="col-6">
-          <div formArrayName="contributors">
-            <div
-              *ngFor="
-                let contributor of contributors().controls;
-                let conIndex = index
-              "
-              fxLayout="row"
-              fxLayoutAlign="space-around center"
-            >
-              <div class="width" [formGroupName]="conIndex">
-                <mat-form-field class="form-element" appearance="outline">
-                  <input
-                    matInput
-                    placeholder="Contributors"
-                    formControlName="contributor"
-                  />
-                  <mat-hint align="start">Contributors Name</mat-hint>
-                  <!-- <mat-error *ngIf="!contributors.valid && contributors.touched">
-          {{ titleAlert }}
-        </mat-error> -->
-                </mat-form-field>
-              </div>
-              <mat-icon (click)="removeCont(conIndex)">delete</mat-icon>
-              <mat-icon (click)="addContributors()">add</mat-icon>
-            </div>
+          <div class="files-list" *ngFor="let file of urls; let i = index">
+            <span>{{ file }}</span>
+            <button class="delete-file" (click)="deleteImages(i)">
+              <mat-icon>delete</mat-icon>
+              <!-- <img src="../../../assets/images/Recycle_Bin_Full.png" /> -->
+            </button>
           </div>
         </div>
       </div>
-      <span>Add Files</span>
-      <div
-        fxLayout="column"
-        fxLayoutAlign="space-evenly center"
-        formArrayName="files"
-      >
-        <div
-          *ngFor="let file of files().controls; let fileIndex = index"
-          class="width"
-        >
-          <div
-            [formGroupName]="fileIndex"
-            fxLayout="row"
-            fxLayoutAlign="space-between center"
+      <label class="fs-18">Add Files</label>
+
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <label>Title</label>
+          <mat-form-field
+            class="form-element custom-form-input"
+            appearance="outline"
           >
-            <div class="width">
-              <div>
-                <mat-form-field class="form-element" appearance="outline">
-                  <input
-                    matInput
-                    placeholder="Title"
-                    formControlName="linkText"
-                  />
-                  <mat-hint align="start"
-                    >hint: Usage Document/Source code</mat-hint
-                  >
-                </mat-form-field>
-              </div>
-              <div class="pd-l">
-                <input
-                  type="file"
-                  multiple
-                  accept="files/*"
-                  formControlName="downloadable"
-                />
-              </div>
-            </div>
-            <mat-icon (click)="removefile(fileIndex)">delete</mat-icon>
-            <mat-icon (click)="addFiles()">add</mat-icon>
+            <input
+              matInput
+              #documentTitleInput
+              placeholder="hint: Usage Document/Source code"
+              (keyup)="EnableUploadFiles($event)"
+            />
+          </mat-form-field>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <label>Contributors</label>
+
+          <mat-form-field
+            class="form-element custom-form-input nopdb"
+            appearance="outline"
+          >
+            <input
+              matInput
+              #ContributorTitleInput
+              placeholder="Enter Contibutors Name"
+              (change)="InputContributors($event)"
+              formControlName="Contributors"
+            />
+            <mat-icon
+              (click)="updateContributor($event, ContributorTitleInput)"
+              matSuffix
+              >done</mat-icon
+            >
+            <mat-error
+              *ngIf="
+                !formGroup.controls['Contributors'].valid &&
+                formGroup.controls['Contributors'].touched
+              "
+            >
+              Required field, Give Contributors Name.
+            </mat-error>
+          </mat-form-field>
+
+          <div
+            class="files-list"
+            *ngFor="let file of contributorsInput; let i = index"
+          >
+            <span>{{ file }}</span>
+            <button class="delete-file">
+              <mat-icon (click)="deleteContributors(i)">delete</mat-icon>
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="form-element">
+      <div class="row">
+        <div
+          class="col-12 col-xs-12"
+          [ngClass]="enableDocument ? '' : 'disabledDocument'"
+        >
+          <label>Add Documents</label>
+          <div class="disable-Wrapper">
+            <div class="diasbledDiv"><p>Title should be there</p></div>
+            <div
+              class="uploadfilecontainer"
+              (click)="documentInput.click()"
+              appDragDrop
+              (onFileDropped)="uploadDocumentFiles($event, documentTitleInput)"
+            >
+              <input
+                hidden
+                type="file"
+                #documentInput
+                (change)="
+                  uploadDocumentFiles($event.target.files, documentTitleInput)
+                "
+              />
+            </div>
+          </div>
+          <div class="files-list" *ngFor="let file of documents; let i = index">
+            <span>{{ file.linkText }}</span>
+            <span>{{ file.downloadable }}</span>
+            <!-- <button class="delete-file" > -->
+            <mat-icon (click)="deleteDocuments(i)">delete</mat-icon>
+            <!-- </button> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="form-element" fxLayout="row" fxLayoutAlign="center center">
         <button
           mat-raised-button
-          color="primary"
           type="submit"
-          class="button"
+          class="button custom-button"
           [disabled]="!formGroup.valid"
+          [ngClass]="!formGroup.valid ? 'disabled' : 'active'"
         >
-          Submit Form
+          Submit
         </button>
       </div>
     </form>

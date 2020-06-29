@@ -47,11 +47,15 @@
       <div class="tile" *ngIf="(type == 'all' && i < 8) || type != 'all'">
         <div class="tile-image">
           <img
-            src="{{ data.thumbnails }}"
-            alt="{{ data.thumbnails }}"
-            *ngIf="data.thumbnails !== ''"
+            src="http://localhost:5000{{ data.images[0].fileURL }}"
+            alt="{{ data.images[0].fileName }}"
+            *ngIf="data.images.length > 0"
           />
-          <img src="{{ imageUrl }}" alt="" *ngIf="data.thumbnails === ''" />
+          <img
+            src="http://localhost:5000{{ data.images[0].fileURL }}"
+            alt=""
+            *ngIf="data.thumbnails === ''"
+          />
         </div>
         <mat-divider></mat-divider>
         <div class="content" fxLayout="column" fxLayoutGap="2px">

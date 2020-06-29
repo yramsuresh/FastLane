@@ -5,7 +5,7 @@
       "id": 2,
       "shortDesc": "Docusign API integration with Select PDF file & configure signature / input fields position, Send it to signer features",
       "longDesc": "Can be useful to integrate / add E-signature in any web application. Ex. Rent Agreement, Confidential document approval",
-      "images": [
+      "Images": [
         "./assets/Data/ReusableComponents/ESignature/Images/Esign1.png",
         "./assets/Data/ReusableComponents/ESignature/Images/Esign2.png",
         "./assets/Data/ReusableComponents/ESignature/Images/Esign3.png",

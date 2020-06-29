@@ -18,8 +18,14 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { SearchComponentComponent } from './search-component/search-component.component';
+import { DragDropDirective } from './drag-drop.directive';
 @NgModule({
-  declarations: [TileComponent, FormComponent, SearchComponentComponent],
+  declarations: [
+    TileComponent,
+    FormComponent,
+    SearchComponentComponent,
+    DragDropDirective,
+  ],
   imports: [
     CommonModule,
     MatIconModule,
@@ -33,7 +39,7 @@ import { SearchComponentComponent } from './search-component/search-component.co
     MatProgressSpinnerModule,
     MatTooltipModule,
     ReactiveFormsModule,
-    // BrowserAnimationsModule,
+
     MatProgressBarModule,
     HttpClientModule,
     MatCardModule,

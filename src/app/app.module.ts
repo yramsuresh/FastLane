@@ -28,6 +28,7 @@ import { JwtInterceptor, ErrorInterceptor } from './@Core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login';
 import { CommonModule } from '@angular/common';
+import { GetDescriptionDetailsPageService } from './common/details/get-description-details-page.service';
 // import { SearchComponentComponent } from './common/search-component/search-component.component';
 
 @NgModule({
@@ -64,6 +65,7 @@ import { CommonModule } from '@angular/common';
   ],
   providers: [
     ComponentServicesService,
+    GetDescriptionDetailsPageService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 

@@ -29,7 +29,8 @@ export class AdminComponent implements OnInit {
   list: any;
   itemsPerPageLabel: string;
   // dataSource: any;
-  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  // @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     private componentservices: ComponentServicesService,
     private router: Router
@@ -39,6 +40,7 @@ export class AdminComponent implements OnInit {
     'id',
     'cName',
     'contributors',
+    'category',
     'type',
     'lastUpdatedOn',
   ];
@@ -56,13 +58,12 @@ export class AdminComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => {
       this.componentData = data;
-      this.list = Object.keys(this.componentData);
+      // this.list = Object.keys(this.componentData);
       this.components = this.componentData[0];
       this.solutions = this.componentData[1];
       this.bestPractices = this.componentData[2];
       this.alldata = this.components.concat(this.bestPractices, this.solutions);
       let value = this.alldata.sort();
-      console.log(value);
       TABLE_DATA = value;
       this.dataSource = new MatTableDataSource(TABLE_DATA);
       this.dataSource.paginator = this.paginator;
@@ -76,6 +77,5 @@ export class AdminComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getComponentData();
-    console.log(moment(new Date()).format('DD MMMM YYYY'));
   }
 }

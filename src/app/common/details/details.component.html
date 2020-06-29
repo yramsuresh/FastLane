@@ -33,30 +33,33 @@
       fxFlex.xs="100"
     >
       <div class="codeHeader">Resources</div>
-      <div class="codeDetails" *ngFor="let detailData of detailobject?.files">
-        <div fxLayout="row" fxLayoutAlign="space-between">
-          <span>{{ detailData.linkText }}</span>
-          <span>
-            <button
-              *ngIf="
-                detailData.linkText === 'Video' ||
-                detailData.linkText === 'video'
-              "
-              (click)="openPreviewImgDialog('video', detailData.downloadable)"
+      <div *ngIf="detailobject.files.length > 0">
+        <div class="codeDetails" *ngFor="let detailData of detailobject.files">
+          <div fxLayout="row" fxLayoutAlign="space-between">
+            <span>{{ detailData.linkText }}</span>
+            <span>
+              <button
+                *ngIf="
+                  detailData.linkText === 'Video' ||
+                  detailData.linkText === 'video'
+                "
+                (click)="openPreviewImgDialog('video', detailData.downloadable)"
+              >
+                Play</button
+              ><a
+                href="{{ detailData.downloadable }}"
+                download="{{ detailData.linkText }}"
+                (click)="getDownloadFiles(detailData.id)"
+                >Download</a
+              ></span
             >
-              Play</button
-            ><a
-              href="{{ detailData.downloadable }}"
-              download="{{ detailData.linkText }}"
-              >Download</a
-            ></span
-          >
-        </div>
-        <br />
-        <!-- <video controls id="video1" width="100%" *ngIf="detailData.linkText==='Video'||detailData.linkText==='video'">
+          </div>
+          <br />
+          <!-- <video controls id="video1" width="100%" *ngIf="detailData.linkText==='Video'||detailData.linkText==='video'">
                 <source [src]="detailData.downloadable" type="video/mp4">
                 <source [src]="detailData.downloadable" type="video/ogg">
             </video> -->
+        </div>
       </div>
     </div>
     <div
@@ -73,25 +76,29 @@
         <div class="previewDiv" (click)="openPreviewImgDialog('image', '')">
           <img
             class="previewImg"
-            src="{{ selectedImgPath }}"
+            src="http://localhost:5000{{ selectedImgPath }}"
             alt="Image Not Found"
-            *ngIf="detailobject?.images.length !== 0"
+            *ngIf="detailobject?.images?.length !== 0"
           />
           <img
             class="previewImg"
             src="assets/images/thumbnails/{{ compType }}.png"
             alt=""
-            *ngIf="detailobject?.images.length === 0"
+            *ngIf="detailobject?.images?.length === 0"
           />
         </div>
         <mat-divider></mat-divider>
-        <div class="imagesList" *ngIf="detailobject?.images.length !== 0">
+        <div class="imagesList" *ngIf="detailobject?.images?.length !== 0">
           <div
             [ngClass]="selectedImgIndex == i ? 'selectedDiv' : 'normalDiv'"
             *ngFor="let img of detailobject?.images; index as i"
             (click)="chooseImg(i)"
           >
-            <img class="smallImgs" src="{{ img }}" alt="thumbnails" />
+            <img
+              class="smallImgs"
+              src="http://localhost:5000{{ img.fileURL }}"
+              alt="thumbnails"
+            />
           </div>
         </div>
         <div class="imagesList" *ngIf="detailobject?.images.length === 0">
@@ -100,7 +107,7 @@
               class="smallImgs"
               src="assets/images/thumbnails/{{ compType }}.png"
               alt="Image not found"
-              *ngIf="detailobject?.images.length === 0"
+              *ngIf="detailobject?.Images.length === 0"
             />
           </div>
         </div>

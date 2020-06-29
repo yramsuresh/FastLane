@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { Observable } from 'rxjs';
 import * as moment from 'moment';
+import { R3TargetBinder } from '@angular/compiler';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -16,45 +17,30 @@ import * as moment from 'moment';
 })
 export class FormComponent implements OnInit {
   urls = [];
-  // files = [];
-  // contributorsArray = [];
+  documents = [];
+  contributorsInput = [];
+  contributorName: string;
+  documentTitle: string;
+  enableDocument = false;
   formGroup: FormGroup;
   selected = 'Components';
   titleAlert: string = 'This field is required';
   post: any;
-
   constructor(
     private formBuilder: FormBuilder,
     private componentservices: ComponentServicesService
   ) {}
-  // onFileComplete(data: any) {
-  //   console.log(data); // We just print out data bubbled up from event emitter.
-  // }
-  onSelectFile(event) {
-    if (event.target.files && event.target.files[0]) {
-      var filesAmount = event.target.files.length;
-      if (filesAmount > 5) {
-        alert('You can only upload a maximum of 5 files');
-      } else {
-        for (let i = 0; i < filesAmount; i++) {
-          var reader = new FileReader();
-          // console.log(event.target.files[i]);
-
-          this.urls.push(event.target.files[i].name);
-          // reader.onload = (event: any) => {
-          //   console.log(event.target.result);
-          //   this.urls.push(event.target.result);
-          //   console.log();
-          // };
-
-          //    reader.readAsDataURL(event.target.files[i]);
-        }
-      }
-    }
-  }
 
   ngOnInit(): void {
     this.createForm();
+  }
+  EnableUploadFiles(event) {
+    if (event.target.value.length > 0) {
+      this.enableDocument = true;
+    } else {
+      this.enableDocument = false;
+    }
+    this.documentTitle = event.target.value;
   }
   createForm() {
     this.formGroup = this.formBuilder.group({
@@ -77,12 +63,12 @@ export class FormComponent implements OnInit {
           Validators.maxLength(500),
         ],
       ],
-      AddImage: this.urls, // [null, Validators.required],
       Images: [],
-      files: this.formBuilder.array([this.newFiles()]),
+      Files: [],
       type: [null, Validators.required],
       lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
-      contributors: this.formBuilder.array([this.newContributors()]),
+      Contributors: [null, Validators.required],
+      // contributors: this.formBuilder.array([this.newContributors()]),
     });
   }
 
@@ -92,45 +78,76 @@ export class FormComponent implements OnInit {
   get cName() {
     return this.formGroup.get('cName') as FormControl;
   }
-  // get contributors() {
-  //   return this.formGroup.get('contributors') as FormControl;
+
+  // contributors(): FormArray {
+  //   return this.formGroup.get('contributors') as FormArray;
+  // }
+  // newContributors(): FormGroup {
+  //   return this.formBuilder.group({ contributor: '' });
+  // }
+  // addContributors() {
+  //   this.contributors().push(this.newContributors());
+  // }
+  // removeCont(conIndex: number) {
+  //   this.contributors().removeAt(conIndex);
   // }
 
-  contributors(): FormArray {
-    return this.formGroup.get('contributors') as FormArray;
+  InputContributors(event) {
+    event.preventDefault();
+    this.contributorName = event.target.value;
   }
-  newContributors(): FormGroup {
-    return this.formBuilder.group({ contributor: '' });
+  updateContributor(event, ContributorTitleInput: HTMLInputElement) {
+    event.preventDefault();
+    if (this.contributorName !== '') {
+      this.contributorsInput.push(this.contributorName);
+      this.contributorName = '';
+      ContributorTitleInput.value = '';
+      ContributorTitleInput.focus();
+    }
   }
-  addContributors() {
-    this.contributors().push(this.newContributors());
-  }
-  removeCont(conIndex: number) {
-    this.contributors().removeAt(conIndex);
-  }
-
-  files(): FormArray {
-    return this.formGroup.get('files') as FormArray;
-  }
-  newFiles(): FormGroup {
-    return this.formBuilder.group({
-      linkText: '',
-      downloadable: '',
-    });
-  }
-  addFiles() {
-    this.files().push(this.newFiles());
-  }
-  removefile(fileIndex: number) {
-    this.files().removeAt(fileIndex);
+  //Upload Document
+  uploadDocumentFiles(event, documentTitleInput: HTMLInputElement) {
+    for (let index = 0; index < event.length; index++) {
+      const element = event[index];
+      this.documents.push({
+        linkText: this.documentTitle,
+        downloadable: element.name,
+      });
+      documentTitleInput.value = '';
+      this.documentTitle = '';
+      this.enableDocument = false;
+    }
   }
 
-  // get AddImage() {
-  //   return console.log(this.urls);
-  // }
+  //upload part
 
-  onSubmit(post) {
+  uploadFile(event) {
+    console.log(event.length);
+    if (event.length > 0) {
+      if (event.length > 5) {
+        alert('You can only upload a maximum of 5 files');
+      } else {
+        for (let index = 0; index < event.length; index++) {
+          const element = event[index];
+          this.urls.push(element.name);
+        }
+      }
+    }
+  }
+  deleteImages(index) {
+    this.urls.splice(index, 1);
+  }
+  deleteContributors(index) {
+    this.contributorsInput.splice(index, 1);
+  }
+  deleteDocuments(index) {
+    this.documents.splice(index, 1);
+  }
+  onSubmit(e, post) {
+    e.preventDefault();
     post.Images = this.urls;
+    post.Files = this.documents;
+    post.Contributors = this.contributorsInput;
 
     // post.contributors = this.contributorsArray;
     const myObjStr = JSON.stringify(post);
