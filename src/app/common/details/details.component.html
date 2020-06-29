@@ -40,8 +40,8 @@
             <span>
               <button
                 *ngIf="
-                  detailData.linkText === 'Video' ||
-                  detailData.linkText === 'video'
+                  detailData.mimeType === 'video/quicktime' ||
+                  detailData.mimeType === 'video/quicktime'
                 "
                 (click)="openPreviewImgDialog('video', detailData.downloadable)"
               >
