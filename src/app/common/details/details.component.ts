@@ -7,6 +7,8 @@ import { Location } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { ImagedialogComponent } from '../imagedialog/imagedialog.component';
 import { GetDescriptionDetailsPageService } from './get-description-details-page.service';
+import { saveAs as importedSaveAs } from 'file-saver';
+import 'rxjs';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -49,15 +51,13 @@ export class DetailsComponent implements OnInit {
     });
 
     this.getDescriptionFullDetailsPage(this.tileId, this.compType);
-    // this.getDownloadFiles(this.filesId);
   }
-  getDownloadFiles(fileId) {
-    console.log(fileId);
-    this.getdescribeDetailsPage.getDownloadFiles(fileId).subscribe((data) => {
-      this.componentData = data;
-      console.log(data);
+  getDownloadFiles(fileId, fileName) {
+    this.getdescribeDetailsPage.getDownloadFiles(fileId).subscribe((blob) => {
+      importedSaveAs(blob, fileName);
     });
   }
+
   getDescriptionFullDetailsPage(tileId, compType) {
     let details = {
       compType: compType,

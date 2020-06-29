@@ -46,10 +46,7 @@
                 (click)="openPreviewImgDialog('video', detailData.downloadable)"
               >
                 Play</button
-              ><a
-                href="{{ detailData.downloadable }}"
-                download="{{ detailData.linkText }}"
-                (click)="getDownloadFiles(detailData.id)"
+              ><a (click)="getDownloadFiles(detailData.id, detailData.fileName)"
                 >Download</a
               ></span
             >
