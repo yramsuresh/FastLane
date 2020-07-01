@@ -34,6 +34,7 @@ export class FormComponent implements OnInit {
   filesUrl: any;
   zipFile;
   errorMessages = false;
+  loading = false;
   @ViewChild('scroll', { read: ElementRef }) public scroll: ElementRef<any>;
 
   constructor(
@@ -168,12 +169,13 @@ export class FormComponent implements OnInit {
     const myObjStr = JSON.stringify(post);
     this.post = myObjStr;
 
-    alert(JSON.parse(this.post).category);
+    // alert(JSON.parse(this.post).category);
     let cat = JSON.parse(this.post);
     const formData = new FormData();
     if (cat.category === 'Components') {
       this.componentservices.postFormData(this.post, 'components').subscribe(
         (x: any) => {
+          this.loading = true;
           console.log(x);
           // Add uploaded file to the form data
           for (let i = 0; i <= this.urls.length - 1; i++) {
@@ -199,6 +201,9 @@ export class FormComponent implements OnInit {
               },
               (error) => {
                 console.log(error);
+              },
+              () => {
+                this.loading = false;
               }
             );
           }
@@ -225,10 +230,8 @@ export class FormComponent implements OnInit {
               }
             );
           }, 2000);
-          alert('Succesfully data Added');
         },
         (err) => {
-          alert('UnSuccesfully data Added');
           console.error(err);
         }
       );
@@ -236,6 +239,7 @@ export class FormComponent implements OnInit {
     if (cat.category === 'Solutions') {
       this.componentservices.postFormData(this.post, 'solutions').subscribe(
         (x: any) => {
+          this.loading = true;
           for (let i = 0; i <= this.urls.length - 1; i++) {
             formData.delete('image');
             formData.delete('entity');
@@ -260,6 +264,9 @@ export class FormComponent implements OnInit {
               },
               (error) => {
                 console.log(error);
+              },
+              () => {
+                this.loading = false;
               }
             );
           }
@@ -285,10 +292,8 @@ export class FormComponent implements OnInit {
               }
             );
           }, 2000);
-          alert('Succesfully data Added');
         },
         (err) => {
-          alert('UnSuccesfully data Added');
           console.error(err);
         }
       );
@@ -296,6 +301,7 @@ export class FormComponent implements OnInit {
     if (cat.category === 'Best Practice') {
       this.componentservices.postFormData(this.post, 'bestPractices').subscribe(
         (x: any) => {
+          this.loading = true;
           for (let i = 0; i <= this.urls.length - 1; i++) {
             formData.delete('image');
             formData.delete('entity');
@@ -320,6 +326,9 @@ export class FormComponent implements OnInit {
               },
               (error) => {
                 console.log(error);
+              },
+              () => {
+                this.loading = false;
               }
             );
           }
@@ -345,10 +354,8 @@ export class FormComponent implements OnInit {
               }
             );
           }, 2000);
-          alert('Succesfully data Added');
         },
         (err) => {
-          alert('UnSuccesfully data Added');
           console.error(err);
         }
       );
