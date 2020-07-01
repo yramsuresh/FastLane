@@ -192,6 +192,7 @@ export class FormComponent implements OnInit {
               (data: any) => {
                 console.log(data);
                 this.errorMessages = true;
+                this.formGroup.reset();
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
@@ -252,6 +253,7 @@ export class FormComponent implements OnInit {
               (data: any) => {
                 console.log(data);
                 this.errorMessages = true;
+                this.formGroup.reset();
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
@@ -311,6 +313,7 @@ export class FormComponent implements OnInit {
               (data: any) => {
                 console.log(data);
                 this.errorMessages = true;
+                this.formGroup.reset();
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
