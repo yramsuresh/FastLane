@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, ElementRef, ViewChild } from '@angular/core';
 import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import {
   FormBuilder,
@@ -12,6 +12,7 @@ import * as moment from 'moment';
 import { R3TargetBinder } from '@angular/compiler';
 import { AuthenticationService } from 'src/app/_services/authentication.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { UserService } from 'src/app/_services';
 const URL = 'http://localhost:5000/api/uploads/image';
 @Component({
   selector: 'app-form',
@@ -32,6 +33,8 @@ export class FormComponent implements OnInit {
   response: string;
   filesUrl: any;
   zipFile;
+  errorMessages = false;
+  @ViewChild('scroll', { read: ElementRef }) public scroll: ElementRef<any>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -130,6 +133,7 @@ export class FormComponent implements OnInit {
       } else {
         for (let index = 0; index < event.length; index++) {
           const element = event[index];
+          console.log(element);
           this.urls.push(element);
         }
       }
@@ -151,8 +155,8 @@ export class FormComponent implements OnInit {
       alert('You can upload max 5 images');
       return;
     }
-    if (this.zipFile?.length > 1) {
-      alert('You can upload max 1 zip file');
+    if (this.zipFile?.length > 5) {
+      alert('You can upload max 5 zip file');
       return;
     }
     post.images = this.urls;
@@ -187,6 +191,10 @@ export class FormComponent implements OnInit {
             this.httpClient.post(endPoint, formData, { headers }).subscribe(
               (data: any) => {
                 console.log(data);
+                this.errorMessages = true;
+                setTimeout(() => {
+                  this.errorMessages = false;
+                }, 5000);
               },
               (error) => {
                 console.log(error);
@@ -243,6 +251,10 @@ export class FormComponent implements OnInit {
             this.httpClient.post(endPoint, formData, { headers }).subscribe(
               (data: any) => {
                 console.log(data);
+                this.errorMessages = true;
+                setTimeout(() => {
+                  this.errorMessages = false;
+                }, 5000);
               },
               (error) => {
                 console.log(error);
@@ -298,6 +310,10 @@ export class FormComponent implements OnInit {
             this.httpClient.post(endPoint, formData, { headers }).subscribe(
               (data: any) => {
                 console.log(data);
+                this.errorMessages = true;
+                setTimeout(() => {
+                  this.errorMessages = false;
+                }, 5000);
               },
               (error) => {
                 console.log(error);

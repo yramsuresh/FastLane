@@ -1,6 +1,7 @@
 <div fxLayout="column">
   <h1 class="admin-heading">Add Components Form</h1>
-  <div class="container" *ngIf="!post; else forminfo" novalidate>
+  <div class="container" novalidate>
+    <h3 *ngIf="post && errorMessages" class="success-messages">Data added succesfully</h3>
     <form
       [formGroup]="formGroup"
       (ngSubmit)="onSubmit($event, formGroup.value)"
@@ -298,9 +299,9 @@
     </form>
   </div>
 
-  <ng-template #forminfo>
+  <!-- <ng-template #forminfo>
     <div class="container">
       {{ post }}
     </div>
-  </ng-template>
+  </ng-template> -->
 </div>
