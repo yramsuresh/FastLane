@@ -30,7 +30,7 @@ export class FormComponent implements OnInit {
   titleAlert: string = 'This field is required';
   post: any;
   response: string;
-  allFiles = [];
+  filesUrl: any;
   zipFile;
 
   constructor(
@@ -39,9 +39,6 @@ export class FormComponent implements OnInit {
     private authenticationService: AuthenticationService,
     private httpClient: HttpClient
   ) {}
-  // onFileComplete(data: any) {
-  //   console.log(data); // We just print out data bubbled up from event emitter.
-  // }
   onChangeFile(event) {
     this.zipFile.push(event.target.files[0]);
     if (this.zipFile.length > 1) {
@@ -49,105 +46,9 @@ export class FormComponent implements OnInit {
       return;
     }
   }
-  onSelectFile(event: any) {
-    // if (event.target.files && event.target.files[0]) {
-    //   var filesAmount = event.target.files.length;
-    //   if (filesAmount > 5) {
-    //     alert('You can only upload a maximum of 5 files');
-    //   } else {
-    //     for (let i = 0; i < filesAmount; i++) {
-    //       var reader = new FileReader();
-    //       // console.log(event.target.files[i]);
-
-    //       this.urls.push(event.target.files[i].name);
-    //       // reader.onload = (event: any) => {
-    //       //   console.log(event.target.result);
-    //       //   this.urls.push(event.target.result);
-    //       //   console.log();
-    //       // };
-
-    //       //    reader.readAsDataURL(event.target.files[i]);
-    //     }
-    //   }
-    // }
-    if (event.target.files.length > 5) {
-      alert('You can upload max 5 images');
-      return;
-    }
-    this.allFiles = [];
-    console.log(event.target.files);
-    if (event.target.files.length === 5) {
-      this.allFiles.push(event.target.files[0]);
-      this.allFiles.push(event.target.files[1]);
-      this.allFiles.push(event.target.files[2]);
-      this.allFiles.push(event.target.files[3]);
-      this.allFiles.push(event.target.files[4]);
-    }
-    if (event.target.files.length === 4) {
-      this.allFiles.push(event.target.files[0]);
-      this.allFiles.push(event.target.files[1]);
-      this.allFiles.push(event.target.files[2]);
-      this.allFiles.push(event.target.files[3]);
-    }
-    if (event.target.files.length === 3) {
-      this.allFiles.push(event.target.files[0]);
-      this.allFiles.push(event.target.files[1]);
-      this.allFiles.push(event.target.files[2]);
-    }
-    if (event.target.files.length === 2) {
-      this.allFiles.push(event.target.files[0]);
-      this.allFiles.push(event.target.files[1]);
-    }
-    if (event.target.files.length === 1) {
-      this.allFiles.push(event.target.files[0]);
-    }
-    if (event.target.files.length === 0) {
-      this.allFiles = null;
-    }
-    if (event.target.files.length > 5) {
-      return;
-    }
-
-    // const formData = new FormData();
-    // // Add uploaded file to the form data
-    // formData.append('image', event.target.files[0], event.target.files[0].name);
-    // formData.append('entity', 'component');
-    // formData.append('entityId', "1");
-    // const endPoint = 'http://localhost:5000/api/uploads/image';
-    // const headers = new HttpHeaders({'x-access-token': this.authenticationService.currentUserValue.token });
-    // this.httpClient.post(endPoint, formData, { headers })
-    //   .subscribe((data: any) => {
-    //     console.log(data);
-    //   },
-    //   error => {
-    //     console.log(error);
-    //   });
-  }
 
   ngOnInit(): void {
     this.createForm();
-    // this.uploader = new FileUploader({
-    //   url: URL,
-    //   headers: [{ name: 'x-access-token', value: this.authenticationService.currentUserValue.token},
-    //   { name: 'Content-Type', value: 'multipart/form-data'}],
-    //   disableMultipart: true, // 'DisableMultipart' must be 'true' for formatDataFunction to be called.
-    //   formatDataFunctionIsAsync: true,
-    //   formatDataFunction: async (item) => {
-    //     console.log(item._file)
-    //     return new Promise( (resolve, reject) => {
-    //       resolve({
-    //         entityId: 1,
-    //         entity: 'component',
-    //         image: item._file,
-    //         // length: item._file.size,
-    //         // contentType: item._file.type,
-    //       });
-    //     });
-    //   }
-    // });
-    // this.uploader.onAfterAddingFile = (file) => { file.withCredentials = false; };
-    // this.response = '';
-    // this.uploader.response.subscribe( res => this.response = res );
   }
   EnableUploadFiles(event) {
     if (event.target.value.length > 0) {
@@ -161,7 +62,7 @@ export class FormComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       category: this.selected,
       cName: [null, Validators.required],
-      id: +new Date(),
+      // id: +new Date(),
       shortDesc: [
         null,
         [
@@ -178,12 +79,11 @@ export class FormComponent implements OnInit {
           Validators.maxLength(500),
         ],
       ],
-      Images: [],
+      images: [],
       Files: [],
       type: [null, Validators.required],
       lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
-      Contributors: [null, Validators.required],
-      // contributors: this.formBuilder.array([this.newContributors()]),
+      contributors: [null, Validators.required],
     });
   }
 
@@ -193,19 +93,6 @@ export class FormComponent implements OnInit {
   get cName() {
     return this.formGroup.get('cName') as FormControl;
   }
-
-  // contributors(): FormArray {
-  //   return this.formGroup.get('contributors') as FormArray;
-  // }
-  // newContributors(): FormGroup {
-  //   return this.formBuilder.group({ contributor: '' });
-  // }
-  // addContributors() {
-  //   this.contributors().push(this.newContributors());
-  // }
-  // removeCont(conIndex: number) {
-  //   this.contributors().removeAt(conIndex);
-  // }
 
   InputContributors(event) {
     event.preventDefault();
@@ -226,7 +113,7 @@ export class FormComponent implements OnInit {
       const element = event[index];
       this.documents.push({
         linkText: this.documentTitle,
-        downloadable: element.name,
+        downloadable: element,
       });
       documentTitleInput.value = '';
       this.documentTitle = '';
@@ -237,14 +124,13 @@ export class FormComponent implements OnInit {
   //upload part
 
   uploadFile(event) {
-    console.log(event.length);
     if (event.length > 0) {
       if (event.length > 5) {
         alert('You can only upload a maximum of 5 files');
       } else {
         for (let index = 0; index < event.length; index++) {
           const element = event[index];
-          this.urls.push(element.name);
+          this.urls.push(element);
         }
       }
     }
@@ -259,13 +145,9 @@ export class FormComponent implements OnInit {
     this.documents.splice(index, 1);
   }
 
-  // get AddImage() {
-  //   return console.log(this.urls);
-  // }
-
   onSubmit(e, post) {
     e.preventDefault();
-    if (this.allFiles?.length > 5) {
+    if (this.urls?.length > 5) {
       alert('You can upload max 5 images');
       return;
     }
@@ -273,27 +155,30 @@ export class FormComponent implements OnInit {
       alert('You can upload max 1 zip file');
       return;
     }
-    post.Images = this.urls;
+    post.images = this.urls;
     post.Files = this.documents;
-    post.Contributors = this.contributorsInput;
+    this.filesUrl = this.documents[0].downloadable;
+    post.contributors = this.contributorsInput;
 
     // post.contributors = this.contributorsArray;
     const myObjStr = JSON.stringify(post);
     this.post = myObjStr;
+
     alert(JSON.parse(this.post).category);
     let cat = JSON.parse(this.post);
     const formData = new FormData();
     if (cat.category === 'Components') {
       this.componentservices.postFormData(this.post, 'components').subscribe(
         (x: any) => {
+          console.log(x);
           // Add uploaded file to the form data
-          for (let i = 0; i <= this.allFiles.length - 1; i++) {
+          for (let i = 0; i <= this.urls.length - 1; i++) {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
-            formData.append('image', this.allFiles[i], this.allFiles[i].name);
+            formData.append('image', this.urls[i]);
             formData.append('entity', 'component');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.component.id);
             const endPoint = 'http://localhost:5000/api/uploads/image';
             const headers = new HttpHeaders({
               'x-access-token': this.authenticationService.currentUserValue
@@ -313,9 +198,9 @@ export class FormComponent implements OnInit {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
-            formData.append('file', this.allFiles[0]);
+            formData.append('file', this.filesUrl);
             formData.append('entity', 'component');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.component.id);
             formData.append('linkText', 'Source Code');
             const endPointZip = 'http://localhost:5000/api/uploads/file';
             const headers = new HttpHeaders({
@@ -342,14 +227,14 @@ export class FormComponent implements OnInit {
     if (cat.category === 'Solutions') {
       this.componentservices.postFormData(this.post, 'solutions').subscribe(
         (x: any) => {
-          for (let i = 0; i <= this.allFiles.length - 1; i++) {
+          for (let i = 0; i <= this.urls.length - 1; i++) {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
 
-            formData.append('image', this.allFiles[i], this.allFiles[i].name);
+            formData.append('image', this.urls[i]);
             formData.append('entity', 'solution');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.solution.id);
             const endPoint = 'http://localhost:5000/api/uploads/image';
             const headers = new HttpHeaders({
               'x-access-token': this.authenticationService.currentUserValue
@@ -368,9 +253,9 @@ export class FormComponent implements OnInit {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
-            formData.append('file', this.allFiles[0]);
+            formData.append('file', this.filesUrl);
             formData.append('entity', 'solution');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.solution.id);
             formData.append('linkText', 'Source Code');
             const endPointZip = 'http://localhost:5000/api/uploads/file';
             const headers = new HttpHeaders({
@@ -397,14 +282,14 @@ export class FormComponent implements OnInit {
     if (cat.category === 'Best Practice') {
       this.componentservices.postFormData(this.post, 'bestPractices').subscribe(
         (x: any) => {
-          for (let i = 0; i <= this.allFiles.length - 1; i++) {
+          for (let i = 0; i <= this.urls.length - 1; i++) {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
 
-            formData.append('image', this.allFiles[i], this.allFiles[i].name);
+            formData.append('image', this.urls[i]);
             formData.append('entity', 'bestPractice');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.bestPractice.id);
             const endPoint = 'http://localhost:5000/api/uploads/image';
             const headers = new HttpHeaders({
               'x-access-token': this.authenticationService.currentUserValue
@@ -423,9 +308,9 @@ export class FormComponent implements OnInit {
             formData.delete('image');
             formData.delete('entity');
             formData.delete('entityId');
-            formData.append('file', this.allFiles[0]);
+            formData.append('file', this.filesUrl);
             formData.append('entity', 'solution');
-            formData.append('entityId', x.id);
+            formData.append('entityId', x.bestPractice.id);
             formData.append('linkText', 'Source Code');
             const endPointZip = 'http://localhost:5000/api/uploads/file';
             const headers = new HttpHeaders({
@@ -449,14 +334,5 @@ export class FormComponent implements OnInit {
         }
       );
     }
-    // this.componentservices.postFormData(this.post).subscribe(
-    //   (x) => {
-    //     alert('Succesfully data Added');
-    //   },
-    //   (err) => {
-    //     alert('UnSuccesfully data Added');
-    //     console.error(err);
-    //   }
-    // );
   }
 }

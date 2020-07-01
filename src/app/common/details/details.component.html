@@ -98,13 +98,13 @@
             />
           </div>
         </div>
-        <div class="imagesList" *ngIf="detailobject?.images.length === 0">
+        <div class="imagesList" *ngIf="detailobject?.images?.length === 0">
           <div class="selectedDiv">
             <img
               class="smallImgs"
               src="assets/images/thumbnails/{{ compType }}.png"
               alt="Image not found"
-              *ngIf="detailobject?.Images.length === 0"
+              *ngIf="detailobject?.Images?.length === 0"
             />
           </div>
         </div>

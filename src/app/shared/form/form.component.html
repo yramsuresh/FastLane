@@ -184,7 +184,7 @@
             -->
           </div>
           <div class="files-list" *ngFor="let file of urls; let i = index">
-            <span>{{ file }}</span>
+            <span>{{ file.name }}</span>
             <button class="delete-file" (click)="deleteImages(i)">
               <mat-icon>delete</mat-icon>
               <!-- <img src="../../../assets/images/Recycle_Bin_Full.png" /> -->
@@ -221,7 +221,7 @@
               #ContributorTitleInput
               placeholder="Enter Contibutors Name"
               (change)="InputContributors($event)"
-              formControlName="Contributors"
+              formControlName="contributors"
             />
             <mat-icon
               (click)="updateContributor($event, ContributorTitleInput)"
@@ -230,8 +230,8 @@
             >
             <mat-error
               *ngIf="
-                !formGroup.controls['Contributors'].valid &&
-                formGroup.controls['Contributors'].touched
+                !formGroup.controls['contributors'].valid &&
+                formGroup.controls['contributors'].touched
               "
             >
               Required field, Give Contributors Name.
@@ -276,7 +276,7 @@
           </div>
           <div class="files-list" *ngFor="let file of documents; let i = index">
             <span>{{ file.linkText }}</span>
-            <span>{{ file.downloadable }}</span>
+            <span>{{ file.downloadable.name }}</span>
             <!-- <button class="delete-file" > -->
             <mat-icon (click)="deleteDocuments(i)">delete</mat-icon>
             <!-- </button> -->

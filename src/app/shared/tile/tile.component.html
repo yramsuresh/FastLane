@@ -52,9 +52,9 @@
             *ngIf="data.images.length > 0"
           />
           <img
-            src="http://localhost:5000{{ data.images[0].fileURL }}"
+            src="assets/images/thumbnails/{{ title }}.png"
             alt=""
-            *ngIf="data.thumbnails === ''"
+            *ngIf="data.images?.length === 0"
           />
         </div>
         <mat-divider></mat-divider>
