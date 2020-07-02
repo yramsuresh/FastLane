@@ -13,11 +13,21 @@
   align-items: center;
   padding: 10px;
 }
-
-.success-messages{
+.backdrop {
+  position: relative;
+  &::before {
+    content: "";
+    z-index: 999999;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.5);
+  }
+}
+.success-messages {
   padding: 30px;
   text-align: center;
-  background: rgb(0,255,0,0.2);
+  background: rgb(0, 255, 0, 0.2);
   border-radius: 9px;
 }
 

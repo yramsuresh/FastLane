@@ -1,7 +1,12 @@
-<div fxLayout="column">
-  <h1 class="admin-heading">Add Components Form</h1>
+<div fxLayout="column" [ngClass]="loading ? 'backdrop' : ''">
+  <h1 class="admin-heading">
+    <mat-icon (click)="goToPreviousPage()">arrow_back</mat-icon>Add Components
+    Form
+  </h1>
   <div class="container" novalidate>
-    <h3 *ngIf="post && errorMessages" class="success-messages">Data added succesfully</h3>
+    <h3 *ngIf="post && errorMessages" class="success-messages">
+      Data added succesfully
+    </h3>
     <form
       [formGroup]="formGroup"
       (ngSubmit)="onSubmit($event, formGroup.value)"
@@ -292,10 +297,11 @@
           class="button custom-button"
           [disabled]="!formGroup.valid"
           [ngClass]="!formGroup.valid ? 'disabled' : 'active'"
-        > <span
-        *ngIf="loading"
-        class="spinner-border spinner-border-sm mr-1"
-      ></span>
+        >
+          <span
+            *ngIf="loading"
+            class="spinner-border spinner-border-sm mr-1"
+          ></span>
           <span *ngIf="loading">Uploading</span>
           <span *ngIf="!loading">Submit</span>
         </button>

@@ -1,4 +1,10 @@
-import { Component, OnInit, Inject, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Inject,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { ComponentServicesService } from 'src/app/fastlane/component-services.service';
 import {
   FormBuilder,
@@ -13,6 +19,7 @@ import { R3TargetBinder } from '@angular/compiler';
 import { AuthenticationService } from 'src/app/_services/authentication.service';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { UserService } from 'src/app/_services';
+import { Router } from '@angular/router';
 const URL = 'http://localhost:5000/api/uploads/image';
 @Component({
   selector: 'app-form',
@@ -41,7 +48,8 @@ export class FormComponent implements OnInit {
     private formBuilder: FormBuilder,
     private componentservices: ComponentServicesService,
     private authenticationService: AuthenticationService,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private router: Router
   ) {}
   onChangeFile(event) {
     this.zipFile.push(event.target.files[0]);
@@ -148,6 +156,9 @@ export class FormComponent implements OnInit {
   }
   deleteDocuments(index) {
     this.documents.splice(index, 1);
+  }
+  goToPreviousPage() {
+    this.router.navigate(['/Admin']);
   }
 
   onSubmit(e, post) {
