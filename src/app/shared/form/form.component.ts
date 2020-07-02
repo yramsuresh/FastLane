@@ -42,6 +42,7 @@ export class FormComponent implements OnInit {
   zipFile;
   errorMessages = false;
   loading = false;
+  entityType;
   @ViewChild('scroll', { read: ElementRef }) public scroll: ElementRef<any>;
 
   constructor(
@@ -50,7 +51,7 @@ export class FormComponent implements OnInit {
     private authenticationService: AuthenticationService,
     private httpClient: HttpClient,
     private router: Router
-  ) {}
+  ) { }
   onChangeFile(event) {
     this.zipFile.push(event.target.files[0]);
     if (this.zipFile.length > 1) {
@@ -123,6 +124,7 @@ export class FormComponent implements OnInit {
   uploadDocumentFiles(event, documentTitleInput: HTMLInputElement) {
     for (let index = 0; index < event.length; index++) {
       const element = event[index];
+      element.uuid = this.genrateUUIDv4();
       this.documents.push({
         linkText: this.documentTitle,
         downloadable: element,
@@ -143,11 +145,23 @@ export class FormComponent implements OnInit {
         for (let index = 0; index < event.length; index++) {
           const element = event[index];
           console.log(element);
+          element.uuid = this.genrateUUIDv4();
           this.urls.push(element);
         }
       }
     }
   }
+
+  public genrateUUIDv4() {
+    const f = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx';
+    return f.replace(/[xy]/g, (c) => {
+      const r = Math.random() * 16 | 0;
+      const v = c === 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }
+
+
   deleteImages(index) {
     this.urls.splice(index, 1);
   }
@@ -159,6 +173,18 @@ export class FormComponent implements OnInit {
   }
   goToPreviousPage() {
     this.router.navigate(['/Admin']);
+  }
+  resetFormData() {
+    if (this.urls.length <= 0 && this.documents.length <= 0) {
+      this.errorMessages = true;
+      this.formGroup.reset();
+      window.scrollTo(0, 0);
+      this.contributorsInput = [];
+      this.loading = false;
+      setTimeout(() => {
+        this.errorMessages = false;
+      }, 5000);
+    }
   }
 
   onSubmit(e, post) {
@@ -173,7 +199,7 @@ export class FormComponent implements OnInit {
     }
     post.images = this.urls;
     post.Files = this.documents;
-    this.filesUrl = this.documents[0].downloadable;
+    this.filesUrl = this.documents;
     post.contributors = this.contributorsInput;
 
     // post.contributors = this.contributorsArray;
@@ -182,206 +208,67 @@ export class FormComponent implements OnInit {
 
     // alert(JSON.parse(this.post).category);
     let cat = JSON.parse(this.post);
-    const formData = new FormData();
     if (cat.category === 'Components') {
-      this.componentservices.postFormData(this.post, 'components').subscribe(
-        (x: any) => {
-          this.loading = true;
-          console.log(x);
-          // Add uploaded file to the form data
-          for (let i = 0; i <= this.urls.length - 1; i++) {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-            formData.append('image', this.urls[i]);
-            formData.append('entity', 'component');
-            formData.append('entityId', x.component.id);
-            const endPoint = 'http://localhost:5000/api/uploads/image';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPoint, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-                this.errorMessages = true;
-                this.formGroup.reset();
-                window.scrollTo(0,0);
-                this.urls = [];
-                this.contributorsInput = [];
-                this.documents = [];
-                setTimeout(() => {
-                  this.errorMessages = false;
-                }, 5000);
-              },
-              (error) => {
-                console.log(error);
-              },
-              () => {
-                this.loading = false;
-              }
-            );
-          }
-
-          setTimeout(() => {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-            formData.append('file', this.filesUrl);
-            formData.append('entity', 'component');
-            formData.append('entityId', x.component.id);
-            formData.append('linkText', 'Source Code');
-            const endPointZip = 'http://localhost:5000/api/uploads/file';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPointZip, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-              },
-              (error) => {
-                console.log(error);
-              }
-            );
-          }, 2000);
-        },
-        (err) => {
-          console.error(err);
-        }
-      );
+      this.entityType = 'component';
     }
     if (cat.category === 'Solutions') {
-      this.componentservices.postFormData(this.post, 'solutions').subscribe(
-        (x: any) => {
-          this.loading = true;
-          for (let i = 0; i <= this.urls.length - 1; i++) {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-
-            formData.append('image', this.urls[i]);
-            formData.append('entity', 'solution');
-            formData.append('entityId', x.solution.id);
-            const endPoint = 'http://localhost:5000/api/uploads/image';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPoint, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-                this.errorMessages = true;
-                this.formGroup.reset();
-                window.scrollTo(0,0);
-                this.urls = [];
-                this.documents = [];
-                this.contributorsInput = [];
-                setTimeout(() => {
-                  this.errorMessages = false;
-                }, 5000);
-              },
-              (error) => {
-                console.log(error);
-              },
-              () => {
-                this.loading = false;
-              }
-            );
-          }
-          setTimeout(() => {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-            formData.append('file', this.filesUrl);
-            formData.append('entity', 'solution');
-            formData.append('entityId', x.solution.id);
-            formData.append('linkText', 'Source Code');
-            const endPointZip = 'http://localhost:5000/api/uploads/file';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPointZip, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-              },
-              (error) => {
-                console.log(error);
-              }
-            );
-          }, 2000);
-        },
-        (err) => {
-          console.error(err);
-        }
-      );
+      this.entityType = 'solution';
     }
     if (cat.category === 'Best Practice') {
-      this.componentservices.postFormData(this.post, 'bestPractices').subscribe(
-        (x: any) => {
-          this.loading = true;
-          for (let i = 0; i <= this.urls.length - 1; i++) {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-
-            formData.append('image', this.urls[i]);
-            formData.append('entity', 'bestPractice');
-            formData.append('entityId', x.bestPractice.id);
-            const endPoint = 'http://localhost:5000/api/uploads/image';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPoint, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-                this.errorMessages = true;
-                this.formGroup.reset();
-                window.scrollTo(0,0);
-                this.urls = [];
-                this.documents = [];
-                this.contributorsInput = [];
-                setTimeout(() => {
-                  this.errorMessages = false;
-                }, 5000);
-              },
-              (error) => {
-                console.log(error);
-              },
-              () => {
-                this.loading = false;
-              }
-            );
-          }
-          setTimeout(() => {
-            formData.delete('image');
-            formData.delete('entity');
-            formData.delete('entityId');
-            formData.append('file', this.filesUrl);
-            formData.append('entity', 'solution');
-            formData.append('entityId', x.bestPractice.id);
-            formData.append('linkText', 'Source Code');
-            const endPointZip = 'http://localhost:5000/api/uploads/file';
-            const headers = new HttpHeaders({
-              'x-access-token': this.authenticationService.currentUserValue
-                .token,
-            });
-            this.httpClient.post(endPointZip, formData, { headers }).subscribe(
-              (data: any) => {
-                console.log(data);
-              },
-              (error) => {
-                console.log(error);
-              }
-            );
-          }, 2000);
-        },
-        (err) => {
-          console.error(err);
-        }
-      );
+      this.entityType = 'bestPractice';
     }
+    this.componentservices.postFormData(this.post, this.entityType+'s')
+      .subscribe((x: any) => {
+        this.loading = true;
+        for (let i = 0; i <= this.urls.length - 1; i++) {
+          const uuid = this.urls[i].uuid;
+          const fileData = {
+            'image': this.urls[i],
+            'entity': this.entityType,
+            'entityId': x[this.entityType].id,
+            'type': 'image'
+          };
+          this.componentservices.uploadFile(fileData).subscribe(
+            (data: any) => {
+              console.log(data);
+              this.urls = this.urls.filter(url => url.uuid !== uuid);
+              this.resetFormData();
+            },
+            (error) => {
+              console.log(error);
+              this.urls = this.urls.filter(url => url.uuid !== uuid);
+              this.resetFormData();
+            },
+          );
+        }
+
+        for (let i = 0; i <= this.documents.length - 1; i++) {
+          const uuid = this.documents[i].uuid;
+          const fileData = {
+            'file': this.documents[i].downloadable,
+            'entity': this.entityType,
+            'entityId': x[this.entityType].id,
+            'type': 'file',
+            'linkText': this.documents[i].linkText
+          };
+          this.componentservices.uploadFile(fileData).subscribe(
+            (data: any) => {
+              console.log(data);
+              this.documents = this.documents.filter(doc => doc.uuid !== uuid);
+              this.resetFormData();
+            },
+            (error) => {
+              console.log(error);
+              this.documents = this.documents.filter(doc => doc.uuid !== uuid);
+              this.resetFormData();
+            },
+          );
+        }
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+
   }
 }

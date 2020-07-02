@@ -22,7 +22,8 @@ export class JwtInterceptor implements HttpInterceptor {
     const currentUser = this.authenticationService.currentUserValue;
     const isLoggedIn = currentUser && currentUser.token;
     const isApiUrl = request.url.startsWith(environment.apiUrl);
-    if (isLoggedIn && isApiUrl) {
+    const isUpload = request.url.endsWith('/uploads/image') || request.url.endsWith('/uploads/file');
+    if (isLoggedIn && isApiUrl && !isUpload) {
       request = request.clone({
         setHeaders: {
           "x-access-token": `${currentUser.token}`,

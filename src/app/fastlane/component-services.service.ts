@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { forkJoin, Observable } from 'rxjs';
+import { AuthenticationService } from '../_services';
 // import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ComponentServicesService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authenticationService: AuthenticationService) {}
   // getComponentData() {
   //   // let baseUrl = environment.apiUrl;
   //   return this.http.get('../assets/Data/data.Json');
@@ -25,7 +26,27 @@ export class ComponentServicesService {
   }
 
   postFormData(post, type) {
-    console.log(post);
     return this.http.post('http://localhost:5000/api/'+type, post);
+  }
+
+  uploadFile(fileData){
+    let endPoint = null;
+    const formData = new FormData();
+    const baseUrl = 'http://localhost:5000/api/uploads'
+    if(fileData.type === 'image'){
+      formData.append('image', fileData.image);
+      endPoint = baseUrl+'/image';
+    } else {
+      formData.append('file', fileData.file);
+      endPoint = baseUrl+'/file';
+      formData.append('linkText', fileData.linkText);
+    }
+    formData.append('entity', fileData.entity);
+    formData.append('entityId', fileData.entityId);
+    const headers = new HttpHeaders({
+      'x-access-token': this.authenticationService.currentUserValue
+        .token
+    });
+    return this.http.post(endPoint, formData, {headers});
   }
 }
