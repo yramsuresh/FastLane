@@ -207,9 +207,9 @@ export class FormComponent implements OnInit {
                 this.errorMessages = true;
                 this.formGroup.reset();
                 window.scrollTo(0,0);
-                this.urls = null;
-                this.contributorsInput = null;
-                this.documents = null;
+                this.urls = [];
+                this.contributorsInput = [];
+                this.documents = [];
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
@@ -274,9 +274,9 @@ export class FormComponent implements OnInit {
                 this.errorMessages = true;
                 this.formGroup.reset();
                 window.scrollTo(0,0);
-                this.urls = null;
-                this.documents = null;
-                this.contributorsInput = null;
+                this.urls = [];
+                this.documents = [];
+                this.contributorsInput = [];
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
@@ -340,9 +340,9 @@ export class FormComponent implements OnInit {
                 this.errorMessages = true;
                 this.formGroup.reset();
                 window.scrollTo(0,0);
-                this.urls = null;
-                this.documents = null;
-                this.contributorsInput = null;
+                this.urls = [];
+                this.documents = [];
+                this.contributorsInput = [];
                 setTimeout(() => {
                   this.errorMessages = false;
                 }, 5000);
