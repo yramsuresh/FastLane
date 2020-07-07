@@ -29,6 +29,10 @@ export class ComponentServicesService {
     return this.http.post('http://localhost:5000/api/'+type, post);
   }
 
+  deleteItem(id,type){
+    return this.http.delete('http://localhost:5000/api/'+type +'/' +id)
+  }
+
   uploadFile(fileData){
     let endPoint = null;
     const formData = new FormData();
