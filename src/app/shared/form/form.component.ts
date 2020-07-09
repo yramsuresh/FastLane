@@ -43,6 +43,7 @@ export class FormComponent implements OnInit {
   errorMessages = false;
   loading = false;
   entityType;
+  practiceList = [];
   @ViewChild('scroll', { read: ElementRef }) public scroll: ElementRef<any>;
 
   constructor(
@@ -62,6 +63,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    this.practiceList = ['Select All', 'FED', 'Mobility', 'ECM', 'WCM', 'UX'];
   }
   EnableUploadFiles(event) {
     if (event.target.value.length > 0) {
@@ -97,6 +99,7 @@ export class FormComponent implements OnInit {
       type: [null, Validators.required],
       lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
       contributors: [null, Validators.required],
+      practice: [null, Validators.required],
     });
   }
 

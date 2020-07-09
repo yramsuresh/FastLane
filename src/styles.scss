@@ -152,3 +152,19 @@ mat-form-field {
   margin-bottom: 40px;
   font-size: 32px;
 }
+.form-field-flex .mat-form-field-flex{
+  border: 1px solid;
+  border-radius: 500px;
+}
+
+.border-buffer .mat-form-field-appearance-fill .mat-form-field-flex{
+  background: none;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-top: 6px;
+  height: 58px;
+}
+
+.border-buffer .mat-form-field-appearance-fill .mat-form-field-flex:hover{
+  border: 2px solid;
+}

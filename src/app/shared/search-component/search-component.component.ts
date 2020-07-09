@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 // import { EventEmitter } from 'protractor';
 
 @Component({
@@ -13,7 +14,9 @@ export class SearchComponentComponent implements OnInit {
   @Output() searchTextEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Output() resetData: EventEmitter<string> = new EventEmitter<string>();
   speechToText: string;
-  constructor(private cd: ChangeDetectorRef) {}
+  formGroup: FormGroup;
+  practiceList = ['Select All', 'FED', 'Mobility', 'ECM', 'WCM', 'UX'];
+  constructor(private cd: ChangeDetectorRef, private formBuilder: FormBuilder) {}
   keyup(event) {
     this.searchValue = event;
     this.search.emit(this.searchValue);
@@ -29,6 +32,9 @@ export class SearchComponentComponent implements OnInit {
       
       // speech recognition API not supported
     }
+    this.formGroup = this.formBuilder.group({
+      practice: [null]
+    })
   }
   voiceSearch(): void {
     //console.log('Inside speech-recognition voiceSearch()');

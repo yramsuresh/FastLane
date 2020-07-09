@@ -123,6 +123,21 @@
             </mat-error>
           </mat-form-field>
         </div>
+        <div class="col-md-6 col-xs-12 border-buffer">
+          <label>Sub-Practices</label>
+          <mat-form-field class="multi-select form-element custom-form-input" appearance="outline">
+            <mat-select formControlName="practice" multiple>
+              <mat-option *ngFor="let practice of practiceList" [value]="practice" selected checked>{{practice}}</mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="
+                !formGroup.controls['practice'].valid &&
+                formGroup.controls['practice'].touched
+              ">
+            This field is required
+            </mat-error>
+          </mat-form-field>
+      </div>
       </div>
       <div class="row">
         <div class="col-12">

@@ -8,6 +8,10 @@
        Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
+.multi-select{
+  width: 95%;
+  // margin-top: 6%;
+}
 
 .container {
   align-items: center;
