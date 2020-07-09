@@ -35,9 +35,15 @@ export class DashboardComponent implements OnInit {
       this.componentData = data;
       this.list = ['components', 'solutions', 'bestPractices'];
       // this.list = Object.keys(this.componentData);
-      this.components = this.componentData[0];
-      this.solutions = this.componentData[1];
-      this.bestPractices = this.componentData[2];
+      if(this.componentData[0].status === true){
+      this.components = this.componentData[0].components;
+      }
+      if(this.componentData[1].status === true){
+      this.solutions = this.componentData[1].solutions;
+      }
+      if(this.componentData[2].status === true){
+      this.bestPractices = this.componentData[2].bestPractices;
+      }
       this.loading = false;
     });
   }

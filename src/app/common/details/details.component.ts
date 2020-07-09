@@ -65,8 +65,14 @@ export class DetailsComponent implements OnInit {
     };
     this.getdescribeDetailsPage
       .getDescriptionFullDetailsPage(details)
-      .subscribe((data) => {
-        this.componentData = data;
+      .subscribe((data:any) => {
+        if(data.status === true && data.component){
+        this.componentData = data.component;
+        } else if(data.status === true && data.solution){
+          this.componentData = data.solution;
+        } else if(data.status === true && data.bestPractice){
+          this.componentData = data.bestPractice;
+        }
         this.detailobject = this.componentData;
         if (this.detailobject && this.detailobject.images.length > 0) {
           this.selectedImgPath = this.detailobject.images[0].fileURL;

@@ -96,15 +96,15 @@ export class FormComponent implements OnInit {
       ],
       images: [],
       Files: [],
-      type: [null, Validators.required],
+      technology: [null, Validators.required],
       lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
       contributors: [null, Validators.required],
-      practice: [null, Validators.required],
+      practices: [null, Validators.required],
     });
   }
 
-  get type() {
-    return this.formGroup.get('type') as FormControl;
+  get technology() {
+    return this.formGroup.get('technology') as FormControl;
   }
   get cName() {
     return this.formGroup.get('cName') as FormControl;

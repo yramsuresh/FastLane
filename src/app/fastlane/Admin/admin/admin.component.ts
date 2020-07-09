@@ -24,7 +24,7 @@ export class AdminComponent implements OnInit {
   components: any;
   solutions: any;
   bestPractices: any;
-  alldata: [];
+  alldata:any=[];
   loading = true;
   currentData: any;
   list: any;
@@ -60,7 +60,7 @@ export class AdminComponent implements OnInit {
   openDialog(ele): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
       width: '350px',
-      data: {element: ele, loading: this.loading, dataSource: this.dataSource, paginator: this.paginator}
+      data: {element: ele}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -72,11 +72,21 @@ export class AdminComponent implements OnInit {
   getComponentData() {
     this.componentservices.getComponentData().subscribe((data) => { 
       this.componentData = data;
+      this.alldata = [];
       // this.list = Object.keys(this.componentData);
-      this.components = this.componentData[0];
-      this.solutions = this.componentData[1];
-      this.bestPractices = this.componentData[2];
-      this.alldata = this.components.concat(this.bestPractices, this.solutions);
+      if(this.componentData[0].status === true){
+      this.components = this.componentData[0].components;
+      this.alldata = this.alldata.concat(this.components);
+      }
+      if(this.componentData[1].status === true){
+      this.solutions = this.componentData[1].solutions;
+      this.alldata = this.alldata.concat(this.solutions);
+      }
+      if(this.componentData[2].status === true){
+      this.bestPractices = this.componentData[2].bestPractices;
+      this.alldata = this.alldata.concat(this.bestPractices);
+      }
+      
       let value = this.alldata.sort();
       TABLE_DATA = value;
       this.dataSource = new MatTableDataSource(TABLE_DATA);
