@@ -15,7 +15,7 @@ export class SearchComponentComponent implements OnInit {
   @Output() resetData: EventEmitter<string> = new EventEmitter<string>();
   speechToText: string;
   formGroup: FormGroup;
-  practiceList = ['Select All', 'FED', 'Mobility', 'ECM', 'WCM', 'UX'];
+  
   constructor(private cd: ChangeDetectorRef, private formBuilder: FormBuilder) {}
   keyup(event) {
     this.searchValue = event;

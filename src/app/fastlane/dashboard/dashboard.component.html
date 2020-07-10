@@ -7,7 +7,7 @@
   >
     <img
       src="../assets/images/Ring-Preloader.gif"
-      width="400"
+      width="700"
       alt="loading..."
     />
   </div>
@@ -30,6 +30,20 @@
   <app-search-component
     (search)="searchComponent($event)"
   ></app-search-component>
+  <form
+      [formGroup]="formGroup"
+      autocomplete="off"
+      class="form"
+    >
+  <div class="text-right col-md-12 col-xs-12 border-buffer input-width">
+    <label class="margin-right">Sub-Practices</label><br/>
+    <mat-form-field class="multi-select form-element custom-form-input" appearance="outline">
+      <mat-select formControlName="practice" multiple>
+        <mat-option (click)="submitSearch()" *ngFor="let practice of practiceList" [value]="practice">{{practice}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  </form>
   <div *ngIf="!loading">
     <tile
       *ngIf="components && ifComponents === true"

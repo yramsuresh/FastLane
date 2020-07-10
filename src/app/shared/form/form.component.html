@@ -15,7 +15,7 @@
     >
       <div class="row">
         <div class="col-md-6 col-xs-12">
-          <label>Select an Category</label>
+          <label>Select an Category <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element custom-form-input"
             appearance="outline"
@@ -29,7 +29,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>You selected: {{ selected }}</label>
+          <label>You selected: {{ selected }} <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element custom-form-input"
             appearance="outline"
@@ -45,7 +45,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>Short Description</label>
+          <label>Short Description <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element description-Input"
             appearance="outline"
@@ -76,7 +76,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>Long Description</label>
+          <label>Long Description <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element description-Input"
             appearance="outline"
@@ -107,7 +107,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>Technology</label>
+          <label>Technology <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element custom-form-input"
             appearance="outline"
@@ -124,7 +124,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12 border-buffer">
-          <label>Sub-Practices</label>
+          <label>Sub-Practices <span class="required-field">*</span></label>
           <mat-form-field class="multi-select form-element custom-form-input" appearance="outline">
             <mat-select formControlName="practices" multiple>
               <mat-option *ngFor="let practices of practiceList" [value]="practices" selected checked>{{practices}}</mat-option>
@@ -217,7 +217,7 @@
 
       <div class="row">
         <div class="col-md-6 col-xs-12">
-          <label>Title</label>
+          <label>Title <span class="required-field">*</span></label>
           <mat-form-field
             class="form-element custom-form-input"
             appearance="outline"
@@ -231,7 +231,7 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>Contributors</label>
+          <label>Contributors <span class="required-field">*</span></label>
 
           <mat-form-field
             class="form-element custom-form-input nopdb"

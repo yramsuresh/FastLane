@@ -16,15 +16,5 @@
     <input type="image" alt="Start" id="image" src="assets/mic.gif" (click)="voiceSearch()"> 
     <mat-icon matSuffix>search</mat-icon>
   </mat-form-field>
-
-  <div class="col-md-6 col-xs-12 border-buffer input-width">
-    <label>Sub-Practices</label><br/>
-    <mat-form-field class="multi-select form-element custom-form-input" appearance="outline">
-      <mat-select formControlName="practice" multiple>
-        <mat-option *ngFor="let practice of practiceList" [value]="practice">{{practice}}</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-
 </div>
 
