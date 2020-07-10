@@ -54,7 +54,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.loading = true;
-    this.practiceList = ['Select All', 'FED', 'Mobility', 'ECM', 'WCM', 'UX']
+    this.practiceList = ['FED', 'Mobility', 'ECM', 'WCM', 'UX']
     this.getComponentData();
     this.createForm();
   }
