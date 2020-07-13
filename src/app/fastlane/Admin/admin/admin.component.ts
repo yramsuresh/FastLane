@@ -70,7 +70,7 @@ export class AdminComponent implements OnInit {
   }
 
   getComponentData() {
-    this.componentservices.getComponentData().subscribe((data) => { 
+    this.componentservices.getComponentData([]).subscribe((data) => { 
       this.componentData = data;
       this.alldata = [];
       // this.list = Object.keys(this.componentData);

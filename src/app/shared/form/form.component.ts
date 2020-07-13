@@ -220,7 +220,7 @@ export class FormComponent implements OnInit {
     if (cat.category === 'Best Practice') {
       this.entityType = 'bestPractice';
     }
-    this.componentservices.postFormData(this.post, this.entityType+'s')
+    this.componentservices.postFormData(this.post, this.entityType+'s/add')
       .subscribe((x: any) => {
         this.loading = true;
         for (let i = 0; i <= this.urls.length - 1; i++) {

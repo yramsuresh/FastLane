@@ -15,20 +15,12 @@ export class ComponentServicesService {
   //   return this.http.get('../assets/Data/data.Json');
   // }
 
-  getComponentData(items?): Observable<any[]> {
-    if(items){
-      let component = this.http.get(`${environment.apiUrl}components`+ '?'+ items);
-      let solutions = this.http.get(`${environment.apiUrl}solutions`+ '?' + items);
-      let bestPractices = this.http.get(`${environment.apiUrl}bestPractices`+'?'+items);
-      return forkJoin([component, solutions, bestPractices]);
-      let data = forkJoin([component, solutions, bestPractices]);
-    } else {
-    let component = this.http.get(`${environment.apiUrl}components`);
-    let solutions = this.http.get(`${environment.apiUrl}solutions`);
-    let bestPractices = this.http.get(`${environment.apiUrl}bestPractices`);
+  getComponentData(practices): Observable<any[]> {
+    let component = this.http.post(`${environment.apiUrl}components`, {practices});
+    let solutions = this.http.post(`${environment.apiUrl}solutions`, {practices});
+    let bestPractices = this.http.post(`${environment.apiUrl}bestPractices`, {practices});
     return forkJoin([component, solutions, bestPractices]);
-    let data = forkJoin([component, solutions, bestPractices]);
-    }
+    // let data = forkJoin([component, solutions, bestPractices]);
     // Observable.forkJoin (RxJS 5) changes to just forkJoin() in RxJS 6
     // let list = ['components', 'solutions', 'bestPractices'];
   }
