@@ -98,8 +98,8 @@ export class FormComponent implements OnInit {
       Files: [],
       technology: [null, Validators.required],
       lastUpdatedOn: moment(new Date()).format('DD MMMM YYYY'),
-      contributors: [null, Validators.required],
-      practices: [null, Validators.required],
+      contributors: [null],
+      practices: [null],
     });
   }
 

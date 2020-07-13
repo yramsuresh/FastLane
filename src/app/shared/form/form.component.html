@@ -38,6 +38,7 @@
               matInput
               placeholder="{{ selected }} Name"
               formControlName="cName"
+              maxlength="20"
             />
             <mat-error *ngIf="!cName.valid && cName.touched">
               {{ titleAlert }}
@@ -58,6 +59,7 @@
               matAutosizeMinRows="2"
               matAutosizeMaxRows="5"
               formControlName="shortDesc"
+              maxlength="78"
             ></textarea>
             <p class="position-hint">
               {{ Short_Description.value.length }} / 78
@@ -89,6 +91,7 @@
               matAutosizeMinRows="2"
               matAutosizeMaxRows="5"
               formControlName="longDesc"
+              maxlength="500"
             ></textarea>
             <p class="position-hint">
               {{ Long_Description.value.length }} / 500
@@ -116,6 +119,7 @@
               matInput
               placeholder="hint: Angular/.Net/Android/SharePoint/Ionic/etc.."
               formControlName="technology"
+              maxlength="20"
             />
 
             <mat-error *ngIf="!technology.valid && technology.touched">
@@ -124,18 +128,18 @@
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12 border-buffer">
-          <label>Sub-Practices <span class="required-field">*</span></label>
+          <label>Sub-Practices</label>
           <mat-form-field class="multi-select form-element custom-form-input" appearance="outline">
             <mat-select formControlName="practices" multiple>
               <mat-option *ngFor="let practices of practiceList" [value]="practices" selected checked>{{practices}}</mat-option>
             </mat-select>
-            <mat-error
+            <!-- <mat-error
               *ngIf="
                 !formGroup.controls['practices'].valid &&
                 formGroup.controls['practices'].touched
               ">
             This field is required
-            </mat-error>
+            </mat-error> -->
           </mat-form-field>
       </div>
       </div>
@@ -227,11 +231,12 @@
               #documentTitleInput
               placeholder="hint: Usage Document/Source code"
               (keyup)="EnableUploadFiles($event)"
+              maxlength="25"
             />
           </mat-form-field>
         </div>
         <div class="col-md-6 col-xs-12">
-          <label>Contributors <span class="required-field">*</span></label>
+          <label>Contributors</label>
 
           <mat-form-field
             class="form-element custom-form-input nopdb"
@@ -243,20 +248,21 @@
               placeholder="Enter Contibutors Name"
               (change)="InputContributors($event)"
               formControlName="contributors"
+              maxlength="500"
             />
             <mat-icon
               (click)="updateContributor($event, ContributorTitleInput)"
               matSuffix
               >done</mat-icon
             >
-            <mat-error
+            <!-- <mat-error
               *ngIf="
                 !formGroup.controls['contributors'].valid &&
                 formGroup.controls['contributors'].touched
               "
             >
               Required field, Give Contributors Name.
-            </mat-error>
+            </mat-error> -->
           </mat-form-field>
 
           <div
